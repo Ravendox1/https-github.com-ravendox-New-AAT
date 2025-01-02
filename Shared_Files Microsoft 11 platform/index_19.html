@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Audit Tool (AAT)</title>
+  <link rel="stylesheet" href="../Styles.css">
+  <meta name="description" content="Admission Audit Tool to evaluate and improve clinical documentation for better compliance and outcomes.">
+  <meta name="author" content="AAT Development Team">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<!-- Dark Mode Toggle -->
+<header id="theme-toggle">
+  <div class="toggle-container">
+    <!-- Accessibility-enhanced label -->
+    <label class="switch" for="dark-mode-switch">
+      <input type="checkbox" id="dark-mode-switch" aria-label="Toggle Dark Mode" />
+      <span class="slider"></span>
+    </label>
+    <!-- Add descriptive text for toggle state -->
+    <span id="toggle-label" aria-live="polite">Enable Dark Mode</span>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+ <!-- Admission Note Section -->
+<section id="admission-note-I still made the lot of stuff missing I'm missing a lot section">
+  <h2>Admission Note</h2>
+  <!-- Accessible and visually distinctive textarea -->
+  <textarea
+    id="admission-note"
+    placeholder="Type or dictate your note here..."
+    aria-describedby="admission-cmi feedback"
+    aria-live="polite"
+    spellcheck="true"
+  ></textarea>
+
+  <!-- CMI Progress Bar -->
+  <div class="progress-container">
+    <label for="admission-cmi" class="cmi-label">Baseline CMI Progress:</label>
+    <div class="progress-bar">
+      <div
+        class="progress"
+        id="admission-cmi-progress"
+        style="width: 25%;"
+      >25%</div>
+    </div>
+    <span id="admission-cmi" class="cmi-text" aria-live="polite">Baseline CMI: 1.0</span>
+  </div>
+
+  <!-- Feedback Section -->
+  <div id="cmi-feedback" aria-live="polite" class="feedback-container">
+    <p>Feedback: Please start dictating to see CMI updates.</p>
+  </div>
+</section>
+
+  <!-- Generate Summary Section -->
+  <section id="generate-summary-section">
+    <h2>Enhanced Summary</h2>
+    <div id="enhanced-summary" role="region" aria-live="polite">
+      <p>Your AI-enhanced summary will appear here...</p>
+    </div>
+    <div class="progress-container">
+      <label for="summary-cmi">Enhanced CMI Progress:</label>
+      <div class="progress-bar">
+        <div class="progress" id="summary-cmi-progress" style="width: 70%;">70%</div>
+      </div>
+      <span id="summary-cmi" aria-live="polite">CMI: 1.5</span>
+    </div>
+    <button id="revisit-note" aria-label="Reset and Regenerate Summary">Reset and Regenerate</button>
+  </section>
+
+  <!-- ICD-10 Table Section -->
+  <section id="icd10-table-section">
+    <h2>Categorized ICD-10 Table</h2>
+    <table id="icd10-table">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>ICD-10 Code</th>
+          <th>DRG</th>
+          <th>GMLOS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" aria-label="Select I50.9"></td>
+          <td>I50.9</td>
+          <td>291</td>
+          <td>4.8</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" aria-label="Select J44.1"></td>
+          <td>J44.1</td>
+          <td>190</td>
+          <td>3.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Side-by-Side Windows -->
+  <section id="side-by-side-windows">
+    <div id="selected-icd10-window">
+      <h3>Selected ICD-10 and GMLOS</h3>
+      <p>Primary ICD-10: I50.9</p>
+      <ul>
+        <li>ICD-10: J44.1 (GMLOS: 3.5)</li>
+        <li>ICD-10: E11.9 (GMLOS: 2.7)</li>
+      </ul>
+      <button id="icd10-search" aria-label="Search ICD-10 Codes">Search ICD-10</button>
+    </div>
+
+    <div id="admission-placement-window">
+      <h3>Recommended Admission Placement</h3>
+      <p>Based on InterQual/Milliman Criteria:</p>
+      <p id="admission-recommendation">Recommendation: --</p>
+      <button id="recommend-admission" aria-label="Get Admission Recommendation">Get Recommendation</button>
+    </div>
+  </section>
+
+  <!-- Metrics and Payment Section -->
+  <section id="metrics-section">
+    <div id="metrics-window">
+      <h3>Metrics</h3>
+      <p id="primary-icd10">Primary ICD-10: I50.9</p>
+      <p id="primary-drg">DRG: 291</p>
+      <p id="primary-gmlos">GMLOS: 4.8</p>
+      <p id="primary-cmi">CMI: 1.5</p>
+      <p id="primary-rvu">RVUs: 3.2</p>
+    </div>
+
+    <div id="payment-metrics-window">
+      <h3>Payment Metrics</h3>
+      <p id="primary-cpt">CPT Code: 99223</p>
+      <p id="medicare-rate">Medicare Base Rate: $5,000</p>
+      <p id="payer-adjusted-rate">Payer Adjusted Rate: $6,200</p>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2024 Admission Audit Tool. All rights reserved.</p>
+  </footer>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  // Define body for use
+  const body = document.body;
+
+  // Debugging log container setup
+  const setupDebugContainer = () => {
+    const debugContainer = document.createElement("div");
+    debugContainer.id = "debug-log";
+    debugContainer.style = `
+      position: fixed; 
+      bottom: 0; 
+      left: 0; 
+      width: 100%; 
+      max-height: 200px; 
+      overflow-y: auto; 
+      background-color: rgba(0, 0, 0, 0.8); 
+      color: #fff; 
+      font-size: 12px; 
+      padding: 10px; 
+      z-index: 9999;
+    `;
+    document.body.appendChild(debugContainer);
+    return debugContainer;
+  };
+
+  const debugContainer = setupDebugContainer();
+
+  const logToDebugContainer = (message) => {
+    const logMessage = document.createElement("p");
+    logMessage.style.margin = "5px 0";
+    logMessage.textContent = message;
+    debugContainer.appendChild(logMessage);
+    debugContainer.scrollTop = debugContainer.scrollHeight; // Auto-scroll to latest log
+  };
+
+  logToDebugContainer("Visual debugging enabled.");
+<script type="module">
+  // Firebase Configuration
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  import { getAnalytics, initializeAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyALyNdiarxU9JCzQ8UYovWGVeWfAc0Q2j4",
+    authDomain: "f6890358-149e-4068-8132.firebaseapp.com",
+    databaseURL: "https://f6890358-149e-4068-default-rtdb.firebaseio.com",
+    projectId: "f6890358-149e-4068",
+    storageBucket: "f6890358-149e-4068.appspot.com",
+    messagingSenderId: "568143396147",
+    appId: "1:568143396147:web:34206bf811761ccafe1246",
+    measurementId: "G-JV3PM3PSRR",
+  };
+
+  let app, analytics;
+  try {
+    app = initializeApp(firebaseConfig);
+    analytics = initializeAnalytics(app, {
+      config: {
+        cookieDomain: "f6890358-149e-4068-8132.web.app",
+        allowAdPersonalizationSignals: false,
+      },
+    });
+    logToDebugContainer("[Firebase] App and Analytics initialized successfully.");
+  } catch (error) {
+    logToDebugContainer(`[Firebase] Error: ${error.message}`);
+    console.error("[Firebase] Initialization Error:", error);
+  }
+	</script>
+  // Admission Note CMI Analysis
+	<script>
+  const admissionNote = document.getElementById("admission-note");
+  if (admissionNote) {
+    const cmiProgressBar = document.getElementById("admission-cmi-progress");
+    const cmiText = document.getElementById("admission-cmi");
+
+    if (!cmiProgressBar || !cmiText) {
+      logToDebugContainer("[Admission Note] Missing progress bar or text element.");
+      return;
+    }
+
+    const cmiFeedback = document.createElement("div");
+    cmiFeedback.id = "cmi-feedback";
+    cmiFeedback.style.marginTop = "10px";
+    admissionNote.insertAdjacentElement("afterend", cmiFeedback);
+
+    const analyzeAdmissionNote = (note) => {
+      let cmi = 1.0;
+      const feedbackMessages = {
+        vague: "Feedback: Note is too vague; please provide more details.",
+        critical: "Feedback: Specific details improve the note; consider documenting treatment.",
+        baseline: "Feedback: Documentation meets baseline; consider adding specificity for compliance.",
+      };
+
+      const noteLower = note.trim().toLowerCase();
+      if (noteLower.length === 0) {
+        cmi = 0.8;
+        cmiFeedback.innerHTML = `<p>${feedbackMessages.vague}</p>`;
+      } else if (noteLower.includes("acute respiratory failure") || noteLower.includes("sepsis")) {
+        cmi = 1.3;
+        cmiFeedback.innerHTML = `<p>${feedbackMessages.critical}</p>`;
+      } else {
+        cmiFeedback.innerHTML = `<p>${feedbackMessages.baseline}</p>`;
+      }
+
+      const progressPercentage = Math.min(25 + (cmi - 0.8) * 100, 100);
+      cmiProgressBar.style.width = `${progressPercentage}%`;
+      cmiProgressBar.textContent = `${progressPercentage.toFixed(0)}%`;
+      cmiText.textContent = `Baseline CMI: ${cmi.toFixed(1)}`;
+      logToDebugContainer(`[Admission Note] Updated CMI: ${cmi.toFixed(1)}, Progress: ${progressPercentage.toFixed(0)}%.`);
+    };
+
+    admissionNote.addEventListener("input", (event) => {
+      analyzeAdmissionNote(event.target.value);
+    });
+
+    logToDebugContainer("[Admission Note] CMI analysis setup complete.");
+  } else {
+    logToDebugContainer("[Admission Note] Textarea not found.");
+  }
+});
+
+</script>
+  
+</body>
+</html>

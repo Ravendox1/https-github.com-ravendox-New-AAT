@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Variables */
+:root {
+  --transition-speed: 0.4s;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b); /* Default: Dark Mode */
+  color: #f8f9fa; /* Light text on dark background */
+  line-height: 1.6;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background: #1b263b; /* Dark header */
+  color: #f8f9fa;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: var(--transition-speed);
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: var(--transition-speed);
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0077b6; /* Slider color in dark mode */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  background: #1b263b; /* Dark background for sections */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2e3c52;
+  color: #f8f9fa;
+  transition: background var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #9fb3c8; /* Default heading color for dark mode */
+  margin-bottom: 10px;
+  transition: color var(--transition-speed);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background: #0d1b2a; /* Dark background for textarea */
+  color: #f8f9fa; /* Light text */
+  border: 1px solid #9fb3c8;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace; /* Typewriter style */
+  font-size: 16px;
+  resize: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #00b4d8;
+  box-shadow: 0 0 5px #00b4d8;
+}
+
+.progress-container {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #0d1b2a; /* Dark progress bar background */
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25px;
+  border: 1px solid #2e3c52;
+  transition: background var(--transition-speed), border-color var(--transition-speed);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(to right, #0096c7, #00b4d8);
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  border-radius: 10px;
+  transition: width var(--transition-speed), color var(--transition-speed);
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background: linear-gradient(to bottom, #f8f9fa, #e0f7fa); /* Lighter gradient */
+  color: #2c3e50; /* Darker text for light mode */
+}
+
+header.light-mode {
+  background: #e0f7fa; /* Light header */
+  color: #2c3e50;
+}
+
+section.light-mode {
+  background: #f0f8ff; /* Light blue background for sections */
+  border: 1px solid #bdd4e7; /* Light border */
+  color: #2c3e50;
+}
+
+h2.light-mode, h3.light-mode {
+  color: #2c6e91; /* Blue-gray text for headings in light mode */
+}
+
+textarea.light-mode {
+  background: #ffffff; /* Light background for textarea */
+  color: #2c3e50; /* Dark text */
+  border: 1px solid #bdd4e7;
+}
+
+.progress-bar.light-mode {
+  background: #e0f7fa; /* Light progress bar background */
+  border: 1px solid #bdd4e7;
+}
+
+.progress.light-mode {
+  color: #2c3e50; /* Darker text inside progress bar */
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #023e8a, #0096c7);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}

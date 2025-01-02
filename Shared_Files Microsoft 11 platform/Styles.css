@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Variables */
+:root {
+  --transition-speed: 0.4s;
+  --primary-color-dark: #0077b6;
+  --primary-color-light: #d0efff;
+  --text-color-dark: #f8f9fa;
+  --text-color-light: #003d5c;
+  --background-dark: linear-gradient(to bottom, #0d1b2a, #1b263b);
+  --background-light: linear-gradient(to bottom, #d0efff, #e8f9ff);
+  --accent-color: #00b4d8;
+  --header-bg-dark: #1b263b;
+  --header-bg-light: #e0f7fa;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--background-dark);
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background: var(--header-bg-dark);
+  color: var(--text-color-dark);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Section Styling */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  background: var(--header-bg-dark);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2e3c52;
+  color: var(--text-color-dark);
+  transition: background var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Progress Bar Container */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Progress Bar Wrapper */
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between bar and percentage */
+  gap: 10px; /* Consistent spacing */
+  width: 100%; /* Ensure consistent alignment with container width */
+  max-width: 500px; /* Responsive maximum width */
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: relative;
+  flex-grow: 1; /* Allow bar to grow while percentage stays static */
+  height: 25px;
+  background: #0d1b2a;
+  border: 1px solid #2e3c52;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background var(--transition-speed), border-color var(--transition-speed);
+}
+
+/* Progress Indicator */
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* Dynamically updated */
+  background: linear-gradient(to right, #0096c7, var(--accent-color));
+  border-radius: 10px 0 0 10px; /* Smooth transition at start */
+  transition: width var(--transition-speed), background var(--transition-speed);
+}
+
+/* Percentage Display (Outside Progress Bar) */
+.progress-percentage {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align: center; /* Ensure alignment when resized */
+  flex-shrink: 0; /* Prevent text from shrinking in smaller views */
+}
+
+/* Light Mode Adjustments */
+body.light-mode {
+  background: var(--background-light);
+  color: var(--text-color-light);
+}
+
+body.light-mode .progress-bar {
+  background: #e0f7fa;
+  border: 1px solid #bdd4e7;
+}
+
+body.light-mode .progress-percentage {
+  color: white; /* Maintain consistent white text for readability */
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8); /* Ensure visibility in light mode */
+}
+
+body.light-mode .progress {
+  background: linear-gradient(to right, #89cff0, #0077b6);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .progress-bar-container {
+    flex-direction: column; /* Stack percentage below progress bar for smaller screens */
+    gap: 5px;
+  }
+
+  .progress-bar {
+    max-width: 300px; /* Smaller progress bar width */
+    height: 20px; /* Compact height for smaller screens */
+  }
+
+  .progress-percentage {
+    font-size: 12px; /* Smaller text size for smaller screens */
+    text-align: center; /* Center percentage below bar */
+  }
+}
