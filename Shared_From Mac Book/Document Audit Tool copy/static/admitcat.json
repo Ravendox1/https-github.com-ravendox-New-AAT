@@ -1,0 +1,1480 @@
+{
+  "conditions": [
+    {
+      "condition": "Skin Abscess",
+      "criteria": {
+        "inpatient": [
+          "Severe cellulitis with systemic symptoms such as fever or tachycardia",
+          "Failed outpatient therapy with worsening infection",
+          "Abscess size > 5 cm requiring surgical drainage",
+          "Immunocompromised state increasing risk of complications"
+        ],
+        "observation": [
+          "Moderate cellulitis without systemic symptoms",
+          "Abscess size 3-5 cm requiring minor drainage or monitoring",
+          "Patient requires close monitoring for response to antibiotics"
+        ],
+        "discharge": [
+          "Localized small abscess (< 3 cm) managed with outpatient antibiotics",
+          "No signs of systemic infection and good response to initial treatment"
+        ]
+      }
+    },
+    {
+      "condition": "Abscess, Intra-abdominal (IA)",
+      "criteria": {
+        "inpatient": [
+          "Requires anti-infective therapy or drainage (surgical or percutaneous) for intra-abdominal abscess",
+          "Imaging study scheduled or performed within 24 hours to guide treatment"
+        ],
+        "consider_discharge": [
+          "No requirement for anti-infective therapy or drainage",
+          "No imaging study required or scheduled within 24 hours",
+          "Symptoms managed effectively with outpatient follow-up"
+        ]
+      }
+      },
+    {
+      "condition": "Acetaminophen Overdose (OD)",
+      "criteria": {
+        "inpatient": [
+          "Ingestion > 10g within a 24-hour period",
+          "Acetaminophen (APAP) level 150-300 mcg/mL with ongoing antidote treatment (N-Acetylcysteine protocol)",
+          "Chronic ingestion with APAP level > 10 mcg/mL OR AST/ALT > 50 U/L requiring monitoring and treatment",
+          "Severe or persistent altered mental status",
+          "Severe or persistent clinical findings (e.g., metabolic acidosis, hypoglycemia, bradycardia)",
+          "Imminent danger to self or others requiring psychiatric or medical intervention"
+        ],
+        "consider_discharge": [
+          "Resolved symptoms with no evidence of hepatotoxicity or metabolic disturbances",
+          "APAP level below toxic threshold (< 150 mcg/mL) and normal liver function tests",
+          "No ongoing requirement for antidote treatment or monitoring",
+          "Safe outpatient management and follow-up arranged"
+        ]
+      }
+    },
+    {
+      "condition": "Anemia",
+      "criteria": {
+        "inpatient": [
+          "Hematocrit < 25% or Hemoglobin < 8 g/dL with symptomatic anemia",
+          "Ongoing transfusion needs (> 2 units of blood products)",
+          "Requires continuous IV infusion of anticoagulation or vasoactive medications"
+        ],
+        "observation": [
+          "Hemoglobin 8-10 g/dL with mild symptoms requiring monitoring",
+          "Stable after transfusion but requires close follow-up"
+        ],
+        "discharge": [
+          "Hemoglobin > 10 g/dL with no symptoms",
+          "Stable labs and outpatient management plan in place"
+        ]
+      }
+    },
+    {
+      "condition": "Acute Coronary Syndrome (ACS)",
+      "criteria": {
+        "inpatient": [
+          "Confirmed acute MI (STEMI) by ECG",
+          "Positive biomarkers with pain controlled and symptoms resolved (NSTEMI)",
+          "Rest angina, new onset, or worsening angina (Class III-IV) with ECG changes or ischemia",
+          "Diagnostic testing indicating ischemia or LBBB with symptoms within the last 24 hours",
+          "Requires all interventions: beta blockers, ASA, antiplatelet, anticoagulant, and continuous cardiac monitoring"
+        ],
+        "observation": [
+          "High-risk features for cardiac ischemia (e.g., DM, prior CABG, PCI < 6 months, GFR < 60, TIMI ≥ 3)",
+          "Evidence of unstable angina (e.g., nocturnal, new onset, progressive, prolonged at rest)",
+          "Symptoms with non-diagnostic ECG, hemodynamic instability (SBP < 90), or dangerous arrhythmia",
+          "Initial negative cardiac biomarkers with serial monitoring planned"
+        ],
+        "consider_discharge": [
+          "No evidence of ongoing ischemia, hemodynamic compromise, or high-risk features",
+          "Resolved symptoms with normal biomarkers and ECG",
+          "Outpatient follow-up arranged for further evaluation or management"
+        ]
+      }
+    },
+    {
+      "condition": "Anticoagulation Requirement",
+      "criteria": {
+        "inpatient": [
+          "Atrial fibrillation with rapid ventricular response requiring IV rate control",
+          "Pulmonary embolism requiring continuous IV anticoagulation",
+          "Severe thrombocytopenia with bleeding complications necessitating close monitoring"
+        ],
+        "observation": [
+          "Initiation of anticoagulation therapy with stable vitals for monitoring response",
+          "Observation for therapeutic effect of warfarin or direct oral anticoagulants",
+          "Mild thrombocytopenia or anticoagulation therapy adjustment without significant complications"
+        ],
+        "consider_discharge": [
+          "Stable on an established anticoagulation regimen with therapeutic INR",
+          "No active bleeding or complications, and outpatient follow-up arranged",
+          "Resolved need for monitoring and no ongoing requirement for inpatient care"
+        ]
+      }
+    },
+    {
+      "condition": "Arrhythmia - Atrial",
+      "criteria": {
+        "inpatient": [
+          "SVT, atrial fibrillation, atrial flutter, or wide complex tachycardia requiring continuous cardiac monitoring",
+          "ICD with repetitive shocks (≥ 3x/24h) necessitating intervention and monitoring",
+          "Treatment requiring ANY of the following: neuro assessment q4h, permanent pacer placement, or digitalization ≤ 24h",
+          "Hyperkalemia requiring treatment (e.g., calcium chloride, calcium gluconate, or glucose 50% with insulin)",
+          "Initiation of oral antiarrhythmics with proarrhythmic risk or post-Ibutilide monitoring",
+          "Potassium repletion (≥ 10 mEq/h or ≥ 120 mEq/24h) or continuous IV antiarrhythmic therapy with frequent titration or bolus monitoring q3-4h"
+        ],
+        "observation": [
+          "Non-sustained ventricular tachycardia or arrhythmias requiring monitoring without acute intervention",
+          "Stable arrhythmia requiring initiation of oral or IV medications with monitoring for therapeutic response",
+          "Moderate electrolyte imbalance correction or arrhythmia therapy adjustment without critical care needs"
+        ],
+        "consider_discharge": [
+          "Resolved arrhythmia without need for ongoing monitoring",
+          "Stable on outpatient antiarrhythmic therapy and follow-up arranged",
+          "No ICD shocks, recurrence of arrhythmia, or ongoing electrolyte imbalances"
+        ]
+      }
+    },
+    {
+      "condition": "Arrhythmia - Atrial",
+      "criteria": {
+        "inpatient": [
+          "SVT, atrial fibrillation, atrial flutter, or wide complex tachycardia requiring continuous cardiac monitoring",
+          "ICD with repetitive shocks (≥ 3x/24h) necessitating intervention and monitoring",
+          "Treatment requiring ANY of the following: neuro assessment q4h, permanent pacer placement, or digitalization ≤ 24h",
+          "Hyperkalemia requiring treatment (e.g., calcium chloride, calcium gluconate, or glucose 50% with insulin)",
+          "Initiation of oral antiarrhythmics with proarrhythmic risk or post-Ibutilide monitoring",
+          "Potassium repletion (≥ 10 mEq/h or ≥ 120 mEq/24h) or continuous IV antiarrhythmic therapy with frequent titration or bolus monitoring q3-4h"
+        ],
+        "observation": [
+          "Non-sustained ventricular tachycardia or arrhythmias requiring monitoring without acute intervention",
+          "Stable arrhythmia requiring initiation of oral or IV medications with monitoring for therapeutic response",
+          "Moderate electrolyte imbalance correction or arrhythmia therapy adjustment without critical care needs"
+        ],
+        "consider_discharge": [
+          "Resolved arrhythmia without need for ongoing monitoring",
+          "Stable on outpatient antiarrhythmic therapy and follow-up arranged",
+          "No ICD shocks, recurrence of arrhythmia, or ongoing electrolyte imbalances"
+        ]
+      }
+    },
+    {
+      "condition": "Arrhythmia - Atrial",
+      "criteria": {
+        "inpatient": [
+          "SVT, atrial fibrillation, atrial flutter, or wide complex tachycardia requiring continuous cardiac monitoring",
+          "ICD with repetitive shocks (≥ 3x/24h) necessitating intervention and monitoring",
+          "Treatment requiring ANY of the following: neuro assessment q4h, permanent pacer placement, or digitalization ≤ 24h",
+          "Hyperkalemia requiring treatment (e.g., calcium chloride, calcium gluconate, or glucose 50% with insulin)",
+          "Initiation of oral antiarrhythmics with proarrhythmic risk or post-Ibutilide monitoring",
+          "Potassium repletion (≥ 10 mEq/h or ≥ 120 mEq/24h) or continuous IV antiarrhythmic therapy with frequent titration or bolus monitoring q3-4h"
+        ],
+        "observation": [
+          "Non-sustained ventricular tachycardia or arrhythmias requiring monitoring without acute intervention",
+          "Stable arrhythmia requiring initiation of oral or IV medications with monitoring for therapeutic response",
+          "Moderate electrolyte imbalance correction or arrhythmia therapy adjustment without critical care needs"
+        ],
+        "consider_discharge": [
+          "Resolved arrhythmia without need for ongoing monitoring",
+          "Stable on outpatient antiarrhythmic therapy and follow-up arranged",
+          "No ICD shocks, recurrence of arrhythmia, or ongoing electrolyte imbalances"
+        ]
+      }
+    },
+    {
+      "condition": "Arterial Occlusion",
+      "criteria": {
+        "inpatient": [
+          "Pain at rest with confirmed arterial occlusion requiring anticoagulation and neurovascular monitoring",
+          "Coldness, mottling, pallor, or numbness indicating critical ischemia requiring intervention",
+          "Limb swelling with imaging confirmation of arterial occlusion requiring close monitoring and treatment",
+          "Anticoagulation therapy initiated with Fondaparinux, LMWH ≤ 3 days, unfractionated heparin ≤ 5 days, or alternative anticoagulants for heparin-induced thrombocytopenia"
+        ],
+        "observation": [
+          "Imaging-confirmed arterial occlusion with mild symptoms requiring monitoring for progression",
+          "Pain or swelling with no critical ischemia but requiring evaluation and initial management",
+          "Neurovascular assessments required without immediate threat to limb viability"
+        ],
+        "consider_discharge": [
+          "Symptoms resolved with no evidence of critical ischemia or ongoing occlusion",
+          "Outpatient anticoagulation initiated with follow-up arranged",
+          "No significant findings on imaging and no need for further monitoring"
+        ]
+      }
+    }, 
+    {
+      "condition": "Arthritis - Septic",
+      "criteria": {
+        "inpatient": [
+          "Joint pain, tenderness, or decreased range of motion with synovial fluid WBC > 50,000 or > 25,000 with polymorphonuclear dominance requiring immediate intervention",
+          "Anti-infective therapy initiated along with joint drainage and synovial fluid culture",
+          "DVT prophylaxis and IVF or advancing diet as tolerated to support recovery"
+        ],
+        "observation": [
+          "Joint pain with synovial fluid WBC > 25,000 and no systemic symptoms requiring monitoring and diagnostic evaluation",
+          "Mild to moderate symptoms requiring anti-infective therapy and joint drainage without immediate complications",
+          "No signs of systemic sepsis but requiring observation for progression of symptoms"
+        ],
+        "consider_discharge": [
+          "Resolved symptoms with no ongoing joint pain or decreased range of motion",
+          "Synovial fluid WBC normalizing and no systemic infection present",
+          "Outpatient follow-up arranged with anti-infective therapy initiated if needed"
+        ]
+      }
+    },
+	  {
+      "condition": "Nonseptic Arthritis",
+      "criteria": {
+        "inpatient": [
+          "Severe joint pain and swelling unresponsive to outpatient therapy",
+          "Associated systemic symptoms such as fever or significant functional impairment",
+          "Requires initiation of IV medications or specialized treatment"
+        ],
+        "observation": [
+          "Moderate joint pain and inflammation requiring close monitoring",
+          "Initiation of new therapy such as corticosteroids or disease-modifying agents",
+          "Stable clinical condition but requires further evaluation"
+        ],
+        "consider discharge": [
+          "Mild symptoms managed with oral medications",
+          "Stable clinical condition with outpatient follow-up arranged",
+          "No evidence of systemic involvement or severe functional impairment"
+        ]
+      }
+    },
+  	 {
+        "condition": "Ascending Cholangitis",
+        "criteria": {
+        "inpatient": [
+          "Signs of sepsis including fever, chills, or hypotension",
+          "Evidence of biliary obstruction with elevated liver enzymes",
+          "Requires IV antibiotics and/or urgent biliary drainage"
+        ],
+        "observation": [
+          "Mild symptoms controlled with initial IV antibiotics",
+          "No hemodynamic instability but requires monitoring",
+          "Stable condition awaiting further diagnostic evaluation"
+        ],
+        "consider discharge": [
+          "Resolved symptoms with normalizing liver enzymes",
+          "Stable clinical condition with outpatient follow-up arranged",
+          "No evidence of ongoing obstruction or infection"
+        ]
+      }
+    },
+	  {
+    	  "condition": "Ascites",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe abdominal distension with respiratory compromise or hemodynamic instability",
+    		  "Infected ascitic fluid (spontaneous bacterial peritonitis) requiring IV antibiotics",
+    		  "Requires urgent paracentesis or other invasive intervention"
+    		],
+    		"observation": [
+    		  "Moderate ascites requiring diagnostic or therapeutic paracentesis",
+    		  "No evidence of infection or hemodynamic instability but requires monitoring",
+    		  "Stable condition with a need for adjustments to diuretic therapy"
+    		],
+    		"consider discharge": [
+    		  "Controlled symptoms managed with oral diuretics",
+    		  "Stable clinical condition with outpatient follow-up arranged",
+    		  "No signs of infection or further need for intervention"
+    		]
+    	} 
+    },
+    {
+    	  "condition": "Asthma",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe asthma exacerbation unresponsive to initial bronchodilators and steroids",
+    		  "Respiratory distress with hypoxemia or hypercapnia requiring supplemental oxygen or noninvasive ventilation",
+    		  "Signs of impending respiratory failure, such as altered mental status or exhaustion"
+    		],
+    		"observation": [
+    		  "Moderate asthma exacerbation requiring frequent bronchodilator therapy",
+    		  "Stable after initial treatment but requires monitoring for recurrence of symptoms",
+    		  "No evidence of respiratory failure but requires further evaluation and management"
+    		],
+    		"consider discharge": [
+    		  "Symptoms controlled with oral or inhaled medications",
+    		  "Stable clinical condition with a clear outpatient management plan",
+    		  "No need for supplemental oxygen or ongoing acute therapy"
+    		]
+      }  
+    },
+    {
+    	  "condition": "Atrial Fibrillation/Flutter",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Uncontrolled atrial fibrillation with rapid ventricular response despite initial rate control measures",
+    		  "New-onset atrial fibrillation/flutter with evidence of hemodynamic instability or signs of myocardial ischemia",
+    		  "Requiring continuous IV anticoagulation or urgent cardioversion for rhythm control"
+    		],
+    		"observation": [
+    		  "Newly diagnosed atrial fibrillation/flutter with stable hemodynamics after initial treatment",
+    		  "Paroxysmal atrial fibrillation/flutter requiring monitoring for recurrence",
+    		  "Stable symptoms with no immediate need for invasive intervention but requiring close observation"
+    		],
+    		"consider discharge": [
+    		  "Controlled atrial fibrillation/flutter with adequate rate or rhythm control",
+    		  "Stable clinical condition with an outpatient anticoagulation and follow-up plan in place",
+    		  "No evidence of hemodynamic instability or myocardial ischemia"
+    		]
+    	}
+    },
+    {
+    	  "condition": "Back Pain",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe back pain with signs of cauda equina syndrome (e.g., urinary retention, saddle anesthesia, motor weakness)",
+    		  "Back pain associated with spinal cord compression requiring urgent surgical or medical intervention",
+    		  "Intractable pain unresponsive to outpatient therapy or requiring IV pain management"
+    		],
+    		"observation": [
+    		  "Moderate back pain requiring diagnostic imaging or further evaluation",
+    		  "Stable after initial treatment but requires monitoring for worsening symptoms",
+    		  "No immediate need for surgical intervention but ongoing assessment required"
+    		],
+    		"consider discharge": [
+    		  "Mild back pain controlled with oral analgesics",
+    		  "Stable clinical condition with no red flag symptoms (e.g., neurological deficits, infection, or malignancy)",
+    		  "Outpatient follow-up and conservative management plan arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Pneumothorax",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Pneumothorax > 3 cm confirmed by imaging and requiring a chest tube and continuous suction"
+    		],
+    		"observation": [
+    		  "Pneumothorax confirmed by imaging but does not require chest tube and continuous suction or size is ≤ 3 cm",
+    		  "Requires monitoring for potential progression or need for further intervention"
+    		],
+    		"consider discharge": [
+    		  "Pneumothorax does not meet severity for inpatient or observation care",
+    		  "Patient is stable with no further intervention needed",
+    		  "Outpatient follow-up arranged with appropriate monitoring"
+    		]
+      }
+    },
+    {
+        "condition": "Bleeding, Upper GI",
+        "criteria": {
+          "inpatient": [
+            "Syncope with evidence of hemodynamic instability",
+            "Hct ≤ 25% OR Hb ≤ 8.3 with active bleeding requiring urgent intervention",
+            "Platelets < 60K OR > 1 million with associated bleeding risk",
+            "Sustained HR 100-120/min with active symptoms",
+            "Postural hypotension: BOTH sustained BP drop within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+            "Non-reversible anticoagulant use OR PT ≥ 1.5x normal, INR ≥ 2, OR PTT ≥ 1.5x normal",
+            "Disorientation, agitation, or lethargy related to inadequate perfusion",
+            "Findings suggesting inadequate perfusion (e.g., myocardial ischemia, end-organ dysfunction)",
+            "Requirement for ALL of the following: IVF, blood product transfusion, Hct/Hb monitoring at least 2x/24h, and PPI administration"
+          ],
+          "observation": [
+            "Mild to moderate bleeding with stable vitals requiring diagnostic evaluation (e.g., endoscopy)",
+            "Hematochezia with Platelets < 60K OR Hct ≤ 25% OR Hb ≤ 8.3 requiring monitoring",
+            "No ongoing bleeding but requiring monitoring for recurrence or progression",
+            "Stable condition after initial resuscitation requiring further assessment"
+          ],
+          "consider_discharge": [
+            "Resolved bleeding with stable hemoglobin levels and normal vitals",
+            "No evidence of ongoing bleeding or hemodynamic compromise",
+            "Outpatient follow-up arranged for further evaluation or management"
+          ]
+        }
+      },
+      {
+        "condition": "Bleeding, Lower GI",
+        "criteria": {
+          "inpatient": [
+            "Severe active bleeding with hemodynamic instability, such as sustained hypotension (SBP < 90 mmHg) or tachycardia (HR > 120 bpm), requiring transfusion or IV fluids",
+            "Significant anemia with ongoing bleeding (Hct ≤ 25% or Hb ≤ 8.3 g/dL) requiring urgent intervention (e.g., endoscopy, angiography, surgery)",
+            "Bleeding associated with coagulopathy (INR ≥ 2 or PTT ≥ 1.5x normal) or anticoagulation therapy requiring reversal and close monitoring"
+          ],
+          "observation": [
+            "Mild to moderate bleeding with stable vitals (e.g., HR < 100 bpm, SBP ≥ 90 mmHg) requiring diagnostic evaluation (e.g., colonoscopy, imaging)",
+            "No ongoing bleeding but requiring monitoring for potential recurrence or progression of symptoms",
+            "Stable condition after initial treatment (e.g., transfusion or fluid resuscitation) requiring further assessment for the source of bleeding"
+          ],
+          "consider_discharge": [
+            "Resolved bleeding with stable hemoglobin levels (Hct > 30% or Hb > 10 g/dL) and normal vital signs (HR < 100 bpm, SBP ≥ 90 mmHg)",
+            "No evidence of ongoing bleeding, hemodynamic compromise, or significant anemia",
+            "Outpatient follow-up arranged for further evaluation or definitive management"
+        ]
+      }  
+    },
+    {
+    	  "condition": "Bleeding, Vaginal",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe vaginal bleeding with hemodynamic instability (e.g., hypotension, tachycardia) requiring transfusion or IV fluids",
+    		  "Evidence of anemia due to acute blood loss requiring urgent surgical or medical intervention",
+    		  "Associated pregnancy complications (e.g., ectopic pregnancy, placenta previa, or abruptio placentae) requiring continuous monitoring or surgical management"
+    		],
+    		"observation": [
+    		  "Moderate bleeding with stable vitals requiring diagnostic evaluation (e.g., pelvic ultrasound)",
+    		  "Bleeding controlled after initial treatment but requiring monitoring for recurrence or progression",
+    		  "Stable condition after initial therapy but needing further diagnostic studies or therapy adjustments"
+    		],
+    		"consider discharge": [
+    		  "Resolved bleeding with stable hemoglobin levels and hemodynamics",
+    		  "No evidence of ongoing or recurrent bleeding",
+    		  "Outpatient follow-up arranged for gynecological evaluation or further management"
+    		]
+      }
+    },
+    {
+    	  "condition": "Bowel Obstruction",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Complete bowel obstruction with severe abdominal pain, vomiting, and inability to pass stool or gas",
+    		  "Signs of bowel ischemia or perforation requiring urgent surgical intervention",
+    		  "Severe dehydration or electrolyte imbalance requiring IV fluids and monitoring"
+    		],
+    		"observation": [
+    		  "Partial bowel obstruction with mild to moderate symptoms requiring monitoring and diagnostic imaging",
+    		  "Stable after initial treatment but requiring further evaluation for resolution or progression",
+    		  "No immediate surgical indication but needing supportive care and monitoring"
+    		],
+    		"consider discharge": [
+    		  "Resolved obstruction with return of normal bowel function",
+    		  "Stable clinical condition with no signs of ischemia or recurrence",
+    		  "Outpatient follow-up arranged for further evaluation or management"
+    		]
+      }
+    },
+    {
+    	  "condition": "C. difficile Infection",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe C. difficile infection with signs of systemic toxicity (e.g., fever, leukocytosis, hypotension)",
+    		  "Evidence of complications such as ileus, megacolon, or perforation requiring close monitoring or surgical intervention",
+    		  "Severe dehydration or electrolyte imbalance requiring IV fluids and supportive care"
+    		],
+    		"observation": [
+    		  "Moderate C. difficile infection requiring oral or IV antibiotics and monitoring for progression",
+    		  "Stable after initial treatment but needing further observation for recurrence or worsening symptoms",
+    		  "Mild systemic symptoms requiring hydration and continued evaluation"
+    		],
+    		"consider discharge": [
+    		  "Mild C. difficile infection controlled with oral antibiotics",
+    		  "Stable clinical condition with resolving symptoms and no systemic toxicity",
+    		  "Outpatient follow-up arranged for continued monitoring and stool studies if needed"
+    		]
+      }
+    },
+    {
+    	  "condition": "Cellulitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe cellulitis with systemic symptoms such as fever, tachycardia, or hypotension",
+    		  "Evidence of necrotizing soft tissue infection or abscess requiring surgical intervention",
+    		  "Failure of outpatient therapy with worsening infection and signs of systemic involvement"
+    		],
+    		"observation": [
+    		  "Moderate cellulitis requiring IV antibiotics and close monitoring",
+    		  "Stable after initial treatment but needing further evaluation for response to therapy",
+    		  "No systemic symptoms but requiring monitoring for progression or complications"
+    		],
+    		"consider discharge": [
+    		  "Mild cellulitis controlled with oral antibiotics",
+    		  "Stable clinical condition with no systemic symptoms or progression",
+    		  "Outpatient follow-up arranged for continued monitoring and treatment"
+    		]
+      }
+    },
+    {
+    	  "condition": "Chemotherapy",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe chemotherapy-related complications such as febrile neutropenia, sepsis, or significant dehydration",
+    		  "Uncontrolled nausea, vomiting, or diarrhea requiring IV fluids and supportive care",
+    		  "Complications such as tumor lysis syndrome or organ dysfunction requiring intensive monitoring",
+    		  "Requires at least one of the following interventions: continuous infusion > 16 hours, IV hydration with urine output or pH monitoring, antiemetic administration ≥ 3x/24h, or blood product transfusion (HCT < 25%, Hb < 8.3, or platelets < 20,000)"
+    		],
+    		"observation": [
+    		  "Mild to moderate chemotherapy-related side effects requiring supportive therapy and monitoring",
+    		  "Initial administration of a new chemotherapy regimen requiring observation for adverse reactions",
+    		  "Stable condition but requiring further evaluation and hydration"
+    		],
+    		"consider discharge": [
+    		  "Tolerating chemotherapy with minimal side effects managed with oral medications",
+    		  "Stable clinical condition with no signs of complications",
+    		  "Outpatient follow-up arranged for continued therapy and monitoring"
+    		]
+      }
+    },
+    {
+    	  "condition": "ACS (Acute Coronary Syndrome)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Acute MI (STEMI) confirmed by ECG",
+    		  "Positive biomarkers with pain controlled AND symptoms resolved (NSTEMI)",
+    		  "Pain controlled OR not with BOTH: Rest angina or new onset angina or worsening angina - Class III-IV, AND ECG changed OR suggesting ischemia OR paced rhythm",
+    		  "Positive diagnostic testing: Ischemia on stress test or CCTA AND symptoms of chest pain (or anginal equivalent) within last 24 hours",
+    		  "ACS suspected and LBBB (new or age undetermined) on ECG",
+    		  "Will require ALL of the following interventions: Beta blockers, ASA, Antiplatelet therapy, Anticoagulant therapy, Continuous cardiac monitoring (excludes Holter)"
+    		],
+    		"observation": [
+    		  "High risk for cardiac ischemia as indicated by ANY ONE of the following: Hx of DM, Hx of CABG, Hx of PCI < 6 months, Chronic renal insufficiency (GFR < 60), High risk score on prognostic index (TIMI ≥ 3)",
+    		  "Evidence of unstable angina as indicated by ANY ONE of the following: Nocturnal, New onset, Progressive, Prolonged at rest",
+    		  "ANY ONE of the following: New or worsening mitral regurgitation, ECG normal, unchanged or non-diagnostic, Hemodynamic instability (SBP < 90), Continuous cardiac monitoring (excludes Holter), ASA or antiplatelet given or contraindicated (includes PO), Dangerous arrhythmia (e.g., sustained ventricular tachycardia), Initial cardiac biomarkers negative with continued serial monitoring planned"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient services",
+    		  "Stable condition with no ongoing chest pain or symptoms",
+    		  "Follow-up arranged for outpatient cardiology evaluation and diagnostic testing"
+    		]
+    	} 
+    },
+    {
+    	  "condition": "Congestive Heart Failure (CHF)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Left Heart Failure confirmed by imaging AND at least one of the following: BUN or creatinine > 1.5x normal or baseline, Sustained HR > 100 BPM, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+    		  "Right Heart Failure with dyspnea at rest and not returned to baseline after 2 hours of treatment AND at least one of the following: JVD, Hepatomegaly, Extremity edema, Weight gain ≥ 3 lbs over the last 2 days",
+    		  "Heart Failure with preserved LVEF AND at least one of the following: Change in mental status, BUN or creatinine > 1.5x normal or baseline, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+    		  "Will require all of the following interventions: DVT prophylaxis, Sodium restriction, Oximetry or blood gas, Diuretic ≥ 2 doses or dialysis, Oxygen (O2 sat < 92% and < baseline), ACEI or ARB (includes PO) or contraindicated, Beta blocker (includes PO) or contraindicated, Continuous cardiac monitoring (excludes Holter)"
+    		],
+    		"observation": [
+    		  "Left Heart Failure confirmed by imaging AND at least one of the following: BUN or creatinine > 1.5x normal or baseline, Sustained HR > 100 BPM, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+    		  "Right Heart Failure with dyspnea at rest and not returned to baseline after 2 hours of treatment AND at least one of the following: JVD, Hepatomegaly, Extremity edema, Weight gain ≥ 3 lbs over the last 2 days",
+    		  "Will require all of the following interventions: DVT prophylaxis, Sodium restriction, Oximetry or blood gas, Diuretic ≥ 2 doses or dialysis, Oxygen (O2 sat < 92% and < baseline), ACEI or ARB (includes PO) or contraindicated, Beta blocker (includes PO) or contraindicated, Continuous cardiac monitoring (excludes Holter)"
+    		],
+    		"consider discharge": [
+    		  "Right Heart Failure with dyspnea resolved and stable clinical condition, no ongoing symptoms or interventions required",
+    		  "Heart Failure with preserved LVEF and no severity of illness or intensity of services matching guidelines for observation or inpatient care",
+    		  "Stable condition with follow-up care and outpatient management plan arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Ascending Cholangitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "All of the following are present: Jaundice, Temperature > 99.4 °F PO, RUQ abdominal pain, and hemodynamically stable (SBP > 90)",
+    		  "All of the following are present: Anti-infective therapy, Imaging study scheduled or performed within 24 hours, and IVF rate > 100 cc/hr if weight > 60 kg OR IVF rate > 75 cc/hr (if weight < 60 kg, age > 65, Hx of CRI, or Hx of CHF)"
+    		],
+    		"observation": [
+    		  "All of the following are present: Jaundice, Temperature > 99.4 °F PO, RUQ abdominal pain, and hemodynamically stable (SBP > 90)",
+    		  "All of the following are present: Anti-infective therapy, Imaging study scheduled or performed within 24 hours, and IVF rate > 100 cc/hr if weight > 60 kg OR IVF rate > 75 cc/hr (if weight < 60 kg, age > 65, Hx of CRI, or Hx of CHF)"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Resolved symptoms with no ongoing jaundice, fever, or abdominal pain",
+    		  "Outpatient follow-up arranged with a clear treatment plan"
+    		]
+      }
+    },
+    {
+    	  "condition": "Cholecystitis - Acute",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Cholecystitis confirmed by imaging AND both of the following are true: Anti-infective therapy initiated, Analgesic administered 3x/24h or continuous"
+    		],
+    		"observation": [
+    		  "Cholecystitis confirmed by imaging BUT both of the following are NOT true: Anti-infective therapy initiated, Analgesic administered 3x/24h or continuous",
+    		  "Requires monitoring or additional diagnostic evaluation without immediate intensive intervention"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms managed with oral medications and no further interventions required",
+    		  "Outpatient follow-up arranged with a clear treatment plan"
+    		]
+      }
+    },
+    {
+    	  "condition": "COPD",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient requires ALL of the following interventions: Corticosteroid (includes PO), Oximetry OR blood gas monitoring, Bronchodilators (includes MDI with spacer ≥ 6/24h), Oxygen (O2 sat ≥ 92% or pO2 ≥ 60 mmHg or baseline OR O2 sat < 92% or pO2 < 60 mmHg and < baseline)"
+    		],
+    		"observation": [
+    		  "The patient does not require ALL of the following interventions but still requires monitoring for severity: Corticosteroid (includes PO), Oximetry OR blood gas monitoring, Bronchodilators (includes MDI with spacer ≥ 6/24h), Oxygen (O2 sat ≥ 92% or pO2 ≥ 60 mmHg or baseline OR O2 sat < 92% or pO2 < 60 mmHg and < baseline)"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms controlled with outpatient management and no further interventions required",
+    		  "Stable clinical condition with follow-up arranged"
+    		]
+    	}
+    },
+    { 
+    	  "condition": "CVA (Cerebrovascular Accident)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "An exacerbation of a previous neuro deficit confirmed by imaging AND at least one of the following: Aphasia, Ataxia, Blindness, Dysphagia, Dysarthrias, Diplopia or visual field loss, Mental status change (excludes coma, stupor or obtundation), Paralysis, Paresis, Sensory deficit, Partial or total gaze palsy",
+    		  "Diagnostic work-up pending with ALL of the following: CT or MRI scheduled or performed within 24h, Vascular imaging of carotid artery scheduled or performed within 24h, Cardiac echo scheduled or performed within 24h or recently performed, Neuro assessment at least 6x/24h, Antiplatelet, ASA, or anticoagulant administered or contraindicated",
+    		  "Thrombolysis or endovascular intervention contraindicated AND at least one neuro deficit present (e.g., Aphasia, Ataxia, Blindness, Dysphagia, Dysarthrias, Diplopia or visual field loss, Mental status change)",
+    		  "Patients with hemodynamic instability requiring intensive monitoring or intervention"
+    		],
+    		"observation": [
+    		  "The patient has an ABCD2 score > 2 AND a resolved neurological deficit",
+    		  "Exacerbation of a previous neuro deficit confirmed by imaging without significant instability, requiring monitoring or further evaluation",
+    		  "Diagnostic work-up partially completed but requiring monitoring for progression, recurrence, or worsening symptoms"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Resolved symptoms with no ongoing neuro deficits or hemodynamic instability",
+    		  "Outpatient follow-up and management plan arranged, including diagnostic studies if needed"
+    		]
+      }
+    },
+    {
+    	  "condition": "Deep Vein Thrombosis (DVT)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "DVT confirmed by imaging AND at least one of the following: Pregnancy, Bilateral DVT, Platelets < 75K, CVA in the last 3 months",
+    		  "Requires at least one of the following interventions: LMWH, Fondaparinux, Unfractionated Heparin, Argatroban, Bivalirudin, Lepirudin, or management for Heparin-induced thrombocytopenia (HIT)",
+    		  "Creatinine clearance < 30 requiring close monitoring due to risk of anticoagulation complications",
+    		  "Active malignancy requiring urgent management or anticoagulation",
+    		  "Trauma or major surgery within the last 30 days with significant risk for embolism",
+    		  "Hemodynamic instability or worsening symptoms requiring immediate intervention"
+    		],
+    		"observation": [
+    		  "DVT confirmed by imaging but does not require immediate intensive interventions",
+    		  "At least one risk factor for DVT: History of HIT, Morbid obesity, Coagulopathy, Hospital acquired, Immobilization ≥ 4 days, High risk for fall or trauma, Recent surgery (within 6 weeks), Liver disease with prolonged PTT/INR, Known clotting abnormality or deficiency (antithrombin III, protein C, or protein S), Previous DVT (≥ 2 episodes, one in the last 3 months or recurrent despite adequate anticoagulation treatment)",
+    		  "Requires monitoring for progression of symptoms or stability of anticoagulation therapy"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "DVT resolved or stabilized with outpatient management (e.g., oral anticoagulation)",
+    		  "Follow-up with anticoagulation therapy and risk reduction measures arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Dehydration",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient has ANY TWO (2) of the following: Sodium > 150, Inadequate oral intake, Sustained HR > 100/min, Urine specific gravity > 1.030, Vomiting that is severe or persistent (unresponsive to outpatient treatment), BUN > 45 OR Creatinine > 3.0 AND below baseline, Mental status change (excludes coma, stupor, or obtundation), Persistent and unresponsive vomiting after > 2 doses of antiemetics, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "The patient requires at least one of the following interventions: Antiemetic (> 2X/24h or a daily serotonin antagonist), IVF rate > 74 cc/hr (if weight < 60 kg, age > 64, history of CRI or CHF) OR rate > 99 cc/hr if weight > 60 kg",
+    		  "Hemodynamic instability requiring continuous monitoring or intervention"
+    		],
+    		"observation": [
+    		  "The patient has ANY TWO (2) of the following: Sodium > 150, Inadequate oral intake, Sustained HR > 100/min, Urine specific gravity > 1.030, Vomiting that is severe or persistent, BUN > 45 OR Creatinine > 3.0 AND below baseline, Mental status change (excludes coma, stupor, or obtundation), Persistent and unresponsive vomiting after > 2 doses of antiemetics, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "The patient requires monitoring for stabilization while receiving IV fluids and antiemetics",
+    		  "Short-term evaluation and symptom management for patients not meeting inpatient criteria"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved with oral hydration and outpatient antiemetics",
+    		  "Stable clinical condition with no progression of dehydration and outpatient follow-up arranged for lab monitoring"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hyperglycemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Glucose > 500 without ketonuria/ketonemia AND at least one of the following: Sodium > 150, Sustained HR > 100/min, BUN > 45 or chronic renal disease and > 1.5x baseline, Mental status change (excludes coma, stupor, or obtundation), Creatinine > 3.0 or chronic renal disease and > 1.5x baseline, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "Requires all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV ≥ 2x/24h or SC or IM injection ≥ 4x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"observation": [
+    		  "Glucose between 401-500 without ketonuria/ketonemia AND new onset of diabetes mellitus requiring stabilization",
+    		  "Glucose > 500 without ketonuria/ketonemia AND requiring all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV > 1x/24h or SC or IM injection > 3x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+    		  "Requires monitoring and initial stabilization for hyperglycemia without meeting inpatient criteria"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Glucose stabilized below 401 with no ongoing symptoms or complications",
+    		  "Follow-up outpatient management and diabetes education arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hyperglycemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Glucose > 500 without ketonuria/ketonemia AND at least one of the following: Sodium > 150, Sustained HR > 100/min, BUN > 45 or chronic renal disease and > 1.5x baseline, Mental status change (excludes coma, stupor, or obtundation), Creatinine > 3.0 or chronic renal disease and > 1.5x baseline, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "Requires all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV ≥ 2x/24h or SC or IM injection ≥ 4x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"observation": [
+    		  "Glucose between 401-500 without ketonuria/ketonemia AND new onset of diabetes mellitus requiring stabilization",
+    		  "Glucose > 500 without ketonuria/ketonemia AND requiring all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV > 1x/24h or SC or IM injection > 3x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+    		  "Requires monitoring and initial stabilization for hyperglycemia without meeting inpatient criteria"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Glucose stabilized below 401 with no ongoing symptoms or complications",
+    		  "Follow-up outpatient management and diabetes education arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Diabetic Ketoacidosis (DKA)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "ALL of the following are true: Glucose > 250, Ketonemia or ketonuria, Serum HCO3 or CO2 < 18, Arterial or venous pH < 7.35",
+    		  "The patient requires ALL of the following interventions: Electrolyte monitoring at least 3x/24h, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV ≥ 2x/24h or SC or IM injection ≥ 4x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"observation": [
+    		  "ALL of the following are true: Glucose > 250, Ketonemia or ketonuria, Serum HCO3 or CO2 < 18, Arterial or venous pH < 7.35",
+    		  "The patient requires monitoring and initial stabilization with interventions such as: Electrolyte monitoring at least 3x/24h, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV > 1x/24h or SC or IM injection > 3x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Resolved acidosis and glucose levels stabilized with oral hydration and outpatient management",
+    		  "Outpatient follow-up and diabetes education arranged"
+    		]
+    	} 
+    },
+    {
+    	  "condition": "Diverticulitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is present: Peritoneal signs, Persistent vomiting, Inadequate oral intake, LLQ abdominal pain or tenderness, Phlegmon (symptomatic inflammatory mass without abscess), Immunocompromised patient (steroid use, chemotherapy, uremia, AIDS, transplant patient) with acute symptoms",
+    		  "The patient requires ALL of the following interventions: Urine culture, Anti-infective therapy, CT scheduled or performed within 24h, IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"observation": [
+    		  "At least one of the following is present: Peritoneal signs, Persistent vomiting, Inadequate oral intake, LLQ abdominal pain or tenderness, Phlegmon (symptomatic inflammatory mass without abscess), Immunocompromised patient (steroid use, chemotherapy, uremia, AIDS, transplant patient) with acute symptoms",
+    		  "The patient requires monitoring and initial stabilization with interventions such as: Anti-infective therapy, CT scheduled or performed within 24h, IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms are managed with oral hydration, anti-infective therapy, and outpatient follow-up",
+    		  "Stable clinical condition with no progression of symptoms and a clear outpatient plan"
+    		]
+      }
+    },
+    {
+    	  "condition": "Dyspnea",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient requires supplemental oxygen AND at least one of the following is true: pO2 < 56, O2 saturation ≤ 89% and below baseline"
+    		],
+    		"observation": [
+    		  "The patient requires supplemental oxygen but does not meet inpatient criteria",
+    		  "Requires close monitoring for stability of oxygenation and progression of symptoms"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and supplemental oxygen if needed",
+    		  "Stable clinical condition with no evidence of hypoxia or respiratory compromise"
+    		]
+      }
+    },
+    {
+    	  "condition": "Epilepsy",
+    	  "criteria": {
+    		"inpatient": [
+    		  "New onset seizure with > 1 seizure within 24h AND all of the following interventions required: Seizure precautions, Anticonvulsant (includes PO), Neuro assessment at least q 4h, EEG (standard or continuous) scheduled or performed within 24h",
+    		  "Known seizure disorder with BOTH of the following true: Anticonvulsant (therapeutic drug level or not measurable in compliant patient) AND > 1 seizure within 24h with a change from baseline, progression in seizure type, or increase in seizure duration",
+    		  "Pregnancy with seizure AND requires all of the following interventions: Seizure precautions, Neuro assessment at least q 4h"
+    		],
+    		"observation": [
+    		  "New onset seizure with < 1 seizure within 24h and requiring monitoring or diagnostic evaluation such as EEG or anticonvulsant initiation",
+    		  "Known seizure disorder with no significant change from baseline but requiring monitoring for medication adjustment or diagnostic testing",
+    		  "Pregnancy with seizure managed with stable symptoms requiring monitoring but not meeting inpatient criteria"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and anticonvulsant therapy",
+    		  "Stable clinical condition with no progression of seizures or change in baseline, with follow-up care arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hematuria",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following scenarios is present: Syncope, Hct ≤ 25% OR Hb ≤ 8.3, Sustained HR > 100/min, Platelets < 60K OR > 1 million, Disorientation, agitation, increased irritability OR increased lethargy, Non-reversible anticoagulant OR PT ≥ 1.5x normal OR INR ≥ 2 OR PTT ≥ 1.5x normal, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "The patient requires ALL of the following interventions: Blood product transfusion, Hct/Hb monitoring at least 2x/24h, Cystoscopy, CT urography, or renal ultrasound scheduled or performed within the last 24h"
+    		],
+    		"observation": [
+    		  "The patient has at least one of the following scenarios without meeting inpatient criteria: Syncope, Hct ≤ 25% OR Hb ≤ 8.3, Sustained HR > 100/min, Platelets < 60K OR > 1 million, Disorientation, agitation, increased irritability OR increased lethargy, Non-reversible anticoagulant OR PT ≥ 1.5x normal OR INR ≥ 2 OR PTT ≥ 1.5x normal, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "The patient requires monitoring and initial stabilization with interventions such as diagnostic imaging, fluid management, or lab monitoring without requiring inpatient-level care"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with diagnostic evaluations completed and no further acute management required"
+    		]
+      }  
+    },
+    {
+    	  "condition": "Hemoptysis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following scenarios is present: Syncope, Hct ≤ 25% OR Hb ≤ 8.3, Sustained HR > 100/min, Platelets < 60K OR > 1 million, Disorientation, agitation, increased irritability OR increased lethargy, Non-reversible anticoagulant OR PT ≥ 1.5x normal OR INR ≥ 2 OR PTT ≥ 1.5x normal, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+    		  "The patient requires ALL of the following interventions: IVF, Hct/Hb monitoring at least 2x/24h, Bronchoscopy (scheduled or performed within the last 24h)",
+    		  "Hemoptysis volume > 200 mL/24h AND both of the following are present: Platelets ≥ 60K, Hct ≤ 25% OR Hb ≤ 8.3"
+    		],
+    		"observation": [
+    		  "The patient requires monitoring and stabilization with interventions such as IVF, Hct/Hb monitoring, or bronchoscopy but does not meet inpatient criteria",
+    		  "Hemoptysis with a volume less than 200 mL/24h and no signs of hemodynamic instability or severe anemia"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with diagnostic evaluations completed and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hepatic Encephalopathy",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient is stage II hepatic encephalopathy AND at least one of the following is present: Lethargy, Asterixis, Drowsiness, Intermittent disorientation, ≤ 75% of ideal body weight or weight lost ≥ 15% in the last 30 days",
+    		  "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+    		  "Stage II hepatic encephalopathy with at least one change in consciousness (e.g., lethargic, altered intellect/behavior, disoriented, inappropriate behavior) AND at least one neurologic finding (e.g., slurred speech, obvious asterixis)"
+    		],
+    		"observation": [
+    		  "The patient is stage II hepatic encephalopathy with mild symptoms requiring monitoring and stabilization",
+    		  "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+    		  "Stable neurologic findings with no progression but requires short-term monitoring for symptom management"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan, including oral therapy",
+    		  "Stable clinical condition with no significant changes in consciousness or neurologic findings"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypercalcemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hypercalcemia with Ca > 11, Ca > 12 AND at least one of the following: Abdominal pain, Nephrolithiasis, Nausea/Vomiting, Mental status change (excludes coma, stupor, or obtundation)",
+    		  "The patient requires at least one of the following interventions: Bisphosphonate, Corticosteroid, IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, history of CRI or CHF; IVF rate ≥ 100 cc/hr if weight > 60 kg), Saline diuresis (both a diuretic and IVF as above)"
+    		],
+    		"observation": [
+    		  "The patient has Ca > 12 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires interventions such as Bisphosphonate, Corticosteroid, or IVF but does not meet criteria for inpatient care"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with no progression of hypercalcemia and outpatient follow-up arranged"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hyperkalemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true (no ECG changes present): K > 6, Hospital-acquired hyperkalemia with K > 5.5",
+    		  "The patient requires at least one of the following interventions: Diuretic, Calcium chloride, Calcium gluconate, Sodium polystyrene (Kayexalate) PO or PR, IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, history of CRI or CHF; IVF rate ≥ 100 cc/hr if weight > 60 kg)"
+    		],
+    		"observation": [
+    		  "The patient has K > 6 or hospital-acquired hyperkalemia (K > 5.5) requiring monitoring and treatment without meeting inpatient criteria",
+    		  "Requires interventions such as diuretics, calcium-based therapy, or Kayexalate but does not meet inpatient thresholds"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with potassium levels normalized and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypermagnesemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hypermagnesemia with Mg > 2.5, Mg > 3.0 AND at least one of the following: Nausea/Vomiting, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+    		  "The patient requires at least one of the following interventions: Diuretic at least twice/24h, IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, history of CRI or CHF; IVF rate ≥ 100 cc/hr if weight > 60 kg)"
+    		],
+    		"observation": [
+    		  "The patient has Mg > 3.0 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires interventions such as diuretics or IVF but does not meet thresholds for inpatient admission"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with magnesium levels normalized and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypernatremia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hypernatremia with Na > 150, Na > 150 AND at least one of the following: Irritability, Restlessness, Hyperreflexia, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+    		  "The patient requires IVF at a rate of ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) or ≥ 100 cc/hr (if weight > 60 kg)"
+    		],
+    		"observation": [
+    		  "The patient has Na > 150 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires IVF therapy to stabilize sodium levels but does not meet inpatient thresholds"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized sodium levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypocalcemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hypocalcemia with Ca < 7.5, Ca < 7.5 AND at least one of the following: Tetany, Paresthesia, Muscle weakness, Carpopedal spasm, Flaccid paralysis, Perioral numbness",
+    		  "The patient requires calcium supplementation (includes PO or IV) and intensive monitoring for symptoms and serum calcium correction"
+    		],
+    		"observation": [
+    		  "The patient has Ca < 7.5 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires calcium supplementation and symptom management but does not meet inpatient thresholds"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized calcium levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypoglycemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The blood sugar (BS) is < 50 and failed outpatient treatment AND all of the following are true: Induced by Sulfonylurea, Unresponsive to glucose 50% bolus, Will need BS monitoring at least 4x/24h, Will need Neuro assessment at least 4x/24h, Will need Glucose ≥ 5% continuous infusion, Long-acting insulin (e.g., half-life more than 6 hours), Mental status change (excludes coma, stupor, or obtundation), Neurologic symptoms (e.g., seizure, ataxia, dysphasia, focal motor deficit)"
+    		],
+    		"observation": [
+    		  "The BS is < 50 and failed outpatient treatment AND all of the following are true: Without mental status change, Requiring ≥ 2 boluses of 50% glucose, Will need BS monitoring at least 4x/24h",
+    		  "Hypoglycemia has resolved AND both of the following are true: Will need BS monitoring at least 4x/24h, Caregiver unavailable and ≤ 12h since hypoglycemia corrected"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Hypoglycemia resolved with symptoms managed and caregiver support available",
+    		  "Stable clinical condition with no further monitoring or acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypokalemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true (No ECG changes): K < 2.5, Hospital-acquired hypokalemia with K < 3.0, K < 3.0 AND at least one of the following: Symptomatic, Risk factor for arrhythmia (CHF, Digitalis use, History of MI, Ischemic heart disease)",
+    		  "The patient requires potassium supplementation in at least one of the following doses (includes PO): KCl < 10 mEq/h, KCl < 120 mEq/24h, KCl 20-40 mEq 3 times/24h"
+    		],
+    		"observation": [
+    		  "The patient has K < 3.0 with mild symptoms or risk factors for arrhythmia requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires potassium supplementation but does not meet thresholds for inpatient admission"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized potassium levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypomagnesemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Mg < 1.2, Hospital-acquired hypomagnesemia with Mg < 1.5, Mg < 1.5 AND at least one of the following: Symptomatic, Risk factor for arrhythmia (CHF, Digitalis use, History of MI, Ischemic heart disease)",
+    		  "The patient requires magnesium supplementation in any form (IV or PO) with ongoing monitoring for correction of serum levels and associated symptoms"
+    		],
+    		"observation": [
+    		  "The patient has Mg < 1.5 with mild symptoms or risk factors for arrhythmia requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires magnesium supplementation but does not meet thresholds for inpatient admission"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized magnesium levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hyponatremia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hyponatremia with Na < 130, Na < 130 AND at least one of the following: Headache, Restlessness, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+    		  "The patient requires any one of the following interventions: Fluid restriction, Diuretic AND oral sodium supplement, Medications (at least one of the following: Tolvaptan, Demeclocycline, Diuretic at least twice/24h)"
+    		],
+    		"observation": [
+    		  "The patient has Na < 130 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires interventions such as fluid restriction or oral sodium supplementation but does not meet thresholds for inpatient admission"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized sodium levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypophosphatemia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Hospital-acquired hypophosphatemia with Phos ≤ 2, Phos < 1.5 AND muscle weakness",
+    		  "The patient requires phosphate supplementation (includes PO or IV) and intensive monitoring for serum phosphorus correction and associated symptoms"
+    		],
+    		"observation": [
+    		  "The patient has Phos ≤ 2 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+    		  "Requires phosphate supplementation but does not meet thresholds for inpatient admission"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with normalized phosphorus levels and no further acute management required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hypothermia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following is true: Patient temperature < 35 degrees Celsius, Any acute evidence of tissue damage from cold exposure (e.g., frostbite), Passive rewarming has been unsuccessful"
+    		],
+    		"observation": [
+    		  "Mild hypothermia requiring passive rewarming with monitoring for stabilization without meeting inpatient criteria",
+    		  "No tissue damage but requiring observation to ensure adequate response to rewarming"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with successful rewarming and no further interventions required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Ileus",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Both of the following are true: The patient is NPO or requires NGT to LIS, IVF is required at a rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or Hx of CHF) or ≥ 100 cc/hr if weight > 60 kg"
+    		],
+    		"observation": [
+    		  "The patient has symptoms of ileus requiring NPO status and monitoring but does not meet the intensity of services for inpatient admission",
+    		  "IVF required but at lower rates or shorter durations than inpatient criteria"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with resolution of ileus and ability to tolerate oral intake"
+    		]
+      }
+    },
+    {
+    	  "condition": "Infection - General",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Failed outpatient treatment: Any one of the following is present: T > 102°F PO > 2 weeks (FUO), Noncompliance with outpatient anti-infective, Continued deterioration despite > 23 hours of treatment, Unable to tolerate or absorb oral anti-infective, Unresponsive to > 4 doses or > 2 days of outpatient anti-infective",
+    		  "Immunocompromised: Any one of the following is present: ANC < 500, Bands > 10%, WBC > 12,000, T > 99.4°F PO, Cultures pending ≤ 2 days",
+    		  "Positive culture or smear: Any one of the following is present: Positive bone marrow, Positive blood culture, Positive effluent smear, Positive surgical biopsy (excludes skin)",
+    		  "Pregnancy: Either one of the following is present: WBC > 18,000, WBC > 15,000 and bands > 7%",
+    		  "Systemic or organ infection: Any one of the following is present: Age ≥ 75, ANC < 500, T > 99.4°F PO, Coexisting disease, Anorexia or PO fluid intolerance, O2 sat < 91% or pO2 < 60 and below baseline, Immunocompromised, asplenic, or chronic vent patient, Mental status change (excludes coma, stupor, or obtundation)",
+    		  "Sepsis: Suspicion of infection with at least two of the following: Sustained HR > 90, Tachypnea > 20 bpm, Platelets < 100,000, T > 99.4°F PO or < 97.0°F PO, Acutely altered mental status, WBC > 12,000, < 4,000, or > 10% bands"
+    		],
+    		"observation": [
+    		  "Failed outpatient treatment: Mild deterioration or unresponsiveness to outpatient anti-infective but does not meet inpatient criteria",
+    		  "Immunocompromised: Requires close monitoring for potential progression but without severe symptoms",
+    		  "Positive culture or smear: Requires observation for further diagnostic clarification or monitoring",
+    		  "Pregnancy: Mild symptoms requiring close observation but does not meet inpatient thresholds",
+    		  "Systemic or organ infection: Requires monitoring for stabilization without meeting inpatient thresholds",
+    		  "Sepsis: Requires oxygen ≥ 40% or a volume expander ≤ 2 days"
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+    		  "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+    		  "Stable clinical condition with no further interventions required"
+    		]
+      }
+    },
+    {
+    	  "condition": "Periorbital Infection",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient requires an anti-infective and meets criteria for severity of illness and intensity of services consistent with inpatient admission."
+    		],
+    		"observation": [
+    		  "The patient requires an anti-infective but does not meet inpatient criteria and has a severity of illness consistent with observation-level care."
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+    		  "Symptoms resolved or managed with oral medications and outpatient follow-up."
+    		]
+      }
+    },
+    {
+    	  "condition": "Peritonsillar Infection",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient requires both an anti-infective and a surgical evaluation, scheduled or performed within 24 hours, and meets the severity of illness and intensity of services consistent with inpatient admission."
+    		],
+    		"observation": [
+    		  "The patient requires an anti-infective and a surgical evaluation but does not meet criteria for inpatient admission, aligning with observation-level care."
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+    		  "Symptoms resolved or managed with oral medications and outpatient follow-up."
+    		]
+      }
+    },
+    {
+    	  "condition": "Infectious Mononucleosis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient has both impaired swallowing and inadequate oral intake and meets the severity of illness and intensity of services consistent with inpatient admission.",
+    		  "Failed outpatient treatment: Any one of the following is present: T > 102°F PO > 2 weeks (FUO), Noncompliance with outpatient anti-infective, Continued deterioration despite > 23 hours of treatment, Unable to tolerate or absorb oral anti-infective, Unresponsive to > 4 doses or > 2 days of outpatient anti-infective."
+    		],
+    		"observation": [
+    		  "The patient has impaired swallowing or inadequate oral intake but does not meet inpatient criteria and has a severity of illness consistent with observation-level care."
+    		],
+    		"consider discharge": [
+    		  "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+    		  "Symptoms managed with outpatient follow-up and supportive treatment."
+    		]
+      }
+    },
+    {
+    	  "condition": "Jaundice",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient has at least one of the following: Abdominal pain, Albumin level < 2, Protracted vomiting, BUN > 45 or Creat > 3, Increasing hepatomegaly, PT ≥ 1.5x normal or INR ≥ 2, T > 99.4° F (excludes viral hepatitis), Mental status change (excludes coma, stupor or obtundation) and requires at least one of the following interventions: FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, Antiemetic (≥ 3x/24h or serotonin antagonist daily), IVF with appropriate rate."
+    		],
+    		"observation": [
+    		  "The patient requires at least one of the following interventions but does not meet inpatient criteria: FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, Antiemetic (≥ 3x/24h or serotonin antagonist daily), IVF with appropriate rate."
+    		],
+    		"consider discharge": [
+    		  "The patient does not have any of the following: Abdominal pain, Albumin level < 2, Protracted vomiting, BUN > 45 or Creat > 3, Increasing hepatomegaly, PT ≥ 1.5x normal or INR ≥ 2, T > 99.4° F (excludes viral hepatitis), Mental status change (excludes coma, stupor or obtundation), and does not require interventions such as FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, or Antiemetic therapy. Symptoms are manageable with outpatient follow-up."
+    		]
+      }
+    },
+    {
+    	  "condition": "Acute Kidney Injury",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The patient has at least one of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr and failed Observation, and requires at least one of the following interventions: Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, Medication adjustment/discontinuation ≤ 3d (either diuretic or nephrotoxic agent, includes PO)."
+    		],
+    		"observation": [
+    		  "The patient has at least one of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr and requires intervention but does not meet criteria for inpatient admission. Interventions include Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, or Medication adjustment/discontinuation ≤ 3d (either diuretic or nephrotoxic agent, includes PO)."
+    		],
+    		"consider discharge": [
+    		  "The patient does not have any of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr, and does not require interventions such as Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, or Medication adjustment/discontinuation. The condition is manageable with outpatient follow-up and no immediate intervention is required."
+    		]
+      }
+    },
+    {
+    	  "condition": "Leukemia/Lymphoma",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The condition is confirmed and requires induction chemotherapy or bone marrow biopsy (scheduled or performed within 24h).",
+    		  "At least two of the following are present: Mediastinal mass, Platelets < 100,000, Hepatosplenomegaly or lymphadenopathy, WBC > 50,000, ANC < 1,000, or blasts/myelocytes/lymphocytes > 100,000."
+    		],
+    		"observation": [
+    		  "The condition is confirmed but does not require induction chemotherapy or urgent bone marrow biopsy within 24h.",
+    		  "Monitoring is required for potential complications or progression without meeting criteria for inpatient admission."
+    		],
+    		"consider discharge": [
+    		  "The condition is not confirmed, and the patient does not require induction chemotherapy or urgent bone marrow biopsy.",
+    		  "There are no significant findings such as mediastinal mass, platelet count < 100,000, hepatosplenomegaly, or critically abnormal WBC/ANC values requiring close monitoring."
+    		]
+      }
+    },
+    {
+    	  "condition": "Nephrotic Syndrome",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Severe generalized edema, proteinuria, or urine output < 0.5 mL/kg/h AND treatment with at least one of the following: ACEI/ARB, Albumin 25%, Corticosteroid, cytotoxic agent, or diuretic ≥ 2x/24h."
+    		],
+    		"observation": [
+    		  "The patient exhibits symptoms requiring monitoring, such as proteinuria or mild to moderate edema, but does not meet the severity or intensity of services for inpatient care.",
+    		  "Treatment is required but does not include high-intensity interventions such as corticosteroids or diuretics ≥ 2x/24h."
+    		],
+    		"consider discharge": [
+    		  "Symptoms are controlled with outpatient management, including oral diuretics or ACEI/ARB.",
+    		  "No significant findings of generalized edema, reduced urine output, or severe proteinuria requiring intensive monitoring or treatment."
+    		]
+      }
+    },
+    {
+    	  "condition": "Osteomyelitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Both of the following are present: Anti-infective therapy and either IVF administration or advancing diet as tolerated."
+    		],
+    		"observation": [
+    		  "The patient requires anti-infective therapy but does not meet the severity or intensity of services for inpatient care.",
+    		  "Monitoring and treatment adjustments are needed but can be managed without admission."
+    		],
+    		"consider discharge": [
+    		  "Symptoms are controlled with outpatient management, including oral anti-infectives.",
+    		  "The patient does not require IVF or advancing diet as tolerated and is clinically stable for outpatient follow-up."
+    		]
+      }
+    },
+    {
+    	  "condition": "Acute Pancreatitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least two (2) of the following findings are present: Abdominal pain consistent with pancreatitis, Amylase or lipase ≥ 3x normal, Confirmed by imaging.",
+    		  "The patient requires all of the following: Pain assessment (controlled, denied by patient, or uncontrolled requiring a change in medication), Renal function, Ca and electrolyte monitoring, NPO status, and IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, Hx of CRI or Hx of CHF, OR IVF rate ≥ 100 cc/hr if weight > 60 kg)."
+    		],
+    		"observation": [
+    		  "At least two (2) of the following findings are present: Abdominal pain consistent with pancreatitis, Amylase or lipase ≥ 3x normal, Confirmed by imaging.",
+    		  "The patient does not require all inpatient-level interventions but needs monitoring and supportive care, such as IVF or pain assessment."
+    		],
+    		"consider discharge": [
+    		  "The patient does not meet the criteria for at least two (2) findings (abdominal pain, elevated enzymes, imaging confirmation).",
+    		  "Symptoms are manageable with outpatient treatment, and the patient is clinically stable for discharge."
+    		]
+      }
+    },
+    {
+    	  "condition": "Chronic Pancreatitis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Any one (1) of the following is true: Analgesic administered ≥ 3 times/24h OR continuous administration ≤ 3 days.",
+    		  "Intractable abdominal pain unresponsive to ≥ 3 doses of analgesic within the last 24h (includes PO) OR unresponsive to transdermal analgesic for ≥ 24h."
+    		],
+    		"consider discharge": [
+    		  "The patient does not have a severity of illness and/or intensity of services matching guidelines for inpatient care.",
+    		  "Symptoms are manageable with outpatient treatment and the patient is clinically stable for discharge."
+    		]
+      }
+    },
+    {
+    	  "condition": "Pelvic Inflammatory Disease (PID)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one (1) of the following is present: Pregnancy, Immunocompromised, Tubo-ovarian abscess, Severe illness (vomiting, high fever), Unable to rule out surgical emergency (e.g., appendicitis), Failed outpatient treatment (continued deterioration despite ≥ 24h treatment, non-compliance, unable to tolerate/absorb oral medication, or unresponsive to ≥ 3 days or ≥ 5 doses).",
+    		  "Requires both of the following interventions: Anti-infective and IVF rate > 75 cc/hr (if weight < 60 kg, age > 65, Hx of CRI or Hx of CHF) OR IVF rate > 100 cc/hr (if weight > 60 kg)."
+    		],
+    		"observation": [
+    		  "Does not meet inpatient criteria but requires both anti-infective treatment and IV fluid therapy at lower intensity."
+    		],
+    		"consider discharge": [
+    		  "Does not meet the severity of illness and/or intensity of services required for inpatient or observation status.",
+    		  "Symptoms are manageable with outpatient treatment and the patient is clinically stable for discharge."
+    		]
+      }
+    },
+    {
+    	  "condition": "Pleural Effusion",
+    	  "criteria": {
+    		"inpatient": [
+    		  "The effusion is > 3 cm confirmed by imaging and requires a chest tube and continuous suction."
+    		],
+    		"observation": [
+    		  "The effusion does not require chest tube and continuous suction but needs monitoring or short-term management."
+    		],
+    		"consider discharge": [
+    		  "The patient does not meet the severity of illness or intensity of services for inpatient or observation status.",
+    		  "Effusion can be managed with outpatient follow-up and no acute interventions are necessary."
+    		]
+      }
+    },
+    {
+    	  "condition": "Pneumonia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "O2 sat < 89%",
+    		  "pO2 < 56",
+    		  "pCO2 45-54",
+    		  "≥ 2 lobes involved",
+    		  "Lung abscess, empyema, or necrotizing pneumonia",
+    		  "Failed outpatient treatment (continued deterioration despite ≥ 24h treatment, non-compliance, unable to tolerate/absorb oral medications, or unresponsive to ≥ 3d or ≥ 5 doses)",
+    		  "TWO (2) clinical risk factors (new confusion, BUN > 19.67, RR ≥ 30, or age ≥ 65)",
+    		  "Pregnant and T > 99.4 ° F PO",
+    		  "Comorbid in hospitalized patient (T > 99.4 ° F PO, mental status change, O2 sat ≤ 91% or baseline, ANC > 10%, WBC > 13K, or WBC < 4K)"
+    		],
+    		"observation": [
+    		  "Requires anti-infective treatment",
+    		  "DVT prophylaxis (or ambulatory)",
+    		  "Oximetry or blood gas monitoring",
+    		  "Oxygen therapy (O2 sat ≥ 92% or baseline OR O2 sat ≤ 91% and < baseline)",
+    		  "Does not meet inpatient criteria but requires close monitoring or short-term treatment adjustments"
+    		],
+    		"consider discharge": [
+    		  "The patient does not meet the severity of illness or intensity of services for inpatient or observation status.",
+    		  "Symptoms are controlled with outpatient management.",
+    		  "No need for acute interventions or monitoring."
+    		]
+      }
+    },
+    {
+    	  "condition": "Pneumothorax",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Pneumothorax > 3 cm confirmed by imaging and requiring a chest tube and continuous suction"
+    		],
+    		"observation": [
+    		  "Pneumothorax confirmed by imaging but does not require chest tube and continuous suction or size is ≤ 3 cm",
+    		  "Requires monitoring for potential progression or need for further intervention"
+    		],
+    		"consider discharge": [
+    		  "Pneumothorax does not meet severity for inpatient or observation care",
+    		  "Patient is stable with no further intervention needed",
+    		  "Outpatient follow-up arranged with appropriate monitoring"
+    		]
+      }
+    },
+    {
+    	  "condition": "Rhabdomyolysis",
+    	  "criteria": {
+    		"inpatient": [
+    		  "CPK > 1,000 with clinical or laboratory evidence of renal dysfunction (e.g., elevated creatinine, electrolyte imbalance)",
+    		  "Myoglobinuria or hemoglobinuria with systemic symptoms (e.g., muscle pain, weakness, dark urine) requiring IV fluid resuscitation",
+    		  "Electrolyte disturbances such as hyperkalemia, hypocalcemia, or acidosis requiring continuous monitoring and correction",
+    		  "IV fluid rate ≥ 100 cc/hr for patients > 60 kg or 75 cc/hr for patients < 60 kg, age ≥ 65, or with comorbid conditions (CRI, CHF)"
+    		],
+    		"observation": [
+    		  "CPK > 1,000 without systemic symptoms or complications but requiring monitoring for potential renal dysfunction",
+    		  "Myoglobinuria or hemoglobinuria without renal impairment requiring IV fluid resuscitation and monitoring",
+    		  "Stable after initial treatment but requiring close observation for signs of worsening electrolyte or renal function"
+    		],
+    		"consider_discharge": [
+    		  "CPK levels decreasing with no evidence of renal dysfunction or systemic symptoms",
+    		  "Symptoms resolved, and no electrolyte abnormalities requiring correction",
+    		  "Outpatient follow-up arranged for monitoring and supportive care"
+    		]
+      }
+    },
+    {
+    	  "condition": "Spontaneous Bacterial Peritonitis (SBP)",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Albumin administration required with ascitic fluid diagnostic findings",
+    		  "Fever (T > 99.4 °F PO) with abdominal pain and anti-infective treatment required",
+    		  "Diagnostic paracentesis performed with BOTH of the following:",
+    		  "- Ascitic fluid culture pending",
+    		  "- Polymorphonuclear leukocyte count > 250"
+    		],
+    		"observation": [
+    		  "Mild symptoms with ascitic fluid analysis pending but no systemic signs of infection",
+    		  "Anti-infective therapy initiated but patient clinically stable",
+    		  "Diagnostic paracentesis shows borderline findings without polymorphonuclear leukocytes > 250 or systemic signs"
+    		],
+    		"consider_discharge": [
+    		  "Symptoms resolved, no systemic signs of infection, and follow-up care arranged",
+    		  "Ascitic fluid analysis normal and patient stable without anti-infective needs",
+    		  "Outpatient monitoring secured for follow-up"
+    		]
+      } 
+    },
+    {
+    	  "condition": "Hepatic Encephalopathy with SBP",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Stage III hepatic encephalopathy (gross disorientation and hyperactive reflexes) with medication required (lactulose, rifaximin, or neomycin)",
+    		  "Combined SBP meeting criteria for fever, abdominal pain, and ascitic fluid analysis with treatment needs"
+    		],
+    		"observation": [
+    		  "Stage II hepatic encephalopathy with medication initiated but patient stable for monitoring",
+    		  "SBP with mild ascitic fluid abnormalities and no systemic signs but requiring close observation"
+    		],
+    		"consider_discharge": [
+    		  "Resolved encephalopathy and SBP symptoms with normal mental status and lab findings",
+    		  "Stable clinical course with follow-up care arranged for ascites management and encephalopathy"
+    		]
+      }
+    },
+    {
+    	  "condition": "Hyponatremia",
+    	  "criteria": {
+    		"inpatient": [
+    		  "Hospital-acquired hyponatremia with Na < 130 requiring acute management",
+    		  "Na < 130 AND AT LEAST ONE (1) of the following:",
+    		  "- Headache",
+    		  "- Restlessness",
+    		  "- Muscle weakness",
+    		  "- Mental status change (excludes coma, stupor, or obtundation)",
+    		  "Requires ANY ONE (1) of the following interventions:",
+    		  "- Fluid restriction",
+    		  "- Diuretic AND oral sodium supplement",
+    		  "- Medications (includes PO): Tolvaptan, Demeclocycline",
+    		  "- Diuretic administration AT LEAST TWICE/24h"
+    		],
+    		"observation": [
+    		  "Na < 130 with mild symptoms (e.g., headache or muscle weakness) requiring close monitoring and oral therapy",
+    		  "Stable after initial correction but requiring further evaluation or therapy adjustments",
+    		  "Hospital-acquired Na < 130 but responding to outpatient-level management strategies"
+    		],
+    		"consider_discharge": [
+    		  "Resolved symptoms with Na ≥ 130 and no ongoing need for fluid or sodium management",
+    		  "Stable condition with normal mental status and no significant symptoms",
+    		  "Outpatient follow-up secured with a clear treatment plan"
+    		]
+      } 
+    },
+    {
+    	  "condition": "Syncope",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following high-risk features:",
+    		  "- Family history of sudden cardiac death",
+    		  "- Syncope during exertion or while supine",
+    		  "- Symptoms preceding syncope (e.g., palpitations, SOB)",
+    		  "- Cardiac disease (e.g., known diastolic dysfunction, EF < 35%, previous MI)",
+    		  "- Abnormal ECG findings (WPW, HR < 60, QRS > 120, arrhythmogenic RVCM, RBB with ST elevation in V1-V3, QT > 440 men/QT > 460 women, QT < 340)",
+    		  "AND requiring continuous cardiac monitoring with all of the following:",
+    		  "- Carotid sinus massage (appropriate based on age and contraindications)",
+    		  "- ECG",
+    		  "- Echocardiogram (scheduled or performed within 24 hours or recently performed)",
+    		  "- Orthostatic BP measurements"
+    		],
+    		"observation": [
+    		  "Requiring continuous cardiac monitoring AND IVF at appropriate rates:",
+    		  "- ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, Hx of CRI or CHF",
+    		  "- ≥ 100 cc/hr if weight > 60 kg",
+    		  "Stable condition but requiring further evaluation (e.g., diagnostic studies, therapy adjustments)"
+    		],
+    		"consider_discharge": [
+    		  "Resolved symptoms with no high-risk features and a normal diagnostic workup",
+    		  "ECG is normal, unchanged, or non-diagnostic",
+    		  "Postural hypotension identified and managed appropriately",
+    		  "Outpatient follow-up arranged for further evaluation"
+    		]
+      }
+    },
+    {
+    	  "condition": "Wound Infection",
+    	  "criteria": {
+    		"inpatient": [
+    		  "At least one of the following high-risk features:",
+    		  "- Presence of purulent discharge from the wound site",
+    		  "- Identification of a specific organism from the wound site",
+    		  "- Evidence of systemic infection (e.g., fever, tachycardia, AMS, hypotension)",
+    		  "- Evidence of deep tissue infection on imaging (e.g., CT scan)",
+    		  "- Comorbid immunosuppressed state (e.g., chemotherapy, neutropenia)",
+    		  "AND requiring all of the following:",
+    		  "- IV antibiotics",
+    		  "- Incision and drainage (I&D) of the wound site"
+    		],
+    		"observation": [
+    		  "Mild to moderate wound infection requiring close monitoring and IV antibiotics but no immediate I&D",
+    		  "Stable after initial I&D or other intervention and requires further observation or adjustment of therapy",
+    		  "No systemic signs but requiring additional diagnostic studies or therapy adjustment"
+    		],
+    		"consider_discharge": [
+    		  "Resolved infection with no systemic or high-risk features",
+    		  "Stable condition following outpatient wound care or oral antibiotics",
+    		  "Outpatient follow-up arranged for definitive management"
+    		]
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

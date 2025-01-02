@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Audit Tool with ICD-10 Search</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --hover-blue: #0d47a1;
+            --light-blue: #e6f7ff;
+            --soft-gray: #f7f9fc;
+            --text-dark: #333;
+            --text-light: #fff;
+            --border-color: #ccc;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--soft-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2, h3 {
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--hover-blue);
+        }
+
+        #icd10SearchContainer {
+            margin-top: 20px;
+        }
+
+        .icd10-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .icd10-item {
+            flex: 1 1 calc(33.33% - 10px);
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .icd10-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            background-color: var(--soft-gray);
+            border-radius: 6px;
+        }
+
+        #selectedICD10s {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admission Audit Tool</h2>
+
+        <h3>Admission Note</h3>
+        <textarea id="admissionNote" placeholder="Enter the patient's admission note here"></textarea>
+        <button onclick="generateEnhancedDocumentation()">Generate Enhanced Documentation</button>
+
+        <h3>Generated Summary</h3>
+        <div id="result" class="result">
+            <p>Your generated summary will appear here.</p>
+        </div>
+
+        <h3>ICD-10 Search</h3>
+        <input 
+            type="text" 
+            id="icd10Search" 
+            placeholder="Search for ICD-10 codes or descriptions" 
+            oninput="searchICD10()">
+        <div id="icd10Results" class="icd10-grid"></div>
+
+        <h3>Selected ICD-10 Codes</h3>
+        <div id="selectedICD10s"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+let icd10Data = []; // Store loaded ICD-10 data
+let selectedICD10s = []; // Track selected ICD-10 codes
+
+// Load ICD-10 data dynamically
+async function loadICD10Data() {
+    try {
+        const response = await fetch("/icd10-data");
+        if (!response.ok) throw new Error("Failed to load ICD-10 data");
+        icd10Data = await response.json();
+        console.log("ICD-10 Data Loaded:", icd10Data);
+    } catch (error) {
+        console.error("Error loading ICD-10 data:", error);
+    }
+}
+
+// Search ICD-10 data
+function searchICD10() {
+    const query = document.getElementById("icd10Search").value.trim().toLowerCase();
+    const resultsContainer = document.getElementById("icd10Results");
+    resultsContainer.innerHTML = ""; // Clear previous results
+
+    if (!query) return;
+
+    const matches = icd10Data.flatMap(drg => 
+        drg.icd10_codes.filter(icd => 
+            icd.code.toLowerCase().includes(query) || 
+            (icd.description && icd.description.toLowerCase().includes(query))
+        ).map(icd => ({ ...icd, drg: drg.drg_code }))
+    );
+
+    if (matches.length === 0) {
+        resultsContainer.innerHTML = `<p>No results found for "${query}"</p>`;
+    } else {
+        matches.forEach(match => {
+            const div = document.createElement("div");
+            div.className = "icd10-item";
+            div.innerHTML = `
+                <input type="checkbox" id="${match.code}" onchange="selectICD10('${match.code}')">
+                <label for="${match.code}">
+                    <strong>${match.code}</strong>: ${match.description} (DRG: ${match.drg})
+                </label>`;
+            resultsContainer.appendChild(div);
+        });
+    }
+}
+
+// Select or deselect an ICD-10 code
+function selectICD10(code) {
+    const checkbox = document.getElementById(code);
+    if (checkbox.checked) {
+        const icd = icd10Data.flatMap(drg => drg.icd10_codes).find(icd => icd.code === code);
+        if (icd) selectedICD10s.push({ ...icd });
+    } else {
+        selectedICD10s = selectedICD10s.filter(icd => icd.code !== code);
+    }
+    updateSelectedICD10s();
+}
+
+// Update selected ICD-10 codes in the UI
+function updateSelectedICD10s() {
+    const container = document.getElementById("selectedICD10s");
+    container.innerHTML = "";
+
+    if (selectedICD10s.length === 0) {
+        container.innerHTML = "<p>No ICD-10 codes selected.</p>";
+    } else {
+        selectedICD10s.forEach(icd => {
+            const div = document.createElement("div");
+            div.textContent = `${icd.code}: ${icd.description} (DRG: ${icd.drg || "N/A"})`;
+            container.appendChild(div);
+        });
+    }
+}
+
+// Generate the enhanced documentation
+async function generateEnhancedDocumentation() {
+    const note = document.getElementById("admissionNote").value.trim();
+    const resultContainer = document.getElementById("result");
+
+    if (!note) {
+        resultContainer.innerHTML = "<p>Please enter an admission note.</p>";
+        return;
+    }
+
+    try {
+        const payload = { note, icd10s: selectedICD10s };
+        const response = await fetch("/generate-summary", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) throw new Error("Failed to generate summary");
+
+        const { result } = await response.json();
+        resultContainer.innerHTML = result ? `<p>${result}</p>` : "<p>Summary could not be generated.</p>";
+    } catch (error) {
+        console.error("Error generating enhanced documentation:", error);
+        resultContainer.innerHTML = "<p>An error occurred. Please try again.</p>";
+    }
+}
+
+// Initialize the tool
+document.addEventListener("DOMContentLoaded", () => {
+    loadICD10Data();
+});

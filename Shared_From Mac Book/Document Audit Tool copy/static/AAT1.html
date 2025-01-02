@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Audit Tool (AAT)</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <header id="theme-toggle">
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-switch" aria-label="Toggle Dark Mode">
+        <span class="slider"></span>
+      </label>
+      <span id="toggle-label">Enable Dark Mode</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Admission Note Section -->
+    <section id="admission-note-section">
+      <h2>Admission Note</h2>
+      <textarea id="admission-note" placeholder="Type or dictate your note here..." aria-describedby="admission-cmi"></textarea>
+      <div class="progress-container">
+        <label for="admission-cmi">CMI Progress:</label>
+        <div class="progress-bar">
+          <div class="progress" id="admission-cmi-progress" style="width: 50%;"></div>
+        </div>
+        <span id="admission-cmi" aria-live="polite">CMI: 1.0</span>
+      </div>
+    </section>
+
+    <!-- Generate Summary Section -->
+    <section id="generate-summary-section">
+      <h2>Enhanced Summary</h2>
+      <div id="enhanced-summary" role="region" aria-live="polite">
+        <p>Your AI-enhanced summary will appear here...</p>
+      </div>
+      <div class="progress-container">
+        <label for="summary-cmi">Enhanced CMI Progress:</label>
+        <div class="progress-bar">
+          <div class="progress" id="summary-cmi-progress" style="width: 70%;"></div>
+        </div>
+        <span id="summary-cmi" aria-live="polite">CMI: 1.5</span>
+      </div>
+      <button id="revisit-note" aria-label="Reset and Regenerate Summary">Reset and Regenerate</button>
+    </section>
+
+    <!-- ICD-10 Table Section -->
+    <section id="icd10-table-section">
+      <h2>Categorized ICD-10 Table</h2>
+      <table id="icd10-table">
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>ICD-10 Code</th>
+            <th>DRG</th>
+            <th>GMLOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" aria-label="Select I50.9"></td>
+            <td>I50.9</td>
+            <td>291</td>
+            <td>4.8</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" aria-label="Select J44.1"></td>
+            <td>J44.1</td>
+            <td>190</td>
+            <td>3.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Side-by-Side Windows -->
+    <section id="side-by-side-windows">
+      <div id="selected-icd10-window">
+        <h3>Selected ICD-10 and GMLOS</h3>
+        <p>Primary ICD-10: I50.9</p>
+        <ul>
+          <li>ICD-10: J44.1 (GMLOS: 3.5)</li>
+          <li>ICD-10: E11.9 (GMLOS: 2.7)</li>
+        </ul>
+        <button id="icd10-search" aria-label="Search ICD-10 Codes">Search ICD-10</button>
+      </div>
+
+      <div id="admission-placement-window">
+        <h3>Recommended Admission Placement</h3>
+        <p>Based on InterQual/Milliman Criteria:</p>
+        <p id="admission-recommendation">Recommendation: --</p>
+        <button id="recommend-admission" aria-label="Get Admission Recommendation">Get Recommendation</button>
+      </div>
+    </section>
+
+    <!-- Metrics and Payment Section -->
+    <section id="metrics-section">
+      <div id="metrics-window">
+        <h3>Metrics</h3>
+        <p id="primary-icd10">Primary ICD-10: I50.9</p>
+        <p id="primary-drg">DRG: 291</p>
+        <p id="primary-gmlos">GMLOS: 4.8</p>
+        <p id="primary-cmi">CMI: 1.5</p>
+        <p id="primary-rvu">RVUs: 3.2</p>
+      </div>
+
+      <div id="payment-metrics-window">
+        <h3>Payment Metrics</h3>
+        <p id="primary-cpt">CPT Code: 99223</p>
+        <p id="medicare-rate">Medicare Base Rate: $5,000</p>
+        <p id="payer-adjusted-rate">Payer Adjusted Rate: $6,200</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Admission Audit Tool. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Dark Mode Toggle -->
+  <script>
+    const darkModeSwitch = document.getElementById('dark-mode-switch');
+    const body = document.body;
+
+    function toggleTheme(mode) {
+      const isLightMode = mode === 'light';
+      body.classList.toggle('light-mode', isLightMode);
+      localStorage.setItem('theme', mode);
+    }
+
+    // Initialize Theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      toggleTheme('light');
+      darkModeSwitch.checked = true;
+    }
+
+    // Event Listener for Theme Toggle
+    darkModeSwitch.addEventListener('change', () => {
+      const mode = darkModeSwitch.checked ? 'light' : 'dark';
+      toggleTheme(mode);
+    });
+  </script>
+</body>
+
+</body>
+</html>

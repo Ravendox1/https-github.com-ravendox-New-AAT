@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Audit Tool with ICD-10 Search</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+        h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #1a237e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0d47a1;
+        }
+        .result, .icd10-list, .gmLos-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border-radius: 10px;
+            white-space: pre-wrap;
+        }
+        .result {
+            height: 400px;
+            overflow-y: auto;
+        }
+        .search-container {
+            margin-top: 20px;
+        }
+        .search-container input {
+            width: calc(100% - 110px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            width: 100px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admission Audit Tool with ICD-10 Search</h2>
+
+        <!-- Admission Note Section -->
+        <p>Enter the patient's admission note below to generate the enhanced documentation and determine the admission status.</p>
+        <textarea id="admissionNote" placeholder="Enter admission note here..."></textarea>
+
+        <!-- ICD-10 Search Section -->
+        <h3>ICD-10 Search</h3>
+        <div class="search-container">
+            <input type="text" id="icd10Search" placeholder="Search ICD-10 Codes" oninput="searchICD10()">
+            <div id="icd10Results" class="icd10-list"></div>
+        </div>
+
+        <!-- Selected ICD-10 Codes -->
+        <h3>Selected ICD-10 Codes</h3>
+        <div id="selectedICD10s" class="icd10-list">No ICD-10 codes selected.</div>
+
+        <!-- GMLOS Display Section -->
+        <h3>Estimated GMLOS</h3>
+        <div id="gmLosDisplay" class="gmLos-display">GMLOS will be displayed here once ICD-10 codes are selected.</div>
+
+        <!-- Generate Summary Section -->
+        <h3>Generated Summary</h3>
+        <button onclick="generateEnhancedDocumentation()">Generate Summary</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const icd10Data = {
+            "I50.9": { description: "Heart failure, unspecified", drg: "DRG 291", gmlos: 4.8, type: "MCC" },
+            "N17.9": { description: "Acute kidney failure, unspecified", drg: "DRG 291", gmlos: 4.8, type: "MCC" },
+            "J18.9": { description: "Pneumonia, unspecified organism", drg: "DRG 193", gmlos: 3.5, type: "CC" },
+            "E11.9": { description: "Type 2 diabetes without complications", drg: "DRG 881", gmlos: 2.0, type: "None" },
+            "I10": { description: "Essential (primary) hypertension", drg: "DRG 881", gmlos: 2.0, type: "None" } 
+        };
+
+        let selectedICD10s = [];
+
+        function searchICD10() {
+            const searchQuery = document.getElementById("icd10Search").value.trim().toUpperCase();
+            const resultsContainer = document.getElementById("icd10Results");
+            resultsContainer.innerHTML = "";
+
+            for (const [code, data] of Object.entries(icd10Data)) {
+                if (code.includes(searchQuery) || data.description.toLowerCase().includes(searchQuery.toLowerCase())) {
+                    const button = document.createElement("button");
+                    button.textContent = `${code} - ${data.description}`;
+                    button.onclick = () => selectICD10(code);
+                    resultsContainer.appendChild(button);
+                }
+            }
+        }
+
+        function selectICD10(code) {
+            if (!selectedICD10s.includes(code)) {
+                selectedICD10s.push(code);
+                updateSelectedICD10s();
+                updateGmLosDisplay();
+            }
+        }
+
+        function updateSelectedICD10s() {
+            const selectedContainer = document.getElementById("selectedICD10s");
+            if (selectedICD10s.length === 0) {
+                selectedContainer.textContent = "No ICD-10 codes selected.";
+            } else {
+                selectedContainer.innerHTML = selectedICD10s
+                    .map(code => {
+                        const data = icd10Data[code];
+                        return `<div>${code} - ${data.description} (DRG: ${data.drg}, GMLOS: ${data.gmlos} days, Type: ${data.type})</div>`;
+                    })
+                    .join("");
+            }
+        }
+
+        function updateGmLosDisplay() {
+            const gmLosContainer = document.getElementById("gmLosDisplay");
+
+            if (selectedICD10s.length === 0) {
+                gmLosContainer.textContent = "GMLOS will be displayed here once ICD-10 codes are selected.";
+            } else {
+                const baseICD10 = selectedICD10s[0];
+                const baseData = icd10Data[baseICD10];
+                const baseGmLos = baseData ? baseData.gmlos : 0;
+
+                const adjustmentFactor = selectedICD10s.length > 3 ? 1.33 : 1.0;
+                const adjustedGmLos = baseGmLos * adjustmentFactor;
+
+                gmLosContainer.textContent = `Estimated GMLOS: ${adjustedGmLos.toFixed(1)} days (Base GMLOS: ${baseGmLos}, Adjustment Factor: ${adjustmentFactor})`;
+            }
+        }
+
+        async function generateEnhancedDocumentation() {
+            const note = document.getElementById("admissionNote").value;
+            const resultElement = document.getElementById("result");
+
+            if (!note.trim()) {
+                resultElement.textContent = "Error: Please enter an admission note.";
+                return;
+            }
+
+            resultElement.textContent = "Generating documentation... Please wait.";
+
+            try {
+                const response = await fetch("http://127.0.0.1:5100/generate", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ note, icd10s: selectedICD10s })
+                });
+
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                const data = await response.json();
+                resultElement.innerHTML = `<pre>${data.result}</pre>`;
+            } catch (error) {
+                resultElement.textContent = "Error: Unable to generate documentation. Please try again.";
+                console.error("There was an error:", error);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Audit Tool with ICD-10 Search</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --hover-blue: #0d47a1;
+            --light-blue: #e6f7ff;
+            --soft-gray: #f7f9fc;
+            --text-dark: #333;
+            --text-light: #fff;
+            --border-color: #ccc;
+        }
+
+        body {
+            font-family: 'Roboto', Georgia, Arial, sans-serif;
+            background-color: var(--soft-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2, h3 {
+            color: var(--primary-blue);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--soft-gray);
+        }
+
+        button {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--hover-blue);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 10% 40% 25% 25%;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .grid-header {
+            font-weight: bold;
+            background-color: var(--light-blue);
+            padding: 10px;
+        }
+
+        .grid-item {
+            padding: 8px;
+        }
+
+        .metrics {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        .metrics p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admission Audit Tool</h2>
+        <div>
+            <h3>Admission Note</h3>
+            <textarea id="admissionNote" placeholder="Enter admission note..."></textarea>
+            <button onclick="generateEnhancedDocumentation()">Generate Documentation</button>
+        </div>
+
+        <div>
+            <h3>Generated Summary</h3>
+            <div class="grid">
+                <div class="grid-header">Select</div>
+                <div class="grid-header">ICD-10 and Description</div>
+                <div class="grid-header">DRG</div>
+                <div class="grid-header">GMLOS</div>
+            </div>
+            <div id="selectedICD10Grid"></div>
+        </div>
+
+        <div class="metrics">
+            <h3>Metrics</h3>
+            <p><strong>Adjusted GMLOS:</strong> <span id="gmLosDisplay">Not available</span></p>
+            <p><strong>CMI:</strong> <span id="cmiDisplay">Not available</span></p>
+            <p><strong>RVUs:</strong> <span id="rvuDisplay">Not available</span></p>
+            <p><strong>Admission Placement:</strong> <span id="admissionPlacementResult">Not determined</span></p>
+        </div>
+    </div>
+
+    <script>
+        let icd10Data = [
+            { code: "E11.9", description: "Type 2 diabetes mellitus without complications", drg: "638", gmlos: 2.5 },
+            { code: "J18.9", description: "Pneumonia, unspecified organism", drg: "193", gmlos: 3.5 },
+            { code: "I10", description: "Essential hypertension", drg: "144", gmlos: 1.8 }
+        ];
+        let selectedICD10s = [];
+
+        function generateEnhancedDocumentation() {
+            const admissionNote = document.getElementById("admissionNote").value.trim();
+            if (!admissionNote) {
+                alert("Please enter an admission note.");
+                return;
+            }
+
+            // Sort selected ICD-10 codes by GMLOS
+            const sortedICD10s = selectedICD10s.sort((a, b) => b.gmlos - a.gmlos);
+
+            // Update the grid and metrics
+            updateSelectedICD10Grid(sortedICD10s);
+            updateMetricsDisplay(sortedICD10s);
+        }
+
+        function updateSelectedICD10Grid(icd10List) {
+            const gridContainer = document.getElementById("selectedICD10Grid");
+            gridContainer.innerHTML = icd10List
+                .map(icd10 => `
+                    <div class="grid-item">
+                        <input type="checkbox" checked onchange="toggleICD10Selection('${icd10.code}')">
+                    </div>
+                    <div class="grid-item">${icd10.code} - ${icd10.description}</div>
+                    <div class="grid-item">${icd10.drg || "N/A"}</div>
+                    <div class="grid-item">${icd10.gmlos.toFixed(1)} days</div>
+                `)
+                .join("");
+        }
+
+        function toggleICD10Selection(code) {
+            selectedICD10s = selectedICD10s.filter(icd => icd.code !== code);
+            generateEnhancedDocumentation();
+        }
+
+        function updateMetricsDisplay(icd10List) {
+            const totalGMLOS = icd10List.reduce((total, icd) => total + icd.gmlos, 0).toFixed(1);
+            const cmi = (totalGMLOS / icd10List.length || 0).toFixed(2);
+            const rvu = (totalGMLOS * 1.2).toFixed(2); // Example RVU calculation
+
+            document.getElementById("gmLosDisplay").textContent = `${totalGMLOS} days`;
+            document.getElementById("cmiDisplay").textContent = cmi;
+            document.getElementById("rvuDisplay").textContent = rvu;
+
+            updateAdmissionPlacement(icd10List);
+        }
+
+        function updateAdmissionPlacement(icd10List) {
+            const note = document.getElementById("admissionNote").value.toLowerCase();
+            const inpatientKeywords = ["acute", "unstable", "severe"];
+            const observationKeywords = ["monitoring", "stable"];
+            const dischargeKeywords = ["no acute findings", "discharge"];
+
+            if (inpatientKeywords.some(keyword => note.includes(keyword))) {
+                document.getElementById("admissionPlacementResult").textContent = "Inpatient";
+            } else if (observationKeywords.some(keyword => note.includes(keyword))) {
+                document.getElementById("admissionPlacementResult").textContent = "Observation";
+            } else if (dischargeKeywords.some(keyword => note.includes(keyword))) {
+                document.getElementById("admissionPlacementResult").textContent = "Discharge";
+            } else {
+                document.getElementById("admissionPlacementResult").textContent = "Undetermined";
+            }
+        }
+
+        // Initialize with pre-selected ICD-10 codes
+        document.addEventListener("DOMContentLoaded", () => {
+            selectedICD10s = [...icd10Data];
+            generateEnhancedDocumentation();
+        });
+    </script>
+</body>
+</html>

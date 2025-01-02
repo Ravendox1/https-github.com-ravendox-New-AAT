@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Audit Tool with ICD-10 Search</title>
+    <style>
+  /* General Body Styling */
+body {
+    font-family: 'Roboto', 'Georgia', Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-top: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    resize: vertical; /* Allow resizing vertically */
+}
+
+textarea:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #1a237e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+#toggleSearchButton {
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px auto 15px auto;
+    text-align: center;
+    display: block;
+}
+
+#toggleSearchButton:hover {
+    background-color: #0d47a1;
+}
+
+/* ICD-10 Search Bar */
+#icd10Search {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #fff;
+}
+
+#icd10Search:focus {
+    outline: none;
+    border-color: #1a237e;
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.5);
+}
+
+/* Display Sections Styling */
+.admission-category-display, .gmLos-display, .cmi-display, .rvu-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    line-height: 1.5;
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #cce7f6;
+}
+
+/* Result Box Styling */
+.result {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    color: #222;
+    line-height: 1.4;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.result pre {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.4;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: #f7f9fc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* No Results Styling */
+.no-results {
+    color: #d32f2f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ICD-10 Search Results Buttons */
+.icd10-result-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.icd10-result-button:hover {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+/* Selected ICD-10 Codes Styling */
+.icd10-list div {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f1f8e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+}
+
+.icd10-list div strong {
+    color: #2e7d32;
+}
+
+.icd10-list div em {
+    color: #455a64;
+    font-style: normal;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    #toggleSearchButton {
+        width: 80%;
+    }
+
+    #icd10Search {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .result {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .admission-category-display, .gmLos-display, .cmi-display, .rvu-display {
+        font-size: 14px;
+    }
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+    <h2>Admission Audit Tool with ICD-10 Search</h2>
+
+    <p>Enter the patient's admission note below to generate the enhanced documentation and determine the admission status.</p>
+    <textarea id="admissionNote" placeholder="Enter admission note here..."></textarea>
+
+    <h3>ICD-10 Search</h3>
+    <button id="toggleSearchButton" onclick="toggleICD10Search()">Hide ICD-10 Search</button>
+    <div id="icd10SearchContainer">
+        <input type="text" id="icd10Search" placeholder="Search ICD-10 Codes" oninput="searchICD10()">
+        <div id="icd10Results" class="icd10-list">
+            <div class="no-results">Start typing to search for ICD-10 codes.</div>
+        </div>
+    </div>
+
+    <h3>Actively Managed ICD-10 Codes</h3>
+    <div id="selectedICD10s" class="icd10-list">
+        <div class="no-selection">No ICD-10 codes selected. Use the search above to select codes.</div>
+    </div>
+
+    <h3>Estimated GMLOS</h3>
+    <div id="gmLosDisplay" class="gmLos-display">
+        GMLOS will be displayed here once ICD-10 codes are selected.
+    </div>
+
+    <h3>Case Mix Index (CMI)</h3>
+    <div id="cmiDisplay" class="cmi-display">
+        CMI will be displayed here.
+    </div>
+
+    <h3>Relative Value Units (RVU)</h3>
+    <div id="rvuDisplay" class="rvu-display">
+        RVU will be displayed here.
+    </div>
+
+    <h3>Generated Summary</h3>
+    <button onclick="generateEnhancedDocumentation()">Generate Summary</button>
+    <div id="result" class="result"></div>
+</div>
+</body>
+</html>
+<script>
+// Initialize ICD-10 data and selected codes
+let icd10Data = [];
+let selectedICD10s = [];
+let summaryGenerated = false; // Tracks if the summary is generated
+
+// Load ICD-10 JSON data
+async function loadICD10Data() {
+    try {
+        const response = await fetch("/icd10-data");
+        if (!response.ok) throw new Error(`Failed to fetch ICD-10 data: ${response.statusText}`);
+
+        const dynamicData = await response.json();
+        if (validateJSONStructure(dynamicData)) {
+            icd10Data = dynamicData;
+            console.log("ICD-10 data loaded successfully:", icd10Data);
+        } else {
+            console.warn("Invalid JSON structure detected. Using fallback data.");
+        }
+    } catch (error) {
+        console.error(`Error loading ICD-10 data: ${error.message}`);
+    }
+}
+
+// Validate JSON structure for DRG and ICD-10 data
+function validateJSONStructure(data) {
+    if (!Array.isArray(data)) {
+        console.error("Validation failed: Expected JSON data to be an array of DRGs.");
+        return false;
+    }
+
+    for (const drg of data) {
+        if (
+            !drg.drg_code || typeof drg.drg_code !== "string" ||
+            !drg.description || typeof drg.description !== "string" ||
+            !Array.isArray(drg.icd10_codes)
+        ) {
+            console.error("Validation failed for DRG entry:", drg);
+            return false;
+        }
+
+        for (const icd10 of drg.icd10_codes) {
+            if (
+                !icd10.code || typeof icd10.code !== "string" ||
+                !icd10.description || typeof icd10.description !== "string" ||
+                !icd10.type || !["MCC", "CC", "None"].includes(icd10.type) ||
+                typeof icd10.gmlos !== "number"
+            ) {
+                console.error("Validation failed for ICD-10 entry:", icd10);
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+// DOX21 Prompt Logic
+function dox21Prompt(note, icd10Codes) {
+    return {
+        prompt: `
+        You are a medical documentation assistant. Format the response into three structured sections:
+        1. **Admission History**:
+           - Presenting complaints.
+           - Initial findings and clinical history.
+           - Include primary ICD-10 codes.
+
+        2. **Management Plan**:
+           - Key interventions, treatments, consultations, and diagnostic plans.
+           - Include secondary ICD-10 codes.
+
+        3. **Key Metrics and Summary** (Bulleted):
+           - **ICD-10 Codes**: List all used codes with descriptions.
+           - **DRG Code & GMLOS**: Include DRG code, description, and GMLOS.
+           - **CMI**: Provide Case Mix Index (CMI).
+           - **Admission Category**: Specify whether this is inpatient, observation, or another category.
+
+        Input:
+        Admission Note: ${note}
+        ICD-10 Codes Provided: ${icd10Codes.join(", ")}
+        `,
+        temperature: 0.7,
+        max_tokens: 1024
+    };
+}
+
+// Generate Enhanced Documentation
+async function generateEnhancedDocumentation() {
+    const noteElement = document.getElementById("admissionNote");
+    const resultElement = document.getElementById("result");
+
+    if (!noteElement || !noteElement.value.trim()) {
+        console.error("Admission note is missing.");
+        resultElement.innerHTML = `<div class="error-message">Error: Please enter an admission note.</div>`;
+        return;
+    }
+
+    const note = noteElement.value.trim();
+    const icd10Codes = selectedICD10s.map(icd10 => icd10.code);
+
+    resultElement.innerHTML = `<div class="loading-message">Generating documentation... Please wait.</div>`;
+
+    try {
+        const promptData = dox21Prompt(note, icd10Codes);
+
+        const response = await fetch("/generate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(promptData)
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`Error response from server: ${response.status} - ${errorText}`);
+            throw new Error(`Server responded with status ${response.status}: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        if (data.result) {
+            summaryGenerated = true;
+            const parsedData = parseSummary(data.result); // Parse AI response for structured data
+            updateHTMLSections(parsedData); // Dynamically update sections
+            resultElement.innerHTML = formatSummary(parsedData); // Format and display summary
+        } else {
+            throw new Error("No result returned from server.");
+        }
+    } catch (error) {
+        console.error("Error generating documentation:", error);
+        resultElement.innerHTML = `<div class="error-message">An error occurred: ${error.message}. Please try again.</div>`;
+    }
+}
+
+// Parse the AI response for structured data
+function parseSummary(responseText) {
+    // Patterns for extracting information
+    const icd10Pattern = /ICD-10 code:\s*([A-Z][0-9A-Z\.]+)/gi; // Matches ICD-10 codes
+    const gmLosPattern = /GMLOS:\s*([\d\.]+)/i;                 // Matches GMLOS values
+    const cmiPattern = /CMI:\s*([\d\.]+)/i;                     // Matches CMI values
+    const admissionCategoryPattern = /Admission Category:\s*(\w+)/i; // Matches admission category
+
+    // Extract matches
+    const icd10Matches = Array.from(responseText.matchAll(icd10Pattern), match => match[1]);
+    const gmLosMatch = responseText.match(gmLosPattern);
+    const cmiMatch = responseText.match(cmiPattern);
+    const admissionCategoryMatch = responseText.match(admissionCategoryPattern);
+
+    // Parse and return structured data
+    return {
+        summaryText: responseText,                            // Raw summary text
+        icd10Codes: icd10Matches.length > 0 ? icd10Matches : [], // Extracted ICD-10 codes
+        gmLos: gmLosMatch ? parseFloat(gmLosMatch[1]) : null, // Parsed GMLOS value or null
+        cmi: cmiMatch ? parseFloat(cmiMatch[1]) : null,       // Parsed CMI value or null
+        admissionCategory: admissionCategoryMatch ? admissionCategoryMatch[1] : "Unknown" // Admission category
+    };
+}
+
+// Update HTML sections dynamically
+function updateHTMLSections(parsedData) {
+    // Update ICD-10 list
+    const selectedContainer = document.getElementById("selectedICD10s");
+    selectedContainer.innerHTML = parsedData.icd10Codes.map(code => `
+        <div class="icd10-item">
+            <strong>${code}</strong>
+        </div>
+    `).join("");
+
+    // Update GMLOS
+    const gmLosContainer = document.getElementById("gmLosDisplay");
+    gmLosContainer.textContent = `Estimated GMLOS: ${parsedData.gmLos || "Not available"} days`;
+
+    // Update CMI
+    const cmiContainer = document.getElementById("cmiDisplay");
+    cmiContainer.textContent = `Case Mix Index (CMI): ${parsedData.cmi || "Not available"}`;
+}
+
+// Format the AI response into structured sections
+function formatSummary(parsedData) {
+    const sections = parsedData.summaryText.split("\n\n");
+
+    if (sections.length >= 3) {
+        return `
+            <h3>Admission History</h3>
+            <p>${sections[0]}</p>
+            <h3>Management Plan</h3>
+            <p>${sections[1]}</p>
+            <h3><strong>Key Metrics and Summary</strong></h3>
+            <ul>
+                ${sections[2].split("\n").map(item => `<li>${item}</li>`).join("")}
+            </ul>
+        `;
+    }
+
+    // Fallback: Return raw text if formatting fails
+    return `<pre>${parsedData.summaryText}</pre>`;
+}
+
+// Calculate GMLOS
+function calculateGmLos() {
+    if (!summaryGenerated) return "Awaiting Summary Generation";
+
+    if (!selectedICD10s.length) {
+        console.warn("No ICD-10 codes selected for GMLOS calculation.");
+        return "No data available";
+    }
+
+    const primaryICD10 = selectedICD10s[0];
+    const baseGmLos = primaryICD10 ? primaryICD10.gmlos : 0;
+
+    const additionalGmLos = selectedICD10s.slice(1).reduce((sum, icd10) => sum + (icd10.gmlos || 0), 0);
+    return (baseGmLos + additionalGmLos).toFixed(1);
+}
+
+// Load ICD-10 data on startup
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM fully loaded and parsed.");
+    loadICD10Data();
+});
+<script>
+	
+</body>
+</html>

@@ -1,0 +1,3130 @@
+{
+  "conditions": [
+    {
+      "condition": "Skin Abscess",
+      "criteria": {
+        "inpatient": [
+          "Severe cellulitis with systemic symptoms such as fever or tachycardia",
+          "Failed outpatient therapy with worsening infection",
+          "Abscess size > 5 cm requiring surgical drainage",
+          "Immunocompromised state increasing risk of complications"
+        ],
+        "observation": [
+          "Moderate cellulitis without systemic symptoms",
+          "Abscess size 3-5 cm requiring minor drainage or monitoring",
+          "Patient requires close monitoring for response to antibiotics"
+        ],
+        "discharge": [
+          "Localized small abscess (< 3 cm) managed with outpatient antibiotics",
+          "No signs of systemic infection and good response to initial treatment"
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          {"code": "602", "description": "Cellulitis with MCC", "GMLOS": 5.3},
+          {"code": "603", "description": "Cellulitis without MCC", "GMLOS": 3.4}
+        ],
+        "ICD10s": [
+          {"code": "L02.91", "description": "Cutaneous abscess, unspecified"},
+          {"code": "L02.0", "description": "Cutaneous abscess, furuncle, and carbuncle of face"},
+          {"code": "L02.1", "description": "Cutaneous abscess, furuncle, and carbuncle of neck"},
+          {"code": "L02.2", "description": "Cutaneous abscess, furuncle, and carbuncle of trunk"},
+          {"code": "L02.3", "description": "Cutaneous abscess, furuncle, and carbuncle of buttock"},
+          {"code": "L02.4", "description": "Cutaneous abscess, furuncle, and carbuncle of limb"},
+          {"code": "L02.8", "description": "Cutaneous abscess, furuncle, and carbuncle of other sites"},
+          {"code": "L02.9", "description": "Cutaneous abscess, furuncle, and carbuncle, unspecified"}
+        ]
+      }
+    },
+	{
+  "condition": "Acetaminophen Overdose (OD)",
+  "criteria": {
+    "inpatient": [
+      "Ingestion > 10g within a 24-hour period",
+      "Acetaminophen (APAP) level 150-300 mcg/mL with ongoing antidote treatment (N-Acetylcysteine protocol)",
+      "Chronic ingestion with APAP level > 10 mcg/mL OR AST/ALT > 50 U/L requiring monitoring and treatment",
+      "Severe or persistent altered mental status",
+      "Severe or persistent clinical findings (e.g., metabolic acidosis, hypoglycemia, bradycardia)",
+      "Imminent danger to self or others requiring psychiatric or medical intervention"
+    ],
+    "observation": [
+      "Mild symptoms with APAP level close to but below toxic threshold (e.g., 120-150 mcg/mL)",
+      "Normal AST/ALT but requires short-term monitoring for clinical progression",
+      "Stable clinical findings after initial antidote treatment requiring limited observation",
+      "Psychiatric evaluation pending after stabilized clinical status"
+    ],
+    "discharge": [
+      "Resolved symptoms with no evidence of hepatotoxicity or metabolic disturbances",
+      "APAP level below toxic threshold (< 150 mcg/mL) and normal liver function tests",
+      "No ongoing requirement for antidote treatment or monitoring",
+      "Safe outpatient management and follow-up arranged"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "917", "description": "Poisoning and toxic effects of drugs with MCC", "GMLOS": 4.6 },
+      { "code": "918", "description": "Poisoning and toxic effects of drugs without MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "T39.1X1A", "description": "Poisoning by 4-aminophenol derivatives, accidental (unintentional), initial encounter" },
+      { "code": "T39.1X2A", "description": "Poisoning by 4-aminophenol derivatives, intentional self-harm, initial encounter" },
+      { "code": "T39.1X3A", "description": "Poisoning by 4-aminophenol derivatives, assault, initial encounter" },
+      { "code": "T39.1X4A", "description": "Poisoning by 4-aminophenol derivatives, undetermined, initial encounter" },
+      { "code": "T39.1X5A", "description": "Adverse effect of 4-aminophenol derivatives, initial encounter" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E87.2", "description": "Acidosis" },
+    { "code": "E16.2", "description": "Hypoglycemia, unspecified" },
+    { "code": "R40.4", "description": "Transient alteration of awareness" },
+    { "code": "F32.9", "description": "Major depressive disorder, single episode, unspecified" },
+    { "code": "Z91.5", "description": "Personal history of self-harm" },
+    { "code": "Z79.4", "description": "Long-term (current) use of insulin" }
+  ]
+},
+	  {
+  "condition": "Anemia",
+  "criteria": {
+    "inpatient": [
+      "Hematocrit < 25% or Hemoglobin < 8 g/dL with symptomatic anemia",
+      "Ongoing transfusion needs (> 2 units of blood products)",
+      "Requires continuous IV infusion of anticoagulation or vasoactive medications",
+      "Significant blood loss with hemodynamic instability requiring intensive monitoring"
+    ],
+    "observation": [
+      "Hemoglobin 8-10 g/dL with mild symptoms requiring monitoring",
+      "Stable after transfusion but requires close follow-up",
+      "Iron studies or diagnostic workup pending for etiology determination"
+    ],
+    "discharge": [
+      "Hemoglobin > 10 g/dL with no symptoms",
+      "Stable labs and outpatient management plan in place",
+      "Successful resolution of acute anemia with no further transfusion needs"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "812", "description": "Red blood cell disorders with MCC", "GMLOS": 4.1 },
+      { "code": "813", "description": "Red blood cell disorders without MCC", "GMLOS": 2.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "D64.9", "description": "Anemia, unspecified" },
+      { "code": "D50.0", "description": "Iron deficiency anemia secondary to blood loss (chronic)" },
+      { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+      { "code": "D64.81", "description": "Anemia due to antineoplastic chemotherapy" },
+      { "code": "D53.9", "description": "Nutritional anemia, unspecified" },
+      { "code": "D61.9", "description": "Aplastic anemia, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "K92.2", "description": "Gastrointestinal hemorrhage, unspecified" },
+    { "code": "R53.83", "description": "Other fatigue" },
+    { "code": "E87.6", "description": "Hypokalemia" }
+  ]
+},
+{
+  "condition": "Acute Coronary Syndrome (ACS)",
+  "criteria": {
+    "inpatient": [
+      "Confirmed acute MI (STEMI) by ECG",
+      "Positive biomarkers with pain controlled and symptoms resolved (NSTEMI)",
+      "Rest angina, new onset, or worsening angina (Class III-IV) with ECG changes or ischemia",
+      "Diagnostic testing indicating ischemia or LBBB with symptoms within the last 24 hours",
+      "Requires all interventions: beta blockers, ASA, antiplatelet, anticoagulant, and continuous cardiac monitoring",
+      "Hemodynamic instability requiring vasopressors or IV nitroglycerin for symptom relief"
+    ],
+    "observation": [
+      "High-risk features for cardiac ischemia (e.g., DM, prior CABG, PCI < 6 months, GFR < 60, TIMI ≥ 3)",
+      "Evidence of unstable angina (e.g., nocturnal, new onset, progressive, prolonged at rest)",
+      "Symptoms with non-diagnostic ECG or hemodynamic instability (e.g., SBP < 90, dangerous arrhythmia)",
+      "Initial negative cardiac biomarkers with serial monitoring planned",
+      "Ongoing chest pain without conclusive evidence of ischemia"
+    ],
+    "discharge": [
+      "No evidence of ongoing ischemia, hemodynamic compromise, or high-risk features",
+      "Resolved symptoms with normal biomarkers and ECG",
+      "Outpatient follow-up arranged for further evaluation or management",
+      "Stable after diagnostic evaluation with no significant findings"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "280", "description": "Acute myocardial infarction with MCC", "GMLOS": 5.3 },
+      { "code": "281", "description": "Acute myocardial infarction without MCC", "GMLOS": 3.3 },
+      { "code": "282", "description": "Acute myocardial infarction discharged alive with CC", "GMLOS": 2.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "I21.3", "description": "ST elevation (STEMI) myocardial infarction of unspecified site" },
+      { "code": "I21.4", "description": "Non-ST elevation (NSTEMI) myocardial infarction" },
+      { "code": "I20.0", "description": "Unstable angina" },
+      { "code": "I21.01", "description": "STEMI involving left main coronary artery" },
+      { "code": "I21.02", "description": "STEMI involving left anterior descending artery" },
+      { "code": "I25.10", "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R07.89", "description": "Other chest pain" },
+    { "code": "D64.9", "description": "Anemia, unspecified" },
+    { "code": "E87.5", "description": "Hyperkalemia" }
+  ]
+},
+	  {
+  "condition": "Anticoagulation Requirement",
+  "criteria": {
+    "inpatient": [
+      "Atrial fibrillation with rapid ventricular response requiring IV rate control",
+      "Pulmonary embolism requiring continuous IV anticoagulation",
+      "Severe thrombocytopenia with bleeding complications necessitating close monitoring",
+      "Deep vein thrombosis with hemodynamic instability or associated complications",
+      "Severe bleeding events requiring transfusion or reversal agents"
+    ],
+    "observation": [
+      "Initiation of anticoagulation therapy with stable vitals for monitoring response",
+      "Observation for therapeutic effect of warfarin or direct oral anticoagulants",
+      "Mild thrombocytopenia or anticoagulation therapy adjustment without significant complications",
+      "Monitoring for side effects or response to anticoagulation in patients with moderate risk"
+    ],
+    "discharge": [
+      "Stable on an established anticoagulation regimen with therapeutic INR",
+      "No active bleeding or complications, and outpatient follow-up arranged",
+      "Resolved need for monitoring and no ongoing requirement for inpatient care",
+      "Successfully transitioned to outpatient oral anticoagulation without complications"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "175", "description": "Pulmonary embolism with MCC", "GMLOS": 5.7 },
+      { "code": "176", "description": "Pulmonary embolism without MCC", "GMLOS": 3.4 },
+      { "code": "177", "description": "Respiratory infections and inflammations with MCC", "GMLOS": 6.3 }
+    ],
+    "primary_icd10s": [
+      { "code": "I26.99", "description": "Other pulmonary embolism without acute cor pulmonale" },
+      { "code": "I82.409", "description": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity" },
+      { "code": "D68.59", "description": "Other primary thrombophilia" },
+      { "code": "I48.91", "description": "Unspecified atrial fibrillation" },
+      { "code": "D69.6", "description": "Thrombocytopenia, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.83", "description": "Other fatigue" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "Z79.01", "description": "Long-term (current) use of anticoagulants" }
+  ]
+},
+	  {
+  "condition": "Arrhythmia - Atrial",
+  "criteria": {
+    "inpatient": [
+      "SVT, atrial fibrillation, atrial flutter, or wide complex tachycardia requiring continuous cardiac monitoring",
+      "ICD with repetitive shocks (≥ 3x/24h) necessitating intervention and monitoring",
+      "Treatment requiring ANY of the following: neuro assessment q4h, permanent pacer placement, or digitalization ≤ 24h",
+      "Hyperkalemia requiring treatment (e.g., calcium chloride, calcium gluconate, or glucose 50% with insulin)",
+      "Initiation of oral antiarrhythmics with proarrhythmic risk or post-Ibutilide monitoring",
+      "Potassium repletion (≥ 10 mEq/h or ≥ 120 mEq/24h) or continuous IV antiarrhythmic therapy with frequent titration or bolus monitoring q3-4h",
+      "Hemodynamic instability associated with arrhythmia requiring vasopressors or IV medications"
+    ],
+    "observation": [
+      "Non-sustained ventricular tachycardia or arrhythmias requiring monitoring without acute intervention",
+      "Stable arrhythmia requiring initiation of oral or IV medications with monitoring for therapeutic response",
+      "Moderate electrolyte imbalance correction or arrhythmia therapy adjustment without critical care needs",
+      "Post-procedure monitoring after ablation or cardioversion for arrhythmia"
+    ],
+    "discharge": [
+      "Resolved arrhythmia without need for ongoing monitoring",
+      "Stable on outpatient antiarrhythmic therapy and follow-up arranged",
+      "No ICD shocks, recurrence of arrhythmia, or ongoing electrolyte imbalances",
+      "Electrolytes corrected and rhythm normalized with no further interventions required"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "308", "description": "Cardiac arrhythmia and conduction disorders with MCC", "GMLOS": 3.7 },
+      { "code": "309", "description": "Cardiac arrhythmia and conduction disorders without MCC", "GMLOS": 2.4 },
+      { "code": "310", "description": "Cardiac arrhythmia and conduction disorders with CC", "GMLOS": 3.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "I48.91", "description": "Unspecified atrial fibrillation" },
+      { "code": "I47.1", "description": "Supraventricular tachycardia" },
+      { "code": "I49.01", "description": "Ventricular fibrillation" },
+      { "code": "I48.92", "description": "Unspecified atrial flutter" },
+      { "code": "I49.3", "description": "Ventricular premature depolarization" },
+      { "code": "E87.5", "description": "Hyperkalemia" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "E87.5", "description": "Hyperkalemia" },
+    { "code": "R55", "description": "Syncope and collapse" },
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "Z95.0", "description": "Presence of cardiac pacemaker" }
+  ]
+},
+	  {
+  "condition": "Arterial Occlusion",
+  "criteria": {
+    "inpatient": [
+      "Pain at rest with confirmed arterial occlusion requiring anticoagulation and neurovascular monitoring",
+      "Coldness, mottling, pallor, or numbness indicating critical ischemia requiring intervention",
+      "Limb swelling with imaging confirmation of arterial occlusion requiring close monitoring and treatment",
+      "Anticoagulation therapy initiated with Fondaparinux, LMWH ≤ 3 days, unfractionated heparin ≤ 5 days, or alternative anticoagulants for heparin-induced thrombocytopenia",
+      "Emergent surgical or endovascular intervention for limb salvage or revascularization"
+    ],
+    "observation": [
+      "Imaging-confirmed arterial occlusion with mild symptoms requiring monitoring for progression",
+      "Pain or swelling with no critical ischemia but requiring evaluation and initial management",
+      "Neurovascular assessments required without immediate threat to limb viability",
+      "Initial anticoagulation therapy with stable clinical status under observation"
+    ],
+    "discharge": [
+      "Symptoms resolved with no evidence of critical ischemia or ongoing occlusion",
+      "Outpatient anticoagulation initiated with follow-up arranged",
+      "No significant findings on imaging and no need for further monitoring",
+      "Resolution of swelling or pain with outpatient vascular follow-up planned"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "299", "description": "Peripheral vascular disorders with MCC", "GMLOS": 5.1 },
+      { "code": "300", "description": "Peripheral vascular disorders without MCC", "GMLOS": 3.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "I70.212", "description": "Atherosclerosis of native arteries of extremities with rest pain, left leg" },
+      { "code": "I70.211", "description": "Atherosclerosis of native arteries of extremities with rest pain, right leg" },
+      { "code": "I74.3", "description": "Embolism and thrombosis of arteries of lower extremities" },
+      { "code": "I74.9", "description": "Embolism and thrombosis of unspecified artery" },
+      { "code": "I70.262", "description": "Atherosclerosis of native arteries of extremities with gangrene, left leg" },
+      { "code": "I70.261", "description": "Atherosclerosis of native arteries of extremities with gangrene, right leg" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" }
+  ]
+},
+	  {
+  "condition": "Arthritis - Septic",
+  "criteria": {
+    "inpatient": [
+      "Joint pain, tenderness, or decreased range of motion with synovial fluid WBC > 50,000 or > 25,000 with polymorphonuclear dominance requiring immediate intervention",
+      "Anti-infective therapy initiated along with joint drainage and synovial fluid culture",
+      "DVT prophylaxis and intravenous fluids or advancing diet as tolerated to support recovery",
+      "Signs of systemic sepsis or bacteremia requiring aggressive treatment and monitoring",
+      "Failure of outpatient therapy with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Joint pain with synovial fluid WBC > 25,000 and no systemic symptoms requiring monitoring and diagnostic evaluation",
+      "Mild to moderate symptoms requiring anti-infective therapy and joint drainage without immediate complications",
+      "No signs of systemic sepsis but requiring observation for progression of symptoms",
+      "Initial therapy initiated and patient stable but requiring close observation for clinical response"
+    ],
+    "discharge": [
+      "Resolved symptoms with no ongoing joint pain or decreased range of motion",
+      "Synovial fluid WBC normalizing and no systemic infection present",
+      "Outpatient follow-up arranged with anti-infective therapy initiated if needed",
+      "Patient stable on oral antibiotics with functional joint recovery"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "545", "description": "Septic arthritis with MCC", "GMLOS": 6.4 },
+      { "code": "546", "description": "Septic arthritis without MCC", "GMLOS": 3.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "M00.9", "description": "Pyogenic arthritis, unspecified" },
+      { "code": "M00.10", "description": "Staphylococcal arthritis, unspecified joint" },
+      { "code": "M00.20", "description": "Pneumococcal arthritis, unspecified joint" },
+      { "code": "M00.80", "description": "Arthritis due to other specified bacteria, unspecified site" },
+      { "code": "M00.89", "description": "Arthritis due to other specified bacteria, other site" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.2", "description": "Acidosis" }
+  ]
+},
+	  {
+  "condition": "Nonseptic Arthritis",
+  "criteria": {
+    "inpatient": [
+      "Severe joint pain and swelling unresponsive to outpatient therapy",
+      "Associated systemic symptoms such as fever or significant functional impairment",
+      "Requires initiation of IV medications or specialized treatment",
+      "Progressive joint damage or acute flare requiring intensive inpatient care",
+      "Complications such as joint instability or associated comorbid conditions necessitating hospitalization"
+    ],
+    "observation": [
+      "Moderate joint pain and inflammation requiring close monitoring",
+      "Initiation of new therapy such as corticosteroids or disease-modifying agents",
+      "Stable clinical condition but requires further evaluation",
+      "Mild to moderate flare-up with good response to initial therapy requiring short-term observation"
+    ],
+    "discharge": [
+      "Mild symptoms managed with oral medications",
+      "Stable clinical condition with outpatient follow-up arranged",
+      "No evidence of systemic involvement or severe functional impairment",
+      "Improved symptoms with functional recovery allowing discharge"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "545", "description": "Connective tissue disorders with MCC", "GMLOS": 5.6 },
+      { "code": "546", "description": "Connective tissue disorders with CC", "GMLOS": 4.0 },
+      { "code": "547", "description": "Connective tissue disorders without CC/MCC", "GMLOS": 2.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "M13.0", "description": "Polyarthritis, unspecified" },
+      { "code": "M19.90", "description": "Osteoarthritis, unspecified site, unspecified severity" },
+      { "code": "M15.0", "description": "Primary generalized (osteo)arthritis" },
+      { "code": "M06.9", "description": "Rheumatoid arthritis, unspecified" },
+      { "code": "M25.50", "description": "Pain in unspecified joint" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" }
+  ]
+},
+	  {
+  "condition": "Ascending Cholangitis",
+  "criteria": {
+    "inpatient": [
+      "Signs of sepsis including fever, chills, or hypotension",
+      "Evidence of biliary obstruction with elevated liver enzymes",
+      "Requires IV antibiotics and/or urgent biliary drainage",
+      "Persistent abdominal pain with jaundice or altered mental status indicating severe infection",
+      "Failure of outpatient therapy with progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Mild symptoms controlled with initial IV antibiotics",
+      "No hemodynamic instability but requires monitoring",
+      "Stable condition awaiting further diagnostic evaluation",
+      "Transient symptoms with good response to initial therapy requiring short-term observation"
+    ],
+    "discharge": [
+      "Resolved symptoms with normalizing liver enzymes",
+      "Stable clinical condition with outpatient follow-up arranged",
+      "No evidence of ongoing obstruction or infection",
+      "Improved symptoms with successful biliary drainage and oral antibiotic therapy"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "437", "description": "Disorders of pancreas except malignancy with MCC", "GMLOS": 6.2 },
+      { "code": "438", "description": "Disorders of pancreas except malignancy with CC", "GMLOS": 4.1 },
+      { "code": "439", "description": "Disorders of pancreas except malignancy without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "K83.1", "description": "Cholangitis" },
+      { "code": "K80.50", "description": "Calculus of bile duct without cholangitis or cholecystitis, unspecified" },
+      { "code": "K80.51", "description": "Calculus of bile duct with cholangitis" },
+      { "code": "K80.52", "description": "Calculus of bile duct with acute cholangitis with obstruction" },
+      { "code": "K81.1", "description": "Chronic cholecystitis" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" }
+  ]
+},
+	  {
+  "condition": "Ascites",
+  "criteria": {
+    "inpatient": [
+      "Severe abdominal distension with respiratory compromise or hemodynamic instability",
+      "Infected ascitic fluid (spontaneous bacterial peritonitis) requiring IV antibiotics",
+      "Requires urgent paracentesis or other invasive intervention",
+      "Electrolyte imbalances or renal dysfunction requiring close monitoring and treatment",
+      "Failure of outpatient management with worsening ascites necessitating hospitalization"
+    ],
+    "observation": [
+      "Moderate ascites requiring diagnostic or therapeutic paracentesis",
+      "No evidence of infection or hemodynamic instability but requires monitoring",
+      "Stable condition with a need for adjustments to diuretic therapy",
+      "Initial response to diuretics requiring observation for clinical improvement"
+    ],
+    "discharge": [
+      "Controlled symptoms managed with oral diuretics",
+      "Stable clinical condition with outpatient follow-up arranged",
+      "No signs of infection or further need for intervention",
+      "Improved symptoms with successful therapeutic paracentesis and stable lab values"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "371", "description": "Major gastrointestinal disorders and peritoneal infections with MCC", "GMLOS": 7.2 },
+      { "code": "372", "description": "Major gastrointestinal disorders and peritoneal infections with CC", "GMLOS": 4.9 },
+      { "code": "373", "description": "Major gastrointestinal disorders and peritoneal infections without CC/MCC", "GMLOS": 3.1 }
+    ],
+    "primary_icd10s": [
+      { "code": "R18.8", "description": "Other ascites" },
+      { "code": "R18.9", "description": "Ascites, unspecified" },
+      { "code": "K65.2", "description": "Spontaneous bacterial peritonitis" },
+      { "code": "K70.31", "description": "Alcoholic cirrhosis of liver with ascites" },
+      { "code": "K76.7", "description": "Hepatorenal syndrome" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "K76.6", "description": "Portal hypertension" }
+  ]
+},
+{
+  "condition": "Asthma",
+  "criteria": {
+    "inpatient": [
+      "Severe asthma exacerbation unresponsive to initial bronchodilators and steroids",
+      "Respiratory distress with hypoxemia or hypercapnia requiring supplemental oxygen or noninvasive ventilation",
+      "Signs of impending respiratory failure, such as altered mental status or exhaustion",
+      "Need for continuous nebulized therapy or IV magnesium sulfate for symptom control",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Moderate asthma exacerbation requiring frequent bronchodilator therapy",
+      "Stable after initial treatment but requires monitoring for recurrence of symptoms",
+      "No evidence of respiratory failure but requires further evaluation and management",
+      "Improvement after initial therapy with need for short-term observation to ensure stability"
+    ],
+    "discharge": [
+      "Symptoms controlled with oral or inhaled medications",
+      "Stable clinical condition with a clear outpatient management plan",
+      "No need for supplemental oxygen or ongoing acute therapy",
+      "Resolved exacerbation with patient tolerating baseline therapy and activities of daily living"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "202", "description": "Bronchitis and asthma with MCC", "GMLOS": 4.0 },
+      { "code": "203", "description": "Bronchitis and asthma with CC", "GMLOS": 3.0 },
+      { "code": "204", "description": "Bronchitis and asthma without CC/MCC", "GMLOS": 2.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "J45.901", "description": "Unspecified asthma with (acute) exacerbation" },
+      { "code": "J45.902", "description": "Unspecified asthma with status asthmaticus" },
+      { "code": "J45.909", "description": "Unspecified asthma, uncomplicated" },
+      { "code": "J45.993", "description": "Exercise induced bronchospasm" },
+      { "code": "J45.998", "description": "Other asthma" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R06.2", "description": "Wheezing" },
+    { "code": "R09.02", "description": "Hypoxemia" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "Z79.01", "description": "Long-term (current) use of inhaled steroids" }
+  ]
+},
+	  {
+  "condition": "Atrial Fibrillation/Flutter",
+  "criteria": {
+    "inpatient": [
+      "Uncontrolled atrial fibrillation with rapid ventricular response despite initial rate control measures",
+      "New-onset atrial fibrillation/flutter with evidence of hemodynamic instability or signs of myocardial ischemia",
+      "Requiring continuous IV anticoagulation or urgent cardioversion for rhythm control",
+      "Associated complications such as acute heart failure, thromboembolism, or stroke requiring intensive monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Newly diagnosed atrial fibrillation/flutter with stable hemodynamics after initial treatment",
+      "Paroxysmal atrial fibrillation/flutter requiring monitoring for recurrence",
+      "Stable symptoms with no immediate need for invasive intervention but requiring close observation",
+      "Improvement after initial therapy with need for short-term monitoring to ensure stability"
+    ],
+    "discharge": [
+      "Controlled atrial fibrillation/flutter with adequate rate or rhythm control",
+      "Stable clinical condition with an outpatient anticoagulation and follow-up plan in place",
+      "No evidence of hemodynamic instability or myocardial ischemia",
+      "Resolution of symptoms with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "308", "description": "Cardiac arrhythmia and conduction disorders with MCC", "GMLOS": 3.7 },
+      { "code": "309", "description": "Cardiac arrhythmia and conduction disorders without MCC", "GMLOS": 2.4 },
+      { "code": "310", "description": "Cardiac arrhythmia and conduction disorders with CC", "GMLOS": 3.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "I48.0", "description": "Paroxysmal atrial fibrillation" },
+      { "code": "I48.1", "description": "Persistent atrial fibrillation" },
+      { "code": "I48.2", "description": "Chronic atrial fibrillation" },
+      { "code": "I48.3", "description": "Typical atrial flutter" },
+      { "code": "I48.4", "description": "Atypical atrial flutter" },
+      { "code": "I48.91", "description": "Unspecified atrial fibrillation" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "R07.9", "description": "Chest pain, unspecified" },
+    { "code": "Z79.01", "description": "Long-term (current) use of anticoagulants" },
+    { "code": "E87.5", "description": "Hyperkalemia" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" }
+  ]
+},
+	  {
+  "condition": "Back Pain",
+  "criteria": {
+    "inpatient": [
+      "Severe back pain with signs of cauda equina syndrome (e.g., urinary retention, saddle anesthesia, motor weakness)",
+      "Back pain associated with spinal cord compression requiring urgent surgical or medical intervention",
+      "Intractable pain unresponsive to outpatient therapy or requiring IV pain management",
+      "Back pain with signs of infection (e.g., spinal epidural abscess) or malignancy requiring intensive evaluation and treatment",
+      "Neurological deficits such as progressive weakness or sensory loss requiring inpatient monitoring"
+    ],
+    "observation": [
+      "Moderate back pain requiring diagnostic imaging or further evaluation",
+      "Stable after initial treatment but requires monitoring for worsening symptoms",
+      "No immediate need for surgical intervention but ongoing assessment required",
+      "Pain responding to initial therapy but requires short-term observation for sustained improvement"
+    ],
+    "discharge": [
+      "Mild back pain controlled with oral analgesics",
+      "Stable clinical condition with no red flag symptoms (e.g., neurological deficits, infection, or malignancy)",
+      "Outpatient follow-up and conservative management plan arranged",
+      "Improved symptoms with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "551", "description": "Medical back problems with MCC", "GMLOS": 4.5 },
+      { "code": "552", "description": "Medical back problems without MCC", "GMLOS": 2.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "M54.5", "description": "Low back pain" },
+      { "code": "M54.2", "description": "Cervicalgia" },
+      { "code": "M54.9", "description": "Dorsalgia, unspecified" },
+      { "code": "M51.26", "description": "Other intervertebral disc displacement, lumbar region" },
+      { "code": "M51.27", "description": "Other intervertebral disc displacement, lumbosacral region" },
+      { "code": "M51.06", "description": "Intervertebral disc disorders with myelopathy, lumbar region" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "D64.9", "description": "Anemia, unspecified" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "M79.2", "description": "Neuralgia and neuritis, unspecified" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Pneumothorax",
+  "criteria": {
+    "inpatient": [
+      "Pneumothorax > 3 cm confirmed by imaging and requiring a chest tube and continuous suction",
+      "Tension pneumothorax requiring immediate decompression and intensive monitoring",
+      "Recurrent pneumothorax requiring surgical intervention (e.g., pleurodesis or thoracoscopy)",
+      "Associated complications such as hemodynamic instability, hypoxemia, or respiratory failure"
+    ],
+    "observation": [
+      "Pneumothorax confirmed by imaging but does not require chest tube and continuous suction or size is ≤ 3 cm",
+      "Requires monitoring for potential progression or need for further intervention",
+      "Stable after initial treatment (e.g., needle aspiration) but requiring observation for recurrence"
+    ],
+    "discharge": [
+      "Pneumothorax does not meet severity for inpatient or observation care",
+      "Patient is stable with no further intervention needed",
+      "Outpatient follow-up arranged with appropriate monitoring",
+      "Resolved symptoms with radiologic confirmation of lung re-expansion"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "199", "description": "Pneumothorax with MCC", "GMLOS": 6.5 },
+      { "code": "200", "description": "Pneumothorax without MCC", "GMLOS": 4.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "J93.0", "description": "Spontaneous tension pneumothorax" },
+      { "code": "J93.11", "description": "Primary spontaneous pneumothorax" },
+      { "code": "J93.12", "description": "Secondary spontaneous pneumothorax" },
+      { "code": "J93.82", "description": "Other air leak" },
+      { "code": "J93.9", "description": "Pneumothorax, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R06.02", "description": "Shortness of breath" },
+    { "code": "R09.02", "description": "Hypoxemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Bleeding, Upper GI",
+  "criteria": {
+    "inpatient": [
+      "Syncope with evidence of hemodynamic instability",
+      "Hct ≤ 25% OR Hb ≤ 8.3 with active bleeding requiring urgent intervention",
+      "Platelets < 60K OR > 1 million with associated bleeding risk",
+      "Sustained HR 100-120/min with active symptoms",
+      "Postural hypotension: BOTH sustained BP drop within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "Non-reversible anticoagulant use OR PT ≥ 1.5x normal, INR ≥ 2, OR PTT ≥ 1.5x normal",
+      "Disorientation, agitation, or lethargy related to inadequate perfusion",
+      "Findings suggesting inadequate perfusion (e.g., myocardial ischemia, end-organ dysfunction)",
+      "Requirement for ALL of the following: IVF, blood product transfusion, Hct/Hb monitoring at least 2x/24h, and PPI administration",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Mild to moderate bleeding with stable vitals requiring diagnostic evaluation (e.g., endoscopy)",
+      "Hematochezia with Platelets < 60K OR Hct ≤ 25% OR Hb ≤ 8.3 requiring monitoring",
+      "No ongoing bleeding but requiring monitoring for recurrence or progression",
+      "Stable condition after initial resuscitation requiring further assessment",
+      "Improved symptoms with continued observation for sustained clinical stability"
+    ],
+    "discharge": [
+      "Resolved bleeding with stable hemoglobin levels and normal vitals",
+      "No evidence of ongoing bleeding or hemodynamic compromise",
+      "Outpatient follow-up arranged for further evaluation or management",
+      "Improved clinical condition with patient tolerating oral intake and activities of daily living"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "378", "description": "Gastrointestinal hemorrhage with MCC", "GMLOS": 5.8 },
+      { "code": "379", "description": "Gastrointestinal hemorrhage with CC", "GMLOS": 3.8 },
+      { "code": "380", "description": "Gastrointestinal hemorrhage without CC/MCC", "GMLOS": 2.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "K92.0", "description": "Hematemesis" },
+      { "code": "K92.1", "description": "Melena" },
+      { "code": "K92.2", "description": "Gastrointestinal hemorrhage, unspecified" },
+      { "code": "I85.00", "description": "Esophageal varices without bleeding" },
+      { "code": "I85.01", "description": "Esophageal varices with bleeding" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Bleeding, Lower GI",
+  "criteria": {
+    "inpatient": [
+      "Severe active bleeding with hemodynamic instability, such as sustained hypotension (SBP < 90 mmHg) or tachycardia (HR > 120 bpm), requiring transfusion or IV fluids",
+      "Significant anemia with ongoing bleeding (Hct ≤ 25% or Hb ≤ 8.3 g/dL) requiring urgent intervention (e.g., endoscopy, angiography, surgery)",
+      "Bleeding associated with coagulopathy (INR ≥ 2 or PTT ≥ 1.5x normal) or anticoagulation therapy requiring reversal and close monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Associated complications such as hypovolemic shock, end-organ dysfunction, or myocardial ischemia requiring intensive monitoring"
+    ],
+    "observation": [
+      "Mild to moderate bleeding with stable vitals (e.g., HR < 100 bpm, SBP ≥ 90 mmHg) requiring diagnostic evaluation (e.g., colonoscopy, imaging)",
+      "No ongoing bleeding but requiring monitoring for potential recurrence or progression of symptoms",
+      "Stable condition after initial treatment (e.g., transfusion or fluid resuscitation) requiring further assessment for the source of bleeding",
+      "Improvement after initial therapy requiring observation for sustained stability"
+    ],
+    "discharge": [
+      "Resolved bleeding with stable hemoglobin levels (Hct > 30% or Hb > 10 g/dL) and normal vital signs (HR < 100 bpm, SBP ≥ 90 mmHg)",
+      "No evidence of ongoing bleeding, hemodynamic compromise, or significant anemia",
+      "Outpatient follow-up arranged for further evaluation or definitive management",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "378", "description": "Gastrointestinal hemorrhage with MCC", "GMLOS": 5.8 },
+      { "code": "379", "description": "Gastrointestinal hemorrhage with CC", "GMLOS": 3.8 },
+      { "code": "380", "description": "Gastrointestinal hemorrhage without CC/MCC", "GMLOS": 2.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "K92.2", "description": "Gastrointestinal hemorrhage, unspecified" },
+      { "code": "K62.5", "description": "Hemorrhage of anus and rectum" },
+      { "code": "K55.21", "description": "Angiodysplasia of colon with hemorrhage" },
+      { "code": "I85.01", "description": "Esophageal varices with bleeding" },
+      { "code": "K57.31", "description": "Diverticulosis of large intestine with perforation and abscess with bleeding" },
+      { "code": "K57.11", "description": "Diverticulosis of small intestine with perforation and abscess with bleeding" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Bleeding, Vaginal",
+  "criteria": {
+    "inpatient": [
+      "Severe vaginal bleeding with hemodynamic instability (e.g., hypotension, tachycardia) requiring transfusion or IV fluids",
+      "Evidence of anemia due to acute blood loss requiring urgent surgical or medical intervention",
+      "Associated pregnancy complications (e.g., ectopic pregnancy, placenta previa, or abruptio placentae) requiring continuous monitoring or surgical management",
+      "Persistent bleeding unresponsive to outpatient management requiring hospitalization",
+      "Signs of end-organ dysfunction or hypovolemic shock requiring intensive monitoring"
+    ],
+    "observation": [
+      "Moderate bleeding with stable vitals requiring diagnostic evaluation (e.g., pelvic ultrasound)",
+      "Bleeding controlled after initial treatment but requiring monitoring for recurrence or progression",
+      "Stable condition after initial therapy but needing further diagnostic studies or therapy adjustments",
+      "Improvement after initial therapy requiring short-term observation to ensure stability"
+    ],
+    "discharge": [
+      "Resolved bleeding with stable hemoglobin levels and hemodynamics",
+      "No evidence of ongoing or recurrent bleeding",
+      "Outpatient follow-up arranged for gynecological evaluation or further management",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "742", "description": "Uterine and adnexa procedures for non-malignancy with CC/MCC", "GMLOS": 3.8 },
+      { "code": "743", "description": "Uterine and adnexa procedures for non-malignancy without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "N93.9", "description": "Abnormal uterine and vaginal bleeding, unspecified" },
+      { "code": "N92.4", "description": "Excessive bleeding in the premenopausal period" },
+      { "code": "N92.0", "description": "Excessive and frequent menstruation with regular cycle" },
+      { "code": "O46.01", "description": "Antepartum hemorrhage with coagulation defect" },
+      { "code": "O20.0", "description": "Threatened abortion" },
+      { "code": "O72.1", "description": "Other immediate postpartum hemorrhage" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Bowel Obstruction",
+  "criteria": {
+    "inpatient": [
+      "Complete bowel obstruction with severe abdominal pain, vomiting, and inability to pass stool or gas",
+      "Signs of bowel ischemia or perforation requiring urgent surgical intervention",
+      "Severe dehydration or electrolyte imbalance requiring IV fluids and monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Associated complications such as sepsis, hypovolemic shock, or end-organ dysfunction requiring intensive care"
+    ],
+    "observation": [
+      "Partial bowel obstruction with mild to moderate symptoms requiring monitoring and diagnostic imaging",
+      "Stable after initial treatment but requiring further evaluation for resolution or progression",
+      "No immediate surgical indication but needing supportive care and monitoring",
+      "Improved symptoms after initial therapy requiring short-term observation to ensure stability"
+    ],
+    "discharge": [
+      "Resolved obstruction with return of normal bowel function",
+      "Stable clinical condition with no signs of ischemia or recurrence",
+      "Outpatient follow-up arranged for further evaluation or management",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "393", "description": "Other digestive system diagnoses with MCC", "GMLOS": 6.5 },
+      { "code": "394", "description": "Other digestive system diagnoses with CC", "GMLOS": 4.5 },
+      { "code": "395", "description": "Other digestive system diagnoses without CC/MCC", "GMLOS": 3.1 }
+    ],
+    "primary_icd10s": [
+      { "code": "K56.69", "description": "Other intestinal obstruction" },
+      { "code": "K56.60", "description": "Unspecified intestinal obstruction" },
+      { "code": "K56.41", "description": "Fecal impaction" },
+      { "code": "K56.2", "description": "Volvulus" },
+      { "code": "K56.0", "description": "Paralytic ileus" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "C. difficile Infection",
+  "criteria": {
+    "inpatient": [
+      "Severe C. difficile infection with signs of systemic toxicity (e.g., fever, leukocytosis, hypotension)",
+      "Evidence of complications such as ileus, megacolon, or perforation requiring close monitoring or surgical intervention",
+      "Severe dehydration or electrolyte imbalance requiring IV fluids and supportive care",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Associated complications such as acute kidney injury or hypovolemic shock requiring intensive care"
+    ],
+    "observation": [
+      "Moderate C. difficile infection requiring oral or IV antibiotics and monitoring for progression",
+      "Stable after initial treatment but needing further observation for recurrence or worsening symptoms",
+      "Mild systemic symptoms requiring hydration and continued evaluation",
+      "Improvement after initial therapy requiring short-term observation to ensure clinical stability"
+    ],
+    "discharge": [
+      "Mild C. difficile infection controlled with oral antibiotics",
+      "Stable clinical condition with resolving symptoms and no systemic toxicity",
+      "Outpatient follow-up arranged for continued monitoring and stool studies if needed",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "371", "description": "Major gastrointestinal disorders and peritoneal infections with MCC", "GMLOS": 7.2 },
+      { "code": "372", "description": "Major gastrointestinal disorders and peritoneal infections with CC", "GMLOS": 4.9 },
+      { "code": "373", "description": "Major gastrointestinal disorders and peritoneal infections without CC/MCC", "GMLOS": 3.1 }
+    ],
+    "primary_icd10s": [
+      { "code": "A04.7", "description": "Enterocolitis due to Clostridioides difficile" },
+      { "code": "A04.71", "description": "Enterocolitis due to C. difficile, recurrent" },
+      { "code": "A04.72", "description": "Enterocolitis due to C. difficile, not specified as recurrent" },
+      { "code": "K52.2", "description": "Toxic gastroenteritis and colitis" },
+      { "code": "K56.69", "description": "Other intestinal obstruction" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	 {
+  "condition": "Cellulitis",
+  "criteria": {
+    "inpatient": [
+      "Severe cellulitis with systemic symptoms such as fever, tachycardia, or hypotension",
+      "Evidence of necrotizing soft tissue infection or abscess requiring surgical intervention",
+      "Failure of outpatient therapy with worsening infection and signs of systemic involvement",
+      "Severe pain, erythema, or swelling with signs of compartment syndrome or vascular compromise",
+      "Associated complications such as acute kidney injury or sepsis requiring intensive monitoring"
+    ],
+    "observation": [
+      "Moderate cellulitis requiring IV antibiotics and close monitoring",
+      "Stable after initial treatment but needing further evaluation for response to therapy",
+      "No systemic symptoms but requiring monitoring for progression or complications",
+      "Improvement after initial therapy requiring observation for sustained stability"
+    ],
+    "discharge": [
+      "Mild cellulitis controlled with oral antibiotics",
+      "Stable clinical condition with no systemic symptoms or progression",
+      "Outpatient follow-up arranged for continued monitoring and treatment",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "602", "description": "Cellulitis with MCC", "GMLOS": 5.3 },
+      { "code": "603", "description": "Cellulitis without MCC", "GMLOS": 3.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "L03.90", "description": "Cellulitis, unspecified" },
+      { "code": "L03.11", "description": "Cellulitis of other parts of limb" },
+      { "code": "L03.113", "description": "Cellulitis of upper limb" },
+      { "code": "L03.114", "description": "Cellulitis of lower limb" },
+      { "code": "L03.115", "description": "Cellulitis of face" },
+      { "code": "L03.116", "description": "Cellulitis of neck" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Chemotherapy",
+  "criteria": {
+    "inpatient": [
+      "Severe chemotherapy-related complications such as febrile neutropenia, sepsis, or significant dehydration",
+      "Uncontrolled nausea, vomiting, or diarrhea requiring IV fluids and supportive care",
+      "Complications such as tumor lysis syndrome or organ dysfunction requiring intensive monitoring",
+      "Requires at least one of the following interventions: continuous infusion > 16 hours, IV hydration with urine output or pH monitoring, antiemetic administration ≥ 3x/24h, or blood product transfusion (HCT < 25%, Hb < 8.3, or platelets < 20,000)",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Severe electrolyte imbalances or acute kidney injury requiring inpatient monitoring and correction"
+    ],
+    "observation": [
+      "Mild to moderate chemotherapy-related side effects requiring supportive therapy and monitoring",
+      "Initial administration of a new chemotherapy regimen requiring observation for adverse reactions",
+      "Stable condition but requiring further evaluation and hydration",
+      "Improvement after initial therapy requiring short-term observation to ensure stability"
+    ],
+    "discharge": [
+      "Tolerating chemotherapy with minimal side effects managed with oral medications",
+      "Stable clinical condition with no signs of complications",
+      "Outpatient follow-up arranged for continued therapy and monitoring",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "820", "description": "Lymphoma and leukemia with major OR procedure with MCC", "GMLOS": 10.8 },
+      { "code": "834", "description": "Acute leukemia without major OR procedure with MCC", "GMLOS": 8.6 },
+      { "code": "835", "description": "Acute leukemia without major OR procedure with CC", "GMLOS": 5.9 },
+      { "code": "836", "description": "Acute leukemia without major OR procedure without CC/MCC", "GMLOS": 4.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "Z51.11", "description": "Encounter for antineoplastic chemotherapy" },
+      { "code": "T45.1X5A", "description": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter" },
+      { "code": "C91.00", "description": "Acute lymphoblastic leukemia, not having achieved remission" },
+      { "code": "C92.00", "description": "Acute myeloblastic leukemia, not having achieved remission" },
+      { "code": "C85.90", "description": "Non-Hodgkin lymphoma, unspecified site, unspecified type, not having achieved remission" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E86.0", "description": "Dehydration" }
+  ]
+},
+	  {
+  "condition": "ACS (Acute Coronary Syndrome)",
+  "criteria": {
+    "inpatient": [
+      "Acute MI (STEMI) confirmed by ECG",
+      "Positive biomarkers with pain controlled AND symptoms resolved (NSTEMI)",
+      "Pain controlled OR not with BOTH: Rest angina, new onset angina, or worsening angina - Class III-IV AND ECG changes suggesting ischemia or paced rhythm",
+      "Positive diagnostic testing: Ischemia on stress test or CCTA AND symptoms of chest pain (or anginal equivalent) within the last 24 hours",
+      "ACS suspected and LBBB (new or age undetermined) on ECG",
+      "Requires ALL of the following interventions: Beta blockers, ASA, Antiplatelet therapy, Anticoagulant therapy, Continuous cardiac monitoring (excludes Holter)",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Associated complications such as acute heart failure, cardiogenic shock, or ventricular arrhythmias requiring intensive monitoring"
+    ],
+    "observation": [
+      "High risk for cardiac ischemia as indicated by ANY ONE of the following: Hx of DM, Hx of CABG, Hx of PCI < 6 months, Chronic renal insufficiency (GFR < 60), High risk score on prognostic index (TIMI ≥ 3)",
+      "Evidence of unstable angina as indicated by ANY ONE of the following: Nocturnal, New onset, Progressive, Prolonged at rest",
+      "ANY ONE of the following: New or worsening mitral regurgitation, ECG normal, unchanged or non-diagnostic, Hemodynamic instability (SBP < 90), Continuous cardiac monitoring (excludes Holter), ASA or antiplatelet given or contraindicated (includes PO), Dangerous arrhythmia (e.g., sustained ventricular tachycardia), Initial cardiac biomarkers negative with continued serial monitoring planned",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient services",
+      "Stable condition with no ongoing chest pain or symptoms",
+      "Follow-up arranged for outpatient cardiology evaluation and diagnostic testing",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "280", "description": "Acute myocardial infarction, discharged alive with MCC", "GMLOS": 6.2 },
+      { "code": "281", "description": "Acute myocardial infarction, discharged alive with CC", "GMLOS": 4.0 },
+      { "code": "282", "description": "Acute myocardial infarction, discharged alive without CC/MCC", "GMLOS": 2.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "I21.01", "description": "ST elevation (STEMI) myocardial infarction involving left main coronary artery" },
+      { "code": "I21.02", "description": "ST elevation (STEMI) myocardial infarction involving left anterior descending coronary artery" },
+      { "code": "I21.11", "description": "ST elevation (STEMI) myocardial infarction involving right coronary artery" },
+      { "code": "I21.19", "description": "ST elevation (STEMI) myocardial infarction involving other coronary artery" },
+      { "code": "I21.4", "description": "Non-ST elevation (NSTEMI) myocardial infarction" },
+      { "code": "I20.0", "description": "Unstable angina" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "I48.91", "description": "Unspecified atrial fibrillation" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	  {
+  "condition": "Congestive Heart Failure (CHF)",
+  "criteria": {
+    "inpatient": [
+      "Left Heart Failure confirmed by imaging AND at least one of the following: BUN or creatinine > 1.5x normal or baseline, Sustained HR > 100 BPM, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+      "Right Heart Failure with dyspnea at rest and not returned to baseline after 2 hours of treatment AND at least one of the following: JVD, Hepatomegaly, Extremity edema, Weight gain ≥ 3 lbs over the last 2 days",
+      "Heart Failure with preserved LVEF AND at least one of the following: Change in mental status, BUN or creatinine > 1.5x normal or baseline, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+      "Will require all of the following interventions: DVT prophylaxis, Sodium restriction, Oximetry or blood gas, Diuretic ≥ 2 doses or dialysis, Oxygen (O2 sat < 92% and < baseline), ACEI or ARB (includes PO) or contraindicated, Beta blocker (includes PO) or contraindicated, Continuous cardiac monitoring (excludes Holter)",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Associated complications such as acute kidney injury, cardiogenic shock, or pulmonary edema requiring intensive monitoring"
+    ],
+    "observation": [
+      "Left Heart Failure confirmed by imaging AND at least one of the following: BUN or creatinine > 1.5x normal or baseline, Sustained HR > 100 BPM, Failed outpatient treatment (≥ 2 visits in the last 7 days), Dyspnea at rest and not returned to baseline after 2 hours of treatment (O2 sat < 89% and < baseline, change in mental status, or sustained HR 100-120)",
+      "Right Heart Failure with dyspnea at rest and not returned to baseline after 2 hours of treatment AND at least one of the following: JVD, Hepatomegaly, Extremity edema, Weight gain ≥ 3 lbs over the last 2 days",
+      "Will require all of the following interventions: DVT prophylaxis, Sodium restriction, Oximetry or blood gas, Diuretic ≥ 2 doses or dialysis, Oxygen (O2 sat < 92% and < baseline), ACEI or ARB (includes PO) or contraindicated, Beta blocker (includes PO) or contraindicated, Continuous cardiac monitoring (excludes Holter)",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "Right Heart Failure with dyspnea resolved and stable clinical condition, no ongoing symptoms or interventions required",
+      "Heart Failure with preserved LVEF and no severity of illness or intensity of services matching guidelines for observation or inpatient care",
+      "Stable condition with follow-up care and outpatient management plan arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "291", "description": "Heart failure and shock with MCC", "GMLOS": 5.5 },
+      { "code": "292", "description": "Heart failure and shock with CC", "GMLOS": 4.1 },
+      { "code": "293", "description": "Heart failure and shock without CC/MCC", "GMLOS": 3.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "I50.1", "description": "Left ventricular failure, unspecified" },
+      { "code": "I50.20", "description": "Unspecified systolic (congestive) heart failure" },
+      { "code": "I50.30", "description": "Unspecified diastolic (congestive) heart failure" },
+      { "code": "I50.40", "description": "Unspecified combined systolic and diastolic heart failure" },
+      { "code": "I50.9", "description": "Heart failure, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R06.02", "description": "Shortness of breath" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Cholecystitis - Acute",
+  "criteria": {
+    "inpatient": [
+      "Cholecystitis confirmed by imaging AND both of the following are true: Anti-infective therapy initiated, Analgesic administered 3x/24h or continuous",
+      "Severe cholecystitis with evidence of systemic symptoms (e.g., fever, tachycardia, hypotension) or complications such as gallbladder perforation, abscess, or sepsis requiring intensive monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Cholecystitis confirmed by imaging BUT both of the following are NOT true: Anti-infective therapy initiated, Analgesic administered 3x/24h or continuous",
+      "Requires monitoring or additional diagnostic evaluation without immediate intensive intervention",
+      "Mild cholecystitis improving after initial therapy but requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms managed with oral medications and no further interventions required",
+      "Outpatient follow-up arranged with a clear treatment plan",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "411", "description": "Cholecystectomy with MCC", "GMLOS": 7.8 },
+      { "code": "412", "description": "Cholecystectomy with CC", "GMLOS": 4.9 },
+      { "code": "413", "description": "Cholecystectomy without CC/MCC", "GMLOS": 3.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "K81.0", "description": "Acute cholecystitis" },
+      { "code": "K81.1", "description": "Chronic cholecystitis" },
+      { "code": "K82.1", "description": "Other cholecystitis" },
+      { "code": "K80.10", "description": "Calculus of gallbladder with acute cholecystitis without obstruction" },
+      { "code": "K80.00", "description": "Calculus of gallbladder without cholecystitis without obstruction" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "I10", "description": "Essential (primary) hypertension" }
+  ]
+},
+	  {
+  "condition": "COPD",
+  "criteria": {
+    "inpatient": [
+      "The patient requires ALL of the following interventions: Corticosteroid (includes PO), Oximetry OR blood gas monitoring, Bronchodilators (includes MDI with spacer ≥ 6/24h), Oxygen (O2 sat ≥ 92% or pO2 ≥ 60 mmHg or baseline OR O2 sat < 92% or pO2 < 60 mmHg and < baseline)",
+      "Severe COPD exacerbation with signs of respiratory failure such as altered mental status, inability to maintain adequate oxygenation or ventilation, or severe acidosis requiring intensive monitoring",
+      "Failure of outpatient treatment with worsening symptoms necessitating hospitalization",
+      "Associated complications such as pneumonia or acute heart failure requiring close monitoring and intervention"
+    ],
+    "observation": [
+      "The patient does not require ALL of the following interventions but still requires monitoring for severity: Corticosteroid (includes PO), Oximetry OR blood gas monitoring, Bronchodilators (includes MDI with spacer ≥ 6/24h), Oxygen (O2 sat ≥ 92% or pO2 ≥ 60 mmHg or baseline OR O2 sat < 92% or pO2 < 60 mmHg and < baseline)",
+      "Mild to moderate COPD exacerbation requiring initial therapy and observation for clinical stability",
+      "Stable after initial treatment but requiring monitoring for symptom recurrence or progression",
+      "Improvement after therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms controlled with outpatient management and no further interventions required",
+      "Stable clinical condition with follow-up arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "190", "description": "Chronic obstructive pulmonary disease with MCC", "GMLOS": 4.3 },
+      { "code": "191", "description": "Chronic obstructive pulmonary disease with CC", "GMLOS": 3.1 },
+      { "code": "192", "description": "Chronic obstructive pulmonary disease without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "J44.1", "description": "Chronic obstructive pulmonary disease with (acute) exacerbation" },
+      { "code": "J44.0", "description": "Chronic obstructive pulmonary disease with (acute) lower respiratory infection" },
+      { "code": "J44.9", "description": "Chronic obstructive pulmonary disease, unspecified" },
+      { "code": "J43.9", "description": "Emphysema, unspecified" },
+      { "code": "J41.1", "description": "Mucopurulent chronic bronchitis" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	  {
+  "condition": "CVA (Cerebrovascular Accident)",
+  "criteria": {
+    "inpatient": [
+      "An exacerbation of a previous neuro deficit confirmed by imaging AND at least one of the following: Aphasia, Ataxia, Blindness, Dysphagia, Dysarthrias, Diplopia or visual field loss, Mental status change (excludes coma, stupor or obtundation), Paralysis, Paresis, Sensory deficit, Partial or total gaze palsy",
+      "Diagnostic work-up pending with ALL of the following: CT or MRI scheduled or performed within 24h, Vascular imaging of carotid artery scheduled or performed within 24h, Cardiac echo scheduled or performed within 24h or recently performed, Neuro assessment at least 6x/24h, Antiplatelet, ASA, or anticoagulant administered or contraindicated",
+      "Thrombolysis or endovascular intervention contraindicated AND at least one neuro deficit present (e.g., Aphasia, Ataxia, Blindness, Dysphagia, Dysarthrias, Diplopia or visual field loss, Mental status change)",
+      "Patients with hemodynamic instability requiring intensive monitoring or intervention",
+      "Acute ischemic stroke or hemorrhagic stroke requiring intensive supportive care, such as airway protection, ICP monitoring, or blood pressure management"
+    ],
+    "observation": [
+      "The patient has an ABCD2 score > 2 AND a resolved neurological deficit",
+      "Exacerbation of a previous neuro deficit confirmed by imaging without significant instability, requiring monitoring or further evaluation",
+      "Diagnostic work-up partially completed but requiring monitoring for progression, recurrence, or worsening symptoms",
+      "Resolved transient ischemic attack (TIA) symptoms requiring short-term observation for stability and follow-up"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Resolved symptoms with no ongoing neuro deficits or hemodynamic instability",
+      "Outpatient follow-up and management plan arranged, including diagnostic studies if needed",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "064", "description": "Intracranial hemorrhage or cerebral infarction with MCC", "GMLOS": 6.7 },
+      { "code": "065", "description": "Intracranial hemorrhage or cerebral infarction with CC", "GMLOS": 4.4 },
+      { "code": "066", "description": "Intracranial hemorrhage or cerebral infarction without CC/MCC", "GMLOS": 3.0 }
+    ],
+    "primary_icd10s": [
+      { "code": "I63.9", "description": "Cerebral infarction, unspecified" },
+      { "code": "I63.8", "description": "Other cerebral infarction" },
+      { "code": "I63.3", "description": "Cerebral infarction due to thrombosis of cerebral arteries" },
+      { "code": "I63.5", "description": "Cerebral infarction due to unspecified occlusion or stenosis of cerebral arteries" },
+      { "code": "I61.9", "description": "Nontraumatic intracerebral hemorrhage, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Deep Vein Thrombosis (DVT)",
+  "criteria": {
+    "inpatient": [
+      "DVT confirmed by imaging AND at least one of the following: Pregnancy, Bilateral DVT, Platelets < 75K, CVA in the last 3 months",
+      "Requires at least one of the following interventions: LMWH, Fondaparinux, Unfractionated Heparin, Argatroban, Bivalirudin, Lepirudin, or management for Heparin-induced thrombocytopenia (HIT)",
+      "Creatinine clearance < 30 requiring close monitoring due to risk of anticoagulation complications",
+      "Active malignancy requiring urgent management or anticoagulation",
+      "Trauma or major surgery within the last 30 days with significant risk for embolism",
+      "Hemodynamic instability or worsening symptoms requiring immediate intervention",
+      "Evidence of pulmonary embolism (PE) complicating DVT requiring hospitalization and intensive monitoring"
+    ],
+    "observation": [
+      "DVT confirmed by imaging but does not require immediate intensive interventions",
+      "At least one risk factor for DVT: History of HIT, Morbid obesity, Coagulopathy, Hospital acquired, Immobilization ≥ 4 days, High risk for fall or trauma, Recent surgery (within 6 weeks), Liver disease with prolonged PTT/INR, Known clotting abnormality or deficiency (antithrombin III, protein C, or protein S), Previous DVT (≥ 2 episodes, one in the last 3 months or recurrent despite adequate anticoagulation treatment)",
+      "Requires monitoring for progression of symptoms or stability of anticoagulation therapy",
+      "Stable condition with initial anticoagulation therapy requiring short-term observation to ensure effectiveness and safety"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "DVT resolved or stabilized with outpatient management (e.g., oral anticoagulation)",
+      "Follow-up with anticoagulation therapy and risk reduction measures arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "299", "description": "Peripheral vascular disorders with MCC", "GMLOS": 5.3 },
+      { "code": "300", "description": "Peripheral vascular disorders with CC", "GMLOS": 3.6 },
+      { "code": "301", "description": "Peripheral vascular disorders without CC/MCC", "GMLOS": 2.7 }
+    ],
+    "primary_icd10s": [
+      { "code": "I82.401", "description": "Acute embolism and thrombosis of unspecified deep veins of right lower extremity" },
+      { "code": "I82.402", "description": "Acute embolism and thrombosis of unspecified deep veins of left lower extremity" },
+      { "code": "I82.403", "description": "Acute embolism and thrombosis of unspecified deep veins of lower extremity, bilateral" },
+      { "code": "I82.409", "description": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity" },
+      { "code": "Z86.718", "description": "Personal history of venous thrombosis and embolism" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "I10", "description": "Essential (primary) hypertension" }
+  ]
+},
+	  {
+  "condition": "Dehydration",
+  "criteria": {
+    "inpatient": [
+      "The patient has ANY TWO (2) of the following: Sodium > 150, Inadequate oral intake, Sustained HR > 100/min, Urine specific gravity > 1.030, Vomiting that is severe or persistent (unresponsive to outpatient treatment), BUN > 45 OR Creatinine > 3.0 AND below baseline, Mental status change (excludes coma, stupor, or obtundation), Persistent and unresponsive vomiting after > 2 doses of antiemetics, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "The patient requires at least one of the following interventions: Antiemetic (> 2X/24h or a daily serotonin antagonist), IVF rate > 74 cc/hr (if weight < 60 kg, age > 64, history of CRI or CHF) OR rate > 99 cc/hr if weight > 60 kg",
+      "Hemodynamic instability requiring continuous monitoring or intervention",
+      "Severe dehydration with evidence of complications such as acute kidney injury or electrolyte imbalances requiring intensive monitoring"
+    ],
+    "observation": [
+      "The patient has ANY TWO (2) of the following: Sodium > 150, Inadequate oral intake, Sustained HR > 100/min, Urine specific gravity > 1.030, Vomiting that is severe or persistent, BUN > 45 OR Creatinine > 3.0 AND below baseline, Mental status change (excludes coma, stupor, or obtundation), Persistent and unresponsive vomiting after > 2 doses of antiemetics, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "The patient requires monitoring for stabilization while receiving IV fluids and antiemetics",
+      "Short-term evaluation and symptom management for patients not meeting inpatient criteria",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved with oral hydration and outpatient antiemetics",
+      "Stable clinical condition with no progression of dehydration and outpatient follow-up arranged for lab monitoring",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "640", "description": "Nutritional and metabolic disorders with MCC", "GMLOS": 4.3 },
+      { "code": "641", "description": "Nutritional and metabolic disorders with CC", "GMLOS": 3.1 },
+      { "code": "642", "description": "Nutritional and metabolic disorders without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "E86.0", "description": "Dehydration" },
+      { "code": "R63.4", "description": "Abnormal weight loss" },
+      { "code": "E87.0", "description": "Hyperosmolality and hypernatremia" },
+      { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+      { "code": "E87.6", "description": "Hypokalemia" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	  {
+  "condition": "Hyperglycemia",
+  "criteria": {
+    "inpatient": [
+      "Glucose > 500 without ketonuria/ketonemia AND at least one of the following: Sodium > 150, Sustained HR > 100/min, BUN > 45 or chronic renal disease and > 1.5x baseline, Mental status change (excludes coma, stupor, or obtundation), Creatinine > 3.0 or chronic renal disease and > 1.5x baseline, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "Requires all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV ≥ 2x/24h or SC or IM injection ≥ 4x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Severe hyperglycemia with evidence of complications such as acute kidney injury or electrolyte imbalances requiring intensive monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "Glucose between 401-500 without ketonuria/ketonemia AND new onset of diabetes mellitus requiring stabilization",
+      "Glucose > 500 without ketonuria/ketonemia AND requiring all of the following interventions: Diabetes education, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV > 1x/24h or SC or IM injection > 3x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Requires monitoring and initial stabilization for hyperglycemia without meeting inpatient criteria",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Glucose stabilized below 401 with no ongoing symptoms or complications",
+      "Follow-up outpatient management and diabetes education arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "637", "description": "Diabetes with MCC", "GMLOS": 4.3 },
+      { "code": "638", "description": "Diabetes with CC", "GMLOS": 3.1 },
+      { "code": "639", "description": "Diabetes without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "E11.65", "description": "Type 2 diabetes mellitus with hyperglycemia" },
+      { "code": "E10.65", "description": "Type 1 diabetes mellitus with hyperglycemia" },
+      { "code": "R73.9", "description": "Hyperglycemia, unspecified" },
+      { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+      { "code": "E13.65", "description": "Other specified diabetes mellitus with hyperglycemia" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	  {
+  "condition": "Diabetic Ketoacidosis (DKA)",
+  "criteria": {
+    "inpatient": [
+      "ALL of the following are true: Glucose > 250, Ketonemia or ketonuria, Serum HCO3 or CO2 < 18, Arterial or venous pH < 7.35",
+      "The patient requires ALL of the following interventions: Electrolyte monitoring at least 3x/24h, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV ≥ 2x/24h or SC or IM injection ≥ 4x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Severe DKA with signs of hemodynamic instability or altered mental status requiring intensive monitoring",
+      "Failure of outpatient management or significant electrolyte imbalances requiring hospitalization"
+    ],
+    "observation": [
+      "ALL of the following are true: Glucose > 250, Ketonemia or ketonuria, Serum HCO3 or CO2 < 18, Arterial or venous pH < 7.35",
+      "The patient requires monitoring and initial stabilization with interventions such as: Electrolyte monitoring at least 3x/24h, Blood sugar monitoring at least 4x/24h, Insulin (Continuous, IV > 1x/24h or SC or IM injection > 3x/24h), IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Resolved acidosis and glucose levels stabilized with oral hydration and outpatient management",
+      "Outpatient follow-up and diabetes education arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "637", "description": "Diabetes with MCC", "GMLOS": 4.3 },
+      { "code": "638", "description": "Diabetes with CC", "GMLOS": 3.1 },
+      { "code": "639", "description": "Diabetes without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "E10.10", "description": "Type 1 diabetes mellitus with ketoacidosis without coma" },
+      { "code": "E11.10", "description": "Type 2 diabetes mellitus with ketoacidosis without coma" },
+      { "code": "E13.10", "description": "Other specified diabetes mellitus with ketoacidosis without coma" },
+      { "code": "E10.11", "description": "Type 1 diabetes mellitus with ketoacidosis with coma" },
+      { "code": "E11.11", "description": "Type 2 diabetes mellitus with ketoacidosis with coma" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	 {
+  "condition": "Diverticulitis",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is present: Peritoneal signs, Persistent vomiting, Inadequate oral intake, LLQ abdominal pain or tenderness, Phlegmon (symptomatic inflammatory mass without abscess), Immunocompromised patient (steroid use, chemotherapy, uremia, AIDS, transplant patient) with acute symptoms",
+      "The patient requires ALL of the following interventions: Urine culture, Anti-infective therapy, CT scheduled or performed within 24h, IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Severe diverticulitis with evidence of complications such as perforation, abscess, or sepsis requiring intensive monitoring",
+      "Failure of outpatient management or significant electrolyte imbalances requiring hospitalization"
+    ],
+    "observation": [
+      "At least one of the following is present: Peritoneal signs, Persistent vomiting, Inadequate oral intake, LLQ abdominal pain or tenderness, Phlegmon (symptomatic inflammatory mass without abscess), Immunocompromised patient (steroid use, chemotherapy, uremia, AIDS, transplant patient) with acute symptoms",
+      "The patient requires monitoring and initial stabilization with interventions such as: Anti-infective therapy, CT scheduled or performed within 24h, IVF rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or CHF) OR rate ≥ 100 cc/hr if weight > 60 kg",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms are managed with oral hydration, anti-infective therapy, and outpatient follow-up",
+      "Stable clinical condition with no progression of symptoms and a clear outpatient plan",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "329", "description": "Major small and large bowel procedures with MCC", "GMLOS": 9.4 },
+      { "code": "330", "description": "Major small and large bowel procedures with CC", "GMLOS": 6.4 },
+      { "code": "331", "description": "Major small and large bowel procedures without CC/MCC", "GMLOS": 4.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "K57.20", "description": "Diverticulitis of large intestine with perforation and abscess without bleeding" },
+      { "code": "K57.30", "description": "Diverticulitis of small intestine with perforation and abscess without bleeding" },
+      { "code": "K57.32", "description": "Diverticulitis of small intestine without perforation or abscess without bleeding" },
+      { "code": "K57.92", "description": "Diverticulitis of intestine, part unspecified, without perforation or abscess without bleeding" },
+      { "code": "K57.90", "description": "Diverticulitis of intestine, part unspecified, without perforation or abscess without bleeding" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "R06.02", "description": "Shortness of breath" }
+  ]
+},
+	 {
+  "condition": "Dyspnea",
+  "criteria": {
+    "inpatient": [
+      "The patient requires supplemental oxygen AND at least one of the following is true: pO2 < 56, O2 saturation ≤ 89% and below baseline",
+      "Dyspnea associated with evidence of respiratory failure (e.g., hypercapnia or significant hypoxia) requiring intensive monitoring",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization",
+      "Evidence of underlying conditions such as heart failure, pulmonary embolism, or acute lung injury requiring inpatient care"
+    ],
+    "observation": [
+      "The patient requires supplemental oxygen but does not meet inpatient criteria",
+      "Requires close monitoring for stability of oxygenation and progression of symptoms",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and supplemental oxygen if needed",
+      "Stable clinical condition with no evidence of hypoxia or respiratory compromise",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "189", "description": "Pulmonary edema and respiratory failure", "GMLOS": 5.5 },
+      { "code": "190", "description": "Chronic obstructive pulmonary disease with MCC", "GMLOS": 4.4 },
+      { "code": "191", "description": "Chronic obstructive pulmonary disease with CC", "GMLOS": 3.6 },
+      { "code": "192", "description": "Chronic obstructive pulmonary disease without CC/MCC", "GMLOS": 2.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "R06.02", "description": "Shortness of breath" },
+      { "code": "J96.01", "description": "Acute respiratory failure with hypoxia" },
+      { "code": "J96.02", "description": "Acute respiratory failure with hypercapnia" },
+      { "code": "J44.1", "description": "Chronic obstructive pulmonary disease with (acute) exacerbation" },
+      { "code": "J96.21", "description": "Chronic respiratory failure with hypoxia" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" }
+  ]
+},
+	  {
+  "condition": "Epilepsy",
+  "criteria": {
+    "inpatient": [
+      "New onset seizure with > 1 seizure within 24h AND all of the following interventions required: Seizure precautions, Anticonvulsant (includes PO), Neuro assessment at least q 4h, EEG (standard or continuous) scheduled or performed within 24h",
+      "Known seizure disorder with BOTH of the following true: Anticonvulsant (therapeutic drug level or not measurable in compliant patient) AND > 1 seizure within 24h with a change from baseline, progression in seizure type, or increase in seizure duration",
+      "Pregnancy with seizure AND requires all of the following interventions: Seizure precautions, Neuro assessment at least q 4h",
+      "Refractory seizures or status epilepticus requiring intensive monitoring and continuous EEG or IV anticonvulsants",
+      "Evidence of complications such as traumatic injury or aspiration during seizure requiring hospitalization"
+    ],
+    "observation": [
+      "New onset seizure with < 1 seizure within 24h and requiring monitoring or diagnostic evaluation such as EEG or anticonvulsant initiation",
+      "Known seizure disorder with no significant change from baseline but requiring monitoring for medication adjustment or diagnostic testing",
+      "Pregnancy with seizure managed with stable symptoms requiring monitoring but not meeting inpatient criteria",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and anticonvulsant therapy",
+      "Stable clinical condition with no progression of seizures or change in baseline, with follow-up care arranged",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "100", "description": "Seizures with MCC", "GMLOS": 4.0 },
+      { "code": "101", "description": "Seizures with CC", "GMLOS": 2.9 },
+      { "code": "102", "description": "Seizures without CC/MCC", "GMLOS": 2.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "G40.909", "description": "Epilepsy, unspecified, not intractable, without status epilepticus" },
+      { "code": "G40.901", "description": "Epilepsy, unspecified, intractable, without status epilepticus" },
+      { "code": "G40.311", "description": "Juvenile myoclonic epilepsy, intractable, with status epilepticus" },
+      { "code": "G40.309", "description": "Juvenile myoclonic epilepsy, not intractable, without status epilepticus" },
+      { "code": "G40.119", "description": "Generalized idiopathic epilepsy and epileptic syndromes, intractable, without status epilepticus" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" }
+  ]
+},
+	  {
+  "condition": "Hematuria",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following scenarios is present: Syncope, Hct ≤ 25% OR Hb ≤ 8.3, Sustained HR > 100/min, Platelets < 60K OR > 1 million, Disorientation, agitation, increased irritability OR increased lethargy, Non-reversible anticoagulant OR PT ≥ 1.5x normal OR INR ≥ 2 OR PTT ≥ 1.5x normal, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "The patient requires ALL of the following interventions: Blood product transfusion, Hct/Hb monitoring at least 2x/24h, Cystoscopy, CT urography, or renal ultrasound scheduled or performed within the last 24h",
+      "Severe hematuria with evidence of active bleeding or clot retention requiring continuous bladder irrigation or surgical intervention",
+      "Failure of outpatient management with worsening symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient has at least one of the following scenarios without meeting inpatient criteria: Syncope, Hct ≤ 25% OR Hb ≤ 8.3, Sustained HR > 100/min, Platelets < 60K OR > 1 million, Disorientation, agitation, increased irritability OR increased lethargy, Non-reversible anticoagulant OR PT ≥ 1.5x normal OR INR ≥ 2 OR PTT ≥ 1.5x normal, Postural hypotension: BOTH a sustained drop in BP within 3 minutes of sitting/standing AND either SBP drop > 20 or DBP drop > 10",
+      "The patient requires monitoring and initial stabilization with interventions such as diagnostic imaging, fluid management, or lab monitoring without requiring inpatient-level care",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with diagnostic evaluations completed and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "662", "description": "Minor bladder procedures with MCC", "GMLOS": 4.5 },
+      { "code": "663", "description": "Minor bladder procedures with CC", "GMLOS": 3.2 },
+      { "code": "664", "description": "Minor bladder procedures without CC/MCC", "GMLOS": 2.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "R31.0", "description": "Gross hematuria" },
+      { "code": "R31.1", "description": "Benign essential microscopic hematuria" },
+      { "code": "R31.2", "description": "Other microscopic hematuria" },
+      { "code": "N02.1", "description": "Recurrent and persistent hematuria with focal and segmental glomerular lesions" },
+      { "code": "N20.0", "description": "Calculus of kidney" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	  {
+  "condition": "Hepatic Encephalopathy",
+  "criteria": {
+    "inpatient": [
+      "The patient is stage II hepatic encephalopathy AND at least one of the following is present: Lethargy, Asterixis, Drowsiness, Intermittent disorientation, ≤ 75% of ideal body weight or weight lost ≥ 15% in the last 30 days",
+      "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+      "Stage II hepatic encephalopathy with at least one change in consciousness (e.g., lethargic, altered intellect/behavior, disoriented, inappropriate behavior) AND at least one neurologic finding (e.g., slurred speech, obvious asterixis)",
+      "Evidence of worsening liver function (e.g., elevated ammonia levels, INR > 2, bilirubin > 3) requiring intensive monitoring and treatment",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient is stage II hepatic encephalopathy with mild symptoms requiring monitoring and stabilization",
+      "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+      "Stable neurologic findings with no progression but requires short-term monitoring for symptom management",
+      "Improvement after initial therapy requiring observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan, including oral therapy",
+      "Stable clinical condition with no significant changes in consciousness or neurologic findings",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "432", "description": "Cirrhosis and alcoholic hepatitis with MCC", "GMLOS": 6.5 },
+      { "code": "433", "description": "Cirrhosis and alcoholic hepatitis with CC", "GMLOS": 4.3 },
+      { "code": "434", "description": "Cirrhosis and alcoholic hepatitis without CC/MCC", "GMLOS": 3.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "K72.90", "description": "Hepatic failure, unspecified without coma" },
+      { "code": "K72.91", "description": "Hepatic failure, unspecified with coma" },
+      { "code": "K76.6", "description": "Portal hypertension" },
+      { "code": "K70.40", "description": "Alcoholic hepatic failure without coma" },
+      { "code": "K76.7", "description": "Hepatorenal syndrome" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+{
+  "condition": "Hepatic Encephalopathy",
+  "criteria": {
+    "inpatient": [
+      "The patient is stage II hepatic encephalopathy AND at least one of the following is present: Lethargy, Asterixis, Drowsiness, Intermittent disorientation, ≤ 75% of ideal body weight or weight lost ≥ 15% in the last 30 days",
+      "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+      "Stage II hepatic encephalopathy with at least one change in consciousness (e.g., lethargic, altered intellect/behavior, disoriented, inappropriate behavior) AND at least one neurologic finding (e.g., slurred speech, obvious asterixis)",
+      "Evidence of worsening liver function (e.g., elevated ammonia levels, INR > 2, bilirubin > 3) requiring intensive monitoring and treatment",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient is stage II hepatic encephalopathy with mild symptoms requiring monitoring and stabilization",
+      "The patient requires at least one of the following interventions (includes PO): Neomycin, Lactulose, Rifaximin",
+      "Stable neurologic findings with no progression but requires short-term monitoring for symptom management",
+      "Improvement after initial therapy requiring observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan, including oral therapy",
+      "Stable clinical condition with no significant changes in consciousness or neurologic findings",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "432", "description": "Cirrhosis and alcoholic hepatitis with MCC", "GMLOS": 6.5 },
+      { "code": "433", "description": "Cirrhosis and alcoholic hepatitis with CC", "GMLOS": 4.3 },
+      { "code": "434", "description": "Cirrhosis and alcoholic hepatitis without CC/MCC", "GMLOS": 3.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "K72.90", "description": "Hepatic failure, unspecified without coma" },
+      { "code": "K72.91", "description": "Hepatic failure, unspecified with coma" },
+      { "code": "K76.6", "description": "Portal hypertension" },
+      { "code": "K70.40", "description": "Alcoholic hepatic failure without coma" },
+      { "code": "K76.7", "description": "Hepatorenal syndrome" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	{
+  "condition": "Hyperkalemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true (no ECG changes present): K > 6, Hospital-acquired hyperkalemia with K > 5.5",
+      "The patient requires at least one of the following interventions: Diuretic, Calcium chloride, Calcium gluconate, Sodium polystyrene (Kayexalate) PO or PR, IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, history of CRI or CHF; IVF rate ≥ 100 cc/hr if weight > 60 kg)",
+      "Hyperkalemia with ECG changes (e.g., peaked T waves, widened QRS) requiring continuous cardiac monitoring and intervention",
+      "Evidence of renal impairment or acidosis requiring intensive treatment and monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient has K > 6 or hospital-acquired hyperkalemia (K > 5.5) requiring monitoring and treatment without meeting inpatient criteria",
+      "Requires interventions such as diuretics, calcium-based therapy, or Kayexalate but does not meet inpatient thresholds",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with potassium levels normalized and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E87.5", "description": "Hyperkalemia" },
+      { "code": "I45.89", "description": "Other specified conduction disorders" },
+      { "code": "N17.9", "description": "Acute kidney failure, unspecified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R94.31", "description": "Abnormal electrocardiogram [ECG] [EKG]" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" }
+  ]
+},
+   {
+  "condition": "Hypermagnesemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Hospital-acquired hypermagnesemia with Mg > 2.5, Mg > 3.0 AND at least one of the following: Nausea/Vomiting, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+      "The patient requires at least one of the following interventions: Diuretic at least twice/24h, IVF (IVF rate ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, history of CRI or CHF; IVF rate ≥ 100 cc/hr if weight > 60 kg)",
+      "Hypermagnesemia with ECG changes (e.g., bradycardia, widened QRS, or heart block) requiring continuous cardiac monitoring and intervention",
+      "Evidence of renal dysfunction or acidosis requiring intensive treatment and monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient has Mg > 3.0 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires interventions such as diuretics or IVF but does not meet thresholds for inpatient admission",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with magnesium levels normalized and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E83.40", "description": "Disorders of magnesium metabolism, unspecified" },
+      { "code": "E83.41", "description": "Hypomagnesemia" },
+      { "code": "E83.42", "description": "Hypermagnesemia" },
+      { "code": "N17.9", "description": "Acute kidney failure, unspecified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "D62", "description": "Acute posthemorrhagic anemia" }
+  ]
+},
+	{
+  "condition": "Hypernatremia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Hospital-acquired hypernatremia with Na > 150, Na > 150 AND at least one of the following: Irritability, Restlessness, Hyperreflexia, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+      "The patient requires IVF at a rate of ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, history of CRI or CHF) or ≥ 100 cc/hr (if weight > 60 kg)",
+      "Severe hypernatremia with signs of dehydration (e.g., poor skin turgor, dry mucous membranes, tachycardia) requiring intensive monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Hypernatremia with evidence of renal dysfunction or neurologic symptoms requiring inpatient care"
+    ],
+    "observation": [
+      "The patient has Na > 150 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires IVF therapy to stabilize sodium levels but does not meet inpatient thresholds",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized sodium levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E87.0", "description": "Hypernatremia" },
+      { "code": "N17.9", "description": "Acute kidney failure, unspecified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R41.82", "description": "Altered mental status, unspecified" },
+      { "code": "R63.4", "description": "Abnormal weight loss" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+	{
+  "condition": "Hypocalcemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Hospital-acquired hypocalcemia with Ca < 7.5, Ca < 7.5 AND at least one of the following: Tetany, Paresthesia, Muscle weakness, Carpopedal spasm, Flaccid paralysis, Perioral numbness",
+      "The patient requires calcium supplementation (includes PO or IV) and intensive monitoring for symptoms and serum calcium correction",
+      "Severe hypocalcemia with ECG changes (e.g., prolonged QT interval, arrhythmias) requiring continuous cardiac monitoring",
+      "Evidence of associated conditions such as hypoparathyroidism or renal dysfunction requiring inpatient care",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient has Ca < 7.5 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires calcium supplementation and symptom management but does not meet inpatient thresholds",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized calcium levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E83.51", "description": "Hypocalcemia" },
+      { "code": "E20.9", "description": "Hypoparathyroidism, unspecified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R94.31", "description": "Abnormal electrocardiogram [ECG] [EKG]" },
+      { "code": "E87.9", "description": "Disorder of electrolyte imbalance, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "E87.2", "description": "Acidosis" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "R53.1", "description": "Weakness" }
+  ]
+},
+   {
+  "condition": "Hypoglycemia",
+  "criteria": {
+    "inpatient": [
+      "The blood sugar (BS) is < 50 and failed outpatient treatment AND all of the following are true: Induced by Sulfonylurea, Unresponsive to glucose 50% bolus, Will need BS monitoring at least 4x/24h, Will need Neuro assessment at least 4x/24h, Will need Glucose ≥ 5% continuous infusion, Long-acting insulin (e.g., half-life more than 6 hours), Mental status change (excludes coma, stupor, or obtundation), Neurologic symptoms (e.g., seizure, ataxia, dysphasia, focal motor deficit)",
+      "Severe or recurrent hypoglycemia with altered mental status or neurologic symptoms requiring continuous IV glucose infusion",
+      "Failure of outpatient management with persistent symptoms requiring intensive monitoring",
+      "Associated comorbidities (e.g., renal failure, liver disease) complicating management and requiring hospitalization"
+    ],
+    "observation": [
+      "The BS is < 50 and failed outpatient treatment AND all of the following are true: Without mental status change, Requiring ≥ 2 boluses of 50% glucose, Will need BS monitoring at least 4x/24h",
+      "Hypoglycemia has resolved AND both of the following are true: Will need BS monitoring at least 4x/24h, Caregiver unavailable and ≤ 12h since hypoglycemia corrected",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Hypoglycemia resolved with symptoms managed and caregiver support available",
+      "Stable clinical condition with no further monitoring or acute management required",
+      "Improved clinical condition with a clear outpatient management plan in place"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "640", "description": "Nutritional and metabolic disorders with MCC", "GMLOS": 5.3 },
+      { "code": "641", "description": "Nutritional and metabolic disorders with CC", "GMLOS": 3.8 },
+      { "code": "642", "description": "Nutritional and metabolic disorders without CC/MCC", "GMLOS": 2.5 }
+    ],
+    "primary_icd10s": [
+      { "code": "E16.2", "description": "Hypoglycemia, unspecified" },
+      { "code": "E16.0", "description": "Drug-induced hypoglycemia without coma" },
+      { "code": "E16.1", "description": "Other hypoglycemia" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R41.82", "description": "Altered mental status, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E11.65", "description": "Type 2 diabetes mellitus with hyperglycemia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" }
+  ]
+},
+  {
+  "condition": "Hypokalemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true (No ECG changes): K < 2.5, Hospital-acquired hypokalemia with K < 3.0, K < 3.0 AND at least one of the following: Symptomatic, Risk factor for arrhythmia (CHF, Digitalis use, History of MI, Ischemic heart disease)",
+      "The patient requires potassium supplementation in at least one of the following doses (includes PO): KCl ≥ 10 mEq/h, KCl ≥ 120 mEq/24h, KCl 20-40 mEq 3 times/24h",
+      "Hypokalemia with ECG changes (e.g., U waves, flattened T waves, prolonged QT interval) requiring continuous cardiac monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Associated comorbidities (e.g., renal dysfunction, CHF) complicating management and requiring inpatient care"
+    ],
+    "observation": [
+      "The patient has K < 3.0 with mild symptoms or risk factors for arrhythmia requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires potassium supplementation but does not meet thresholds for inpatient admission",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized potassium levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E87.6", "description": "Hypokalemia" },
+      { "code": "I50.9", "description": "Heart failure, unspecified" },
+      { "code": "E87.5", "description": "Hyperkalemia" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R94.31", "description": "Abnormal electrocardiogram [ECG] [EKG]" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "I25.10", "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris" }
+  ]
+},
+   {
+  "condition": "Hypomagnesemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Mg < 1.2, Hospital-acquired hypomagnesemia with Mg < 1.5, Mg < 1.5 AND at least one of the following: Symptomatic, Risk factor for arrhythmia (CHF, Digitalis use, History of MI, Ischemic heart disease)",
+      "The patient requires magnesium supplementation in any form (IV or PO) with ongoing monitoring for correction of serum levels and associated symptoms",
+      "Hypomagnesemia with ECG changes (e.g., prolonged QT interval, ventricular arrhythmias) requiring continuous cardiac monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Associated comorbidities (e.g., CKD, malabsorption) complicating management and requiring inpatient care"
+    ],
+    "observation": [
+      "The patient has Mg < 1.5 with mild symptoms or risk factors for arrhythmia requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires magnesium supplementation but does not meet thresholds for inpatient admission",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized magnesium levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E83.42", "description": "Hypomagnesemia" },
+      { "code": "E87.3", "description": "Hypermagnesemia" },
+      { "code": "I50.9", "description": "Heart failure, unspecified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R94.31", "description": "Abnormal electrocardiogram [ECG] [EKG]" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "I25.10", "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris" }
+  ]
+},
+	 {
+  "condition": "Hyponatremia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Hospital-acquired hyponatremia with Na < 130, Na < 130 AND at least one of the following: Headache, Restlessness, Muscle weakness, Mental status change (excludes coma, stupor, or obtundation)",
+      "The patient requires any one of the following interventions: Fluid restriction, Diuretic AND oral sodium supplement, Medications (at least one of the following: Tolvaptan, Demeclocycline, Diuretic at least twice/24h)",
+      "Hyponatremia with significant neurologic symptoms (e.g., seizures, altered mental status) requiring intensive monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Associated comorbidities (e.g., CHF, cirrhosis, SIADH) complicating management and requiring inpatient care"
+    ],
+    "observation": [
+      "The patient has Na < 130 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires interventions such as fluid restriction or oral sodium supplementation but does not meet thresholds for inpatient admission",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized sodium levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+      { "code": "R41.82", "description": "Altered mental status, unspecified" },
+      { "code": "R55", "description": "Syncope and collapse" },
+      { "code": "E87.0", "description": "Hyperosmolality and hypernatremia" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "I50.9", "description": "Heart failure, unspecified" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "K70.30", "description": "Alcoholic cirrhosis of liver without ascites" }
+  ]
+},
+	 {
+  "condition": "Hypophosphatemia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Hospital-acquired hypophosphatemia with Phos ≤ 2, Phos < 1.5 AND muscle weakness",
+      "The patient requires phosphate supplementation (includes PO or IV) and intensive monitoring for serum phosphorus correction and associated symptoms",
+      "Hypophosphatemia with significant symptoms (e.g., respiratory muscle weakness, altered mental status) requiring intensive care",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Associated comorbidities (e.g., malnutrition, refeeding syndrome, CKD) complicating management and requiring inpatient care"
+    ],
+    "observation": [
+      "The patient has Phos ≤ 2 with mild symptoms requiring monitoring and stabilization without meeting inpatient criteria",
+      "Requires phosphate supplementation but does not meet thresholds for inpatient admission",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with normalized phosphorus levels and no further acute management required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "682", "description": "Renal failure with MCC", "GMLOS": 6.1 },
+      { "code": "683", "description": "Renal failure with CC", "GMLOS": 4.0 },
+      { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.9 }
+    ],
+    "primary_icd10s": [
+      { "code": "E83.31", "description": "Hypophosphatemia" },
+      { "code": "E46", "description": "Unspecified protein-calorie malnutrition" },
+      { "code": "E87.8", "description": "Other disorders of electrolyte and fluid balance, not elsewhere classified" },
+      { "code": "N18.4", "description": "Chronic kidney disease, stage 4 (severe)" },
+      { "code": "R41.82", "description": "Altered mental status, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E46", "description": "Unspecified protein-calorie malnutrition" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "K90.0", "description": "Celiac disease" }
+  ]
+},
+	{
+  "condition": "Hypothermia",
+  "criteria": {
+    "inpatient": [
+      "At least one of the following is true: Patient temperature < 35 degrees Celsius, Any acute evidence of tissue damage from cold exposure (e.g., frostbite), Passive rewarming has been unsuccessful",
+      "Hypothermia with hemodynamic instability (e.g., hypotension, bradycardia) requiring intensive monitoring and intervention",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization",
+      "Associated comorbidities (e.g., malnutrition, advanced age, sepsis) complicating management and requiring inpatient care"
+    ],
+    "observation": [
+      "Mild hypothermia requiring passive rewarming with monitoring for stabilization without meeting inpatient criteria",
+      "No tissue damage but requiring observation to ensure adequate response to rewarming",
+      "Improvement after initial therapy requiring short-term observation for sustained stability"
+    ],
+    "discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with successful rewarming and no further interventions required",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "640", "description": "Miscellaneous disorders of nutrition, metabolism, fluids, and electrolytes with MCC", "GMLOS": 4.5 },
+      { "code": "641", "description": "Miscellaneous disorders of nutrition, metabolism, fluids, and electrolytes with CC", "GMLOS": 3.2 },
+      { "code": "642", "description": "Miscellaneous disorders of nutrition, metabolism, fluids, and electrolytes without CC/MCC", "GMLOS": 2.4 }
+    ],
+    "primary_icd10s": [
+      { "code": "T68.XXXA", "description": "Hypothermia, initial encounter" },
+      { "code": "T33.90XA", "description": "Superficial frostbite of unspecified site, initial encounter" },
+      { "code": "T34.90XA", "description": "Frostbite with tissue necrosis of unspecified site, initial encounter" },
+      { "code": "E86.0", "description": "Dehydration" },
+      { "code": "R09.89", "description": "Other specified symptoms and signs involving the circulatory and respiratory systems" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E46", "description": "Unspecified protein-calorie malnutrition" },
+    { "code": "R53.1", "description": "Weakness" },
+    { "code": "J18.9", "description": "Pneumonia, unspecified organism" }
+  ]
+},
+  {
+  "condition": "Ileus",
+  "criteria": {
+    "inpatient": [
+      "Both of the following are true: The patient is NPO or requires NGT to LIS, IVF is required at a rate ≥ 75 cc/hr (if weight < 60 kg, age ≥ 65, Hx of CRI or Hx of CHF) or ≥ 100 cc/hr if weight > 60 kg",
+      "Ileus associated with complications such as severe abdominal distension, electrolyte imbalance, or hemodynamic instability requiring intensive monitoring",
+      "Failure of outpatient management or progression of symptoms necessitating hospitalization"
+    ],
+    "observation": [
+      "The patient has symptoms of ileus requiring NPO status and monitoring but does not meet the intensity of services for inpatient admission",
+      "IVF required but at lower rates or shorter durations than inpatient criteria",
+      "Monitoring for resolution of symptoms with short-term interventions"
+    ],
+    "consider_discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with resolution of ileus and ability to tolerate oral intake",
+      "Improved clinical condition with no further need for acute intervention"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "393", "description": "Other digestive system diagnoses with MCC", "GMLOS": 5.8 },
+      { "code": "394", "description": "Other digestive system diagnoses with CC", "GMLOS": 3.6 },
+      { "code": "395", "description": "Other digestive system diagnoses without CC/MCC", "GMLOS": 2.6 }
+    ],
+    "primary_icd10s": [
+      { "code": "K56.7", "description": "Ileus, unspecified" },
+      { "code": "K56.60", "description": "Partial intestinal obstruction, unspecified as to cause" },
+      { "code": "K56.69", "description": "Other intestinal obstruction, unspecified as to cause" },
+      { "code": "K56.5", "description": "Intestinal adhesions [bands] with obstruction (postoperative)" },
+      { "code": "K56.3", "description": "Volvulus" },
+      { "code": "K56.2", "description": "Paralytic ileus" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E86.0", "description": "Dehydration" },
+    { "code": "E87.6", "description": "Hypokalemia" },
+    { "code": "E87.5", "description": "Hyperkalemia" },
+    { "code": "E46", "description": "Unspecified protein-calorie malnutrition" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" }
+  ]
+},
+  {
+  "condition": "Infection - General",
+  "criteria": {
+    "inpatient": [
+      "Failed outpatient treatment: Any one of the following is present: T > 102°F PO > 2 weeks (FUO), Noncompliance with outpatient anti-infective, Continued deterioration despite > 23 hours of treatment, Unable to tolerate or absorb oral anti-infective, Unresponsive to > 4 doses or > 2 days of outpatient anti-infective",
+      "Immunocompromised: Any one of the following is present: ANC < 500, Bands > 10%, WBC > 12,000, T > 99.4°F PO, Cultures pending ≤ 2 days",
+      "Positive culture or smear: Any one of the following is present: Positive bone marrow, Positive blood culture, Positive effluent smear, Positive surgical biopsy (excludes skin)",
+      "Pregnancy: Either one of the following is present: WBC > 18,000, WBC > 15,000 and bands > 7%",
+      "Systemic or organ infection: Any one of the following is present: Age ≥ 75, ANC < 500, T > 99.4°F PO, Coexisting disease, Anorexia or PO fluid intolerance, O2 sat < 91% or pO2 < 60 and below baseline, Immunocompromised, asplenic, or chronic vent patient, Mental status change (excludes coma, stupor, or obtundation)",
+      "Sepsis: Suspicion of infection with at least two of the following: Sustained HR > 90, Tachypnea > 20 bpm, Platelets < 100,000, T > 99.4°F PO or < 97.0°F PO, Acutely altered mental status, WBC > 12,000, < 4,000, or > 10% bands",
+      "Infection with associated complications requiring IV antibiotics, intensive monitoring, or inpatient intervention"
+    ],
+    "observation": [
+      "Failed outpatient treatment: Mild deterioration or unresponsiveness to outpatient anti-infective but does not meet inpatient criteria",
+      "Immunocompromised: Requires close monitoring for potential progression but without severe symptoms",
+      "Positive culture or smear: Requires observation for further diagnostic clarification or monitoring",
+      "Pregnancy: Mild symptoms requiring close observation but does not meet inpatient thresholds",
+      "Systemic or organ infection: Requires monitoring for stabilization without meeting inpatient thresholds",
+      "Sepsis: Requires oxygen ≥ 40% or a volume expander ≤ 2 days",
+      "Mild infection requiring short-term IV therapy or supportive care without inpatient criteria"
+    ],
+    "consider_discharge": [
+      "The patient DOES NOT have a severity of illness and/or intensity of services matching guidelines for observation or inpatient care",
+      "Symptoms resolved or managed with outpatient follow-up and treatment plan",
+      "Stable clinical condition with no further interventions required",
+      "Improved condition with successful response to initial treatment"
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "871", "description": "Septicemia or severe sepsis with MCC", "GMLOS": 6.9 },
+      { "code": "872", "description": "Septicemia or severe sepsis without MCC", "GMLOS": 4.5 },
+      { "code": "853", "description": "Infectious & parasitic diseases with OR procedure with MCC", "GMLOS": 12.1 },
+      { "code": "854", "description": "Infectious & parasitic diseases with OR procedure with CC", "GMLOS": 6.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "A41.9", "description": "Sepsis, unspecified organism" },
+      { "code": "B37.7", "description": "Candidal sepsis" },
+      { "code": "J18.9", "description": "Pneumonia, unspecified organism" },
+      { "code": "N39.0", "description": "Urinary tract infection, site not specified" },
+      { "code": "A49.9", "description": "Bacterial infection, unspecified" },
+      { "code": "R65.21", "description": "Severe sepsis with septic shock" },
+      { "code": "T81.4XXA", "description": "Infection following a procedure, initial encounter" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "E46", "description": "Unspecified protein-calorie malnutrition" },
+    { "code": "J96.00", "description": "Acute respiratory failure, unspecified whether with hypoxia or hypercapnia" },
+    { "code": "R65.10", "description": "Systemic inflammatory response syndrome (SIRS) of non-infectious origin without acute organ dysfunction" }
+  ]
+},
+	{
+  "condition": "Periorbital Infection",
+  "criteria": {
+    "inpatient": [
+      "The patient requires an anti-infective and meets criteria for severity of illness and intensity of services consistent with inpatient admission.",
+      "Severe pain, swelling, or erythema with systemic signs (e.g., fever, leukocytosis, or tachycardia).",
+      "Associated orbital cellulitis or risk of complications such as abscess formation or vision loss.",
+      "Failure of outpatient therapy with worsening symptoms or no clinical improvement."
+    ],
+    "observation": [
+      "The patient requires an anti-infective but does not meet inpatient criteria and has a severity of illness consistent with observation-level care.",
+      "Moderate swelling, erythema, or pain without systemic signs or orbital involvement.",
+      "Stable after initial treatment but requires close monitoring for progression or complications."
+    ],
+    "consider_discharge": [
+      "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+      "Symptoms resolved or managed with oral medications and outpatient follow-up.",
+      "No evidence of orbital cellulitis or progression of infection."
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "130", "description": "Non-major ophthalmologic procedures with MCC", "GMLOS": 3.4 },
+      { "code": "131", "description": "Non-major ophthalmologic procedures with CC", "GMLOS": 2.5 },
+      { "code": "132", "description": "Non-major ophthalmologic procedures without CC/MCC", "GMLOS": 1.8 }
+    ],
+    "primary_icd10s": [
+      { "code": "H00.019", "description": "Abscess of eyelid, unspecified eye" },
+      { "code": "H05.011", "description": "Cellulitis of orbit, right eye" },
+      { "code": "H05.012", "description": "Cellulitis of orbit, left eye" },
+      { "code": "H05.013", "description": "Cellulitis of orbit, bilateral" },
+      { "code": "H05.019", "description": "Cellulitis of orbit, unspecified eye" },
+      { "code": "L03.113", "description": "Cellulitis of face" },
+      { "code": "L03.114", "description": "Cellulitis of neck" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "J96.00", "description": "Acute respiratory failure, unspecified whether with hypoxia or hypercapnia" },
+    { "code": "R50.9", "description": "Fever, unspecified" },
+    { "code": "R65.21", "description": "Severe sepsis with septic shock" }
+  ]
+},
+	{
+  "condition": "Peritonsillar Infection",
+  "criteria": {
+    "inpatient": [
+      "The patient requires both an anti-infective and a surgical evaluation, scheduled or performed within 24 hours, and meets the severity of illness and intensity of services consistent with inpatient admission.",
+      "Severe pain, swelling, or inability to swallow with systemic signs such as fever, tachycardia, or leukocytosis.",
+      "Associated complications like abscess formation or risk of airway compromise."
+    ],
+    "observation": [
+      "The patient requires an anti-infective and a surgical evaluation but does not meet criteria for inpatient admission, aligning with observation-level care.",
+      "Moderate symptoms requiring close monitoring for response to treatment.",
+      "Stable after initial therapy but needing observation for progression or complications."
+    ],
+    "consider_discharge": [
+      "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+      "Symptoms resolved or managed with oral medications and outpatient follow-up.",
+      "No evidence of abscess formation or progression of infection."
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "149", "description": "Other Ear, Nose, Mouth & Throat O.R. Procedures with MCC", "GMLOS": 6.5 },
+      { "code": "150", "description": "Other Ear, Nose, Mouth & Throat O.R. Procedures with CC", "GMLOS": 3.9 },
+      { "code": "151", "description": "Other Ear, Nose, Mouth & Throat O.R. Procedures without CC/MCC", "GMLOS": 2.2 }
+    ],
+    "primary_icd10s": [
+      { "code": "J36", "description": "Peritonsillar abscess" },
+      { "code": "J35.8", "description": "Other chronic diseases of tonsils and adenoids" },
+      { "code": "J02.9", "description": "Acute pharyngitis, unspecified" },
+      { "code": "J03.90", "description": "Acute tonsillitis, unspecified" },
+      { "code": "J03.91", "description": "Acute recurrent tonsillitis, unspecified" },
+      { "code": "J39.0", "description": "Retropharyngeal and parapharyngeal abscess" },
+      { "code": "R09.02", "description": "Hypoxemia" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "N18.3", "description": "Chronic kidney disease, stage 3 (moderate)" },
+    { "code": "R50.9", "description": "Fever, unspecified" },
+    { "code": "R65.21", "description": "Severe sepsis with septic shock" },
+    { "code": "J45.909", "description": "Unspecified asthma, uncomplicated" }
+  ]
+},
+	{
+  "condition": "Infectious Mononucleosis",
+  "criteria": {
+    "inpatient": [
+      "The patient has both impaired swallowing and inadequate oral intake and meets the severity of illness and intensity of services consistent with inpatient admission.",
+      "Failed outpatient treatment: Any one of the following is present: T > 102°F PO > 2 weeks (FUO), Noncompliance with outpatient anti-infective, Continued deterioration despite > 23 hours of treatment, Unable to tolerate or absorb oral anti-infective, Unresponsive to > 4 doses or > 2 days of outpatient anti-infective.",
+      "Severe pharyngeal swelling with risk of airway compromise or evidence of systemic complications such as splenic rupture or significant hepatomegaly."
+    ],
+    "observation": [
+      "The patient has impaired swallowing or inadequate oral intake but does not meet inpatient criteria and has a severity of illness consistent with observation-level care.",
+      "Mild systemic symptoms requiring monitoring and supportive therapy, including hydration and antipyretics.",
+      "Stable after initial treatment but requiring monitoring for progression or complications."
+    ],
+    "consider_discharge": [
+      "The patient DOES NOT have a severity of illness or intensity of services matching guidelines for observation or inpatient care.",
+      "Symptoms managed with outpatient follow-up and supportive treatment.",
+      "No evidence of airway compromise, systemic complications, or ongoing progression of symptoms."
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "153", "description": "Otitis Media & URI with MCC", "GMLOS": 4.2 },
+      { "code": "154", "description": "Otitis Media & URI with CC", "GMLOS": 2.8 },
+      { "code": "155", "description": "Otitis Media & URI without CC/MCC", "GMLOS": 2.1 }
+    ],
+    "primary_icd10s": [
+      { "code": "B27.00", "description": "Infectious mononucleosis with complications, unspecified" },
+      { "code": "B27.01", "description": "Infectious mononucleosis with splenic rupture" },
+      { "code": "B27.09", "description": "Infectious mononucleosis with other complications" },
+      { "code": "B27.10", "description": "Cytomegaloviral mononucleosis without complications" },
+      { "code": "B27.90", "description": "Infectious mononucleosis without complications" },
+      { "code": "J02.9", "description": "Acute pharyngitis, unspecified" },
+      { "code": "K76.9", "description": "Liver disease, unspecified" },
+      { "code": "R50.9", "description": "Fever, unspecified" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "J45.909", "description": "Unspecified asthma, uncomplicated" },
+    { "code": "R50.9", "description": "Fever, unspecified" },
+    { "code": "K76.9", "description": "Liver disease, unspecified" },
+    { "code": "R63.3", "description": "Feeding difficulties" }
+  ]
+},
+	{
+  "condition": "Jaundice",
+  "criteria": {
+    "inpatient": [
+      "The patient has at least one of the following: Abdominal pain, Albumin level < 2, Protracted vomiting, BUN > 45 or Creat > 3, Increasing hepatomegaly, PT ≥ 1.5x normal or INR ≥ 2, T > 99.4°F (excludes viral hepatitis), Mental status change (excludes coma, stupor or obtundation) and requires at least one of the following interventions: FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, Antiemetic (≥ 3x/24h or serotonin antagonist daily), IVF with appropriate rate."
+    ],
+    "observation": [
+      "The patient requires at least one of the following interventions but does not meet inpatient criteria: FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, Antiemetic (≥ 3x/24h or serotonin antagonist daily), IVF with appropriate rate."
+    ],
+    "consider_discharge": [
+      "The patient does not have any of the following: Abdominal pain, Albumin level < 2, Protracted vomiting, BUN > 45 or Creat > 3, Increasing hepatomegaly, PT ≥ 1.5x normal or INR ≥ 2, T > 99.4°F (excludes viral hepatitis), Mental status change (excludes coma, stupor or obtundation), and does not require interventions such as FFP, ERCP or MRCP, Liver biopsy, Albumin administration ≤ 24h, Anti-infective, Percutaneous transhepatic biliary drainage, or Antiemetic therapy. Symptoms are manageable with outpatient follow-up."
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      { "code": "444", "description": "Disorders of the Biliary Tract with MCC", "GMLOS": 6.3 },
+      { "code": "445", "description": "Disorders of the Biliary Tract with CC", "GMLOS": 4.0 },
+      { "code": "446", "description": "Disorders of the Biliary Tract without CC/MCC", "GMLOS": 2.6 }
+    ],
+    "primary_icd10s": [
+      { "code": "R17", "description": "Unspecified jaundice" },
+      { "code": "K76.89", "description": "Other specified diseases of liver" },
+      { "code": "K76.9", "description": "Liver disease, unspecified" },
+      { "code": "R16.2", "description": "Hepatomegaly with splenomegaly, not elsewhere classified" },
+      { "code": "K83.1", "description": "Obstruction of bile duct" },
+      { "code": "K80.44", "description": "Calculus of bile duct with acute cholecystitis without obstruction" },
+      { "code": "R50.9", "description": "Fever, unspecified" },
+      { "code": "R18.8", "description": "Other ascites" }
+    ]
+  },
+  "actively_managed_conditions": [
+    { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+    { "code": "I10", "description": "Essential (primary) hypertension" },
+    { "code": "J45.909", "description": "Unspecified asthma, uncomplicated" },
+    { "code": "K76.9", "description": "Liver disease, unspecified" },
+    { "code": "R50.9", "description": "Fever, unspecified" },
+    { "code": "R63.3", "description": "Feeding difficulties" }
+  ]
+},
+	{
+  "conditions": [
+    {
+      "condition": "Acute Kidney Injury",
+      "criteria": {
+        "inpatient": [
+          "The patient has at least one of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr and failed Observation, and requires at least one of the following interventions: Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, Medication adjustment/discontinuation ≤ 3d (either diuretic or nephrotoxic agent).",
+          "Metabolic acidosis with HCO3 < 18 requiring urgent intervention.",
+          "Hyperkalemia (K > 5.5) with ECG changes requiring immediate treatment.",
+          "Multi-organ dysfunction or acute cardiorenal syndrome requiring continuous monitoring.",
+          "Repeated ER visits or inability to maintain hydration status despite outpatient management."
+        ],
+        "observation": [
+          "The patient has at least one of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr and requires intervention but does not meet criteria for inpatient admission. Interventions include Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, or Medication adjustment/discontinuation ≤ 3d (either diuretic or nephrotoxic agent).",
+          "Mild electrolyte imbalances requiring 24-48 hours of IV hydration.",
+          "Reduced urine output without signs of significant organ dysfunction requiring monitoring."
+        ],
+        "discharge": [
+          "The patient does not have any of the following: Creatinine ≥ 2X baseline, GFR > 50% decrease from baseline, UOP < 0.5 mL/kg/hr, and does not require interventions such as Volume expander ≥ 2d, Diuretic ≥ 2X/24h for ≤ 3d, or Medication adjustment/discontinuation. The condition is manageable with outpatient follow-up and no immediate intervention is required.",
+          "Recovery indicators such as return to baseline creatinine or urine output > 0.5 mL/kg/hr consistently.",
+          "Transition to outpatient dialysis or monitoring program for partial recovery or CKD progression."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "682", "description": "Renal failure with MCC", "GMLOS": 5.4 },
+          { "code": "683", "description": "Renal failure with CC", "GMLOS": 3.8 },
+          { "code": "684", "description": "Renal failure without CC/MCC", "GMLOS": 2.7 }
+        ],
+        "primary_icd10s": [
+          { "code": "N17.9", "description": "Acute kidney failure, unspecified" },
+          { "code": "N17.0", "description": "Acute kidney failure with tubular necrosis" },
+          { "code": "N17.1", "description": "Acute kidney failure with acute cortical necrosis" },
+          { "code": "N17.2", "description": "Acute kidney failure with medullary necrosis" },
+          { "code": "N17.8", "description": "Other acute kidney failure" },
+          { "code": "T79.5", "description": "Traumatic anuria" },
+          { "code": "E87.2", "description": "Acidosis" },
+          { "code": "E87.3", "description": "Alkalosis" },
+          { "code": "R34", "description": "Anuria and oliguria" }
+        ],
+        "procedures": [
+          { "code": "90935", "description": "Single-session hemodialysis" },
+          { "code": "36902", "description": "Continuous Renal Replacement Therapy (CRRT)" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "I50.9", "description": "Heart failure, unspecified" },
+          { "code": "E87.6", "description": "Hypokalemia" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "J96.00", "description": "Acute respiratory failure without hypoxia" },
+          { "code": "N18.6", "description": "End-stage renal disease" },
+          { "code": "I13.0", "description": "Hypertensive heart and renal disease with heart failure" }
+        ]
+    },
+		{
+  "conditions": [
+    {
+      "condition": "Leukemia/Lymphoma",
+      "criteria": {
+        "inpatient": [
+          "The condition is confirmed and requires induction chemotherapy or bone marrow biopsy (scheduled or performed within 24h).",
+          "At least two of the following are present: Mediastinal mass, Platelets < 100,000, Hepatosplenomegaly or lymphadenopathy, WBC > 50,000, ANC < 1,000, or blasts/myelocytes/lymphocytes > 100,000.",
+          "Severe systemic symptoms such as fever > 101.5°F, night sweats, or significant weight loss (>10% in 6 months).",
+          "Complications such as tumor lysis syndrome requiring IV hydration, electrolyte monitoring, and specific treatment (e.g., rasburicase)."
+        ],
+        "observation": [
+          "The condition is confirmed but does not require induction chemotherapy or urgent bone marrow biopsy within 24h.",
+          "Monitoring is required for potential complications or progression without meeting criteria for inpatient admission.",
+          "Mild systemic symptoms such as low-grade fever or minimal weight loss (<10% in 6 months)."
+        ],
+        "discharge": [
+          "The condition is not confirmed, and the patient does not require induction chemotherapy or urgent bone marrow biopsy.",
+          "There are no significant findings such as mediastinal mass, platelet count < 100,000, hepatosplenomegaly, or critically abnormal WBC/ANC values requiring close monitoring.",
+          "Stable clinical condition with outpatient follow-up arranged."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "820", "description": "Lymphoma and leukemia with MCC", "GMLOS": 6.8 },
+          { "code": "821", "description": "Lymphoma and leukemia with CC", "GMLOS": 4.2 },
+          { "code": "822", "description": "Lymphoma and leukemia without CC/MCC", "GMLOS": 2.9 }
+        ],
+        "primary_icd10s": [
+          { "code": "C91.0", "description": "Acute lymphoblastic leukemia" },
+          { "code": "C92.0", "description": "Acute myeloid leukemia" },
+          { "code": "C81.9", "description": "Hodgkin lymphoma, unspecified" },
+          { "code": "C82.9", "description": "Follicular lymphoma, unspecified" },
+          { "code": "C83.9", "description": "Non-follicular lymphoma, unspecified" }
+        ],
+        "procedures": [
+          { "code": "30243", "description": "Bone marrow biopsy" },
+          { "code": "96413", "description": "Chemotherapy administration, IV infusion" },
+          { "code": "96365", "description": "Therapeutic, prophylactic, or diagnostic injection" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "E87.2", "description": "Acidosis" },
+          { "code": "E87.6", "description": "Hypokalemia" },
+          { "code": "E88.3", "description": "Tumor lysis syndrome" },
+          { "code": "D70.9", "description": "Neutropenia, unspecified" },
+          { "code": "D61.9", "description": "Aplastic anemia, unspecified" }
+        ]
+      },
+	  {
+  "condition": "Nephrotic Syndrome",
+  "criteria": {
+    "inpatient": [
+      "Severe generalized edema with anasarca or pleural effusion requiring urgent intervention.",
+      "Proteinuria > 3.5 g/day and hypoalbuminemia (< 2.5 g/dL) with signs of volume overload or reduced urine output < 0.5 mL/kg/h.",
+      "Treatment requires at least one of the following: ACEI/ARB, Albumin 25%, Corticosteroids, Cytotoxic agents, or diuretics administered ≥ 2x/24h.",
+      "Evidence of complications such as thromboembolism, infection (e.g., peritonitis, cellulitis), or acute kidney injury requiring hospitalization."
+    ],
+    "observation": [
+      "Moderate proteinuria or hypoalbuminemia requiring monitoring but not meeting criteria for inpatient admission.",
+      "Mild to moderate edema managed with outpatient-level interventions such as oral diuretics or dietary modifications.",
+      "Monitoring for response to new or adjusted treatment, including oral corticosteroids or ACEI/ARB, without the need for intensive therapy."
+    ],
+    "discharge": [
+      "Symptoms controlled with oral medications, including ACEI/ARB or diuretics, and dietary recommendations.",
+      "No signs of complications such as thromboembolism, severe edema, or infection requiring hospitalization.",
+      "Stable clinical condition with follow-up plan for monitoring proteinuria and renal function arranged."
+    ]
+  },
+  "associated_data": {
+    "DRGs": [
+      {
+        "code": "682",
+        "description": "Renal failure with MCC",
+        "GMLOS": 5.4
+      },
+      {
+        "code": "683",
+        "description": "Renal failure with CC",
+        "GMLOS": 3.8
+      },
+      {
+        "code": "684",
+        "description": "Renal failure without CC/MCC",
+        "GMLOS": 2.7
+      }
+    ],
+    "primary_icd10s": [
+      {
+        "code": "N04.9",
+        "description": "Nephrotic syndrome, unspecified"
+      },
+      {
+        "code": "N04.1",
+        "description": "Nephrotic syndrome with focal and segmental glomerular lesions"
+      },
+      {
+        "code": "N04.2",
+        "description": "Nephrotic syndrome with diffuse membranous glomerulonephritis"
+      },
+      {
+        "code": "N04.4",
+        "description": "Nephrotic syndrome with diffuse endocapillary proliferative glomerulonephritis"
+      },
+      {
+        "code": "N04.8",
+        "description": "Other nephrotic syndrome"
+      }
+    ],
+    "actively_managed_conditions": [
+      {
+        "code": "I10",
+        "description": "Essential (primary) hypertension"
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications"
+      },
+      {
+        "code": "E87.7",
+        "description": "Fluid overload"
+      },
+      {
+        "code": "I82.9",
+        "description": "Embolism and thrombosis of unspecified vein"
+      },
+      {
+        "code": "B95.8",
+        "description": "Unspecified streptococcus as the cause of diseases classified elsewhere"
+      }
+    ]
+  },
+	{
+  "conditions": [
+    {
+      "condition": "Osteomyelitis",
+      "criteria": {
+        "inpatient": [
+          "Both of the following are present: Anti-infective therapy and either IVF administration or advancing diet as tolerated.",
+          "Signs of systemic involvement such as fever, tachycardia, or hypotension, requiring close monitoring and intervention."
+        ],
+        "observation": [
+          "The patient requires anti-infective therapy but does not meet the severity or intensity of services for inpatient care.",
+          "Monitoring and treatment adjustments are needed but can be managed without admission.",
+          "Symptoms are moderate and require further diagnostic evaluation or imaging."
+        ],
+        "discharge": [
+          "Symptoms are controlled with outpatient management, including oral anti-infectives.",
+          "The patient does not require IVF or advancing diet as tolerated and is clinically stable for outpatient follow-up.",
+          "Follow-up care and treatment plan are established, with no ongoing signs of infection or complications."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "543", "description": "Osteomyelitis with MCC", "GMLOS": 8.4 },
+          { "code": "544", "description": "Osteomyelitis with CC", "GMLOS": 5.7 },
+          { "code": "545", "description": "Osteomyelitis without CC/MCC", "GMLOS": 4.1 }
+        ],
+        "primary_icd10s": [
+          { "code": "M86.9", "description": "Osteomyelitis, unspecified" },
+          { "code": "M86.8", "description": "Other osteomyelitis" },
+          { "code": "M86.6", "description": "Chronic multifocal osteomyelitis" },
+          { "code": "M86.3", "description": "Subacute osteomyelitis" },
+          { "code": "M86.2", "description": "Acute hematogenous osteomyelitis" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "I50.9", "description": "Heart failure, unspecified" },
+          { "code": "E87.2", "description": "Acidosis" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" }
+        ],
+        "clinical_indicators": [
+          "WBC > 12,000 or < 4,000",
+          "ESR or CRP elevated",
+          "Positive imaging findings (e.g., MRI, CT) indicative of osteomyelitis",
+          "Persistent localized bone pain or swelling"
+        ]
+     },
+    {
+  "conditions": [
+    {
+      "condition": "Acute Pancreatitis",
+      "criteria": {
+        "inpatient": [
+          "At least two (2) of the following findings are present: Abdominal pain consistent with pancreatitis, Amylase or lipase ≥ 3x normal, Confirmed by imaging.",
+          "Requires comprehensive monitoring including renal function, calcium, and electrolytes, with evidence of severe or worsening symptoms."
+        ],
+        "observation": [
+          "At least two (2) of the following findings are present: Abdominal pain consistent with pancreatitis, Amylase or lipase ≥ 3x normal, Confirmed by imaging.",
+          "Requires supportive care and monitoring but does not meet the severity or intensity of services for inpatient care."
+        ],
+        "discharge": [
+          "The patient does not meet the criteria for at least two (2) findings (abdominal pain, elevated enzymes, imaging confirmation).",
+          "Symptoms are stable and manageable with outpatient follow-up and monitoring."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "432", "description": "Pancreatitis with MCC", "GMLOS": 5.2 },
+          { "code": "433", "description": "Pancreatitis with CC", "GMLOS": 3.7 },
+          { "code": "434", "description": "Pancreatitis without CC/MCC", "GMLOS": 2.5 }
+        ],
+        "primary_icd10s": [
+          { "code": "K85.0", "description": "Idiopathic acute pancreatitis" },
+          { "code": "K85.1", "description": "Biliary acute pancreatitis" },
+          { "code": "K85.2", "description": "Alcohol-induced acute pancreatitis" },
+          { "code": "K85.3", "description": "Drug-induced acute pancreatitis" },
+          { "code": "K85.9", "description": "Acute pancreatitis, unspecified" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "E87.6", "description": "Hypokalemia" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "E87.2", "description": "Acidosis" },
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" }
+        ]
+	},
+	 {
+  "conditions": [
+    {
+      "condition": "Chronic Pancreatitis",
+      "criteria": {
+        "inpatient": [
+          "Any one (1) of the following is true: Persistent intractable abdominal pain unresponsive to outpatient management or requiring frequent monitoring.",
+          "Severe symptoms with evidence of disease progression requiring comprehensive evaluation and monitoring for complications."
+        ],
+        "observation": [
+          "Symptoms require monitoring or diagnostic evaluation but do not meet the intensity of services for inpatient care.",
+          "Mild to moderate abdominal pain responsive to initial outpatient management but requiring additional observation."
+        ],
+        "discharge": [
+          "The patient does not meet the criteria for severity of illness and/or intensity of services for observation or inpatient care.",
+          "Symptoms are stable and manageable with outpatient follow-up and monitoring."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "432", "description": "Pancreatitis with MCC", "GMLOS": 5.2 },
+          { "code": "433", "description": "Pancreatitis with CC", "GMLOS": 3.7 },
+          { "code": "434", "description": "Pancreatitis without CC/MCC", "GMLOS": 2.5 }
+        ],
+        "primary_icd10s": [
+          { "code": "K86.0", "description": "Alcohol-induced chronic pancreatitis" },
+          { "code": "K86.1", "description": "Other chronic pancreatitis" },
+          { "code": "K86.2", "description": "Cyst of pancreas" },
+          { "code": "K86.3", "description": "Pseudocyst of pancreas" },
+          { "code": "K86.8", "description": "Other specified diseases of pancreas" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "E87.6", "description": "Hypokalemia" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "K85.9", "description": "Acute pancreatitis, unspecified" }
+        ]
+      }
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Pelvic Inflammatory Disease (PID)",
+      "criteria": {
+        "inpatient": [
+          "At least one (1) of the following is present: Pregnancy, Immunocompromised status, Tubo-ovarian abscess, Severe illness with systemic symptoms (e.g., vomiting, high fever), Unable to rule out surgical emergency (e.g., appendicitis), or Failed outpatient treatment (continued deterioration despite ≥ 24h treatment, non-compliance, inability to tolerate/absorb oral medication, or unresponsive to ≥ 3 days or ≥ 5 doses).",
+          "Patient requires intensive monitoring and interventions, including both anti-infective treatment and fluid management."
+        ],
+        "observation": [
+          "Symptoms require monitoring or initial treatment, including anti-infective therapy and IV fluids, but do not meet the intensity of services required for inpatient care.",
+          "Condition is stable enough for short-term monitoring and treatment adjustments without requiring full inpatient admission."
+        ],
+        "discharge": [
+          "The patient does not meet the severity of illness and/or intensity of services required for observation or inpatient care.",
+          "Symptoms are stable and manageable with outpatient follow-up and a treatment plan in place."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "742", "description": "Uterine and Adnexa Procedures for Non-Malignancy with CC/MCC", "GMLOS": 3.5 },
+          { "code": "743", "description": "Uterine and Adnexa Procedures for Non-Malignancy without CC/MCC", "GMLOS": 2.0 },
+          { "code": "744", "description": "Female Reproductive System Infections with MCC", "GMLOS": 5.4 }
+        ],
+        "primary_icd10s": [
+          { "code": "N73.0", "description": "Acute parametritis and pelvic cellulitis" },
+          { "code": "N73.1", "description": "Chronic parametritis and pelvic cellulitis" },
+          { "code": "N73.5", "description": "Female pelvic peritonitis, unspecified" },
+          { "code": "N73.6", "description": "Pelvic peritoneal adhesions, female" },
+          { "code": "N73.9", "description": "Female pelvic inflammatory disease, unspecified" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "R50.9", "description": "Fever, unspecified" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "N39.0", "description": "Urinary tract infection, site not specified" },
+          { "code": "N70.9", "description": "Salpingitis and oophoritis, unspecified" },
+          { "code": "A41.9", "description": "Sepsis, unspecified organism" }
+        ]
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Pleural Effusion",
+      "criteria": {
+        "inpatient": [
+          "The effusion is > 3 cm confirmed by imaging and requires immediate intervention such as chest tube placement and continuous suction.",
+          "Effusion is associated with severe symptoms such as respiratory distress or hemodynamic instability requiring intensive monitoring and treatment."
+        ],
+        "observation": [
+          "The effusion does not meet inpatient criteria but requires short-term monitoring or therapeutic interventions, such as thoracentesis or fluid management.",
+          "Symptoms are moderate and require diagnostic evaluation or monitoring for progression without full inpatient care."
+        ],
+        "discharge": [
+          "The patient does not meet the severity of illness or intensity of services for inpatient or observation care.",
+          "Effusion is stable or resolving, and outpatient management with follow-up is appropriate."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "186", "description": "Pleural Effusion with MCC", "GMLOS": 6.0 },
+          { "code": "187", "description": "Pleural Effusion with CC", "GMLOS": 4.2 },
+          { "code": "188", "description": "Pleural Effusion without CC/MCC", "GMLOS": 2.8 }
+        ],
+        "primary_icd10s": [
+          { "code": "J91.8", "description": "Pleural effusion in other conditions classified elsewhere" },
+          { "code": "J90", "description": "Pleural effusion, not elsewhere classified" },
+          { "code": "R09.1", "description": "Pleurisy" },
+          { "code": "I50.9", "description": "Heart failure, unspecified" },
+          { "code": "C34.90", "description": "Malignant neoplasm of unspecified part of unspecified bronchus or lung" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "R06.02", "description": "Shortness of breath" },
+          { "code": "J98.4", "description": "Other disorders of lung" },
+          { "code": "I27.2", "description": "Other secondary pulmonary hypertension" },
+          { "code": "A41.9", "description": "Sepsis, unspecified organism" },
+          { "code": "I10", "description": "Essential (primary) hypertension" }
+        ]
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Pneumonia",
+      "criteria": {
+        "inpatient": [
+          "O2 saturation < 89% or pO2 < 56 indicating significant hypoxia requiring intensive monitoring and treatment.",
+          "pCO2 45-54 with respiratory distress or failure to compensate.",
+          "Involvement of ≥ 2 lobes on imaging indicating severe or extensive disease.",
+          "Complications such as lung abscess, empyema, or necrotizing pneumonia requiring intensive intervention.",
+          "Failed outpatient treatment: Continued deterioration despite ≥ 24h treatment, non-compliance, inability to tolerate/absorb oral medications, or unresponsive to ≥ 3 days or ≥ 5 doses of treatment.",
+          "TWO (2) clinical risk factors present (e.g., new confusion, BUN > 19.67, RR ≥ 30, or age ≥ 65) suggesting higher severity.",
+          "Pregnant patient with T > 99.4°F PO requiring closer monitoring for maternal and fetal well-being.",
+          "Hospitalized patient with significant comorbid conditions: T > 99.4°F PO, mental status change, O2 sat ≤ 91% or baseline, ANC > 10%, WBC > 13K, or WBC < 4K."
+        ],
+        "observation": [
+          "Requires anti-infective therapy and monitoring for therapeutic response.",
+          "Needs DVT prophylaxis or is ambulatory but still requires monitoring.",
+          "Oximetry or blood gas monitoring for assessing oxygenation status.",
+          "Oxygen therapy required (O2 sat ≥ 92% or baseline OR O2 sat ≤ 91% and < baseline).",
+          "Does not meet inpatient criteria but requires close monitoring or short-term treatment adjustments."
+        ],
+        "discharge": [
+          "The patient does not meet the severity of illness or intensity of services for inpatient or observation care.",
+          "Symptoms are controlled with outpatient management and no acute interventions are necessary.",
+          "Clinically stable for discharge with a clear follow-up plan."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "193", "description": "Simple Pneumonia & Pleurisy with MCC", "GMLOS": 5.0 },
+          { "code": "194", "description": "Simple Pneumonia & Pleurisy with CC", "GMLOS": 3.8 },
+          { "code": "195", "description": "Simple Pneumonia & Pleurisy without CC/MCC", "GMLOS": 2.7 }
+        ],
+        "primary_icd10s": [
+          { "code": "J18.9", "description": "Pneumonia, unspecified organism" },
+          { "code": "J15.9", "description": "Bacterial pneumonia, unspecified" },
+          { "code": "J13", "description": "Pneumonia due to Streptococcus pneumoniae" },
+          { "code": "J12.89", "description": "Other viral pneumonia" },
+          { "code": "J11.00", "description": "Flu with pneumonia due to unidentified influenza virus" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "R06.02", "description": "Shortness of breath" },
+          { "code": "J91.8", "description": "Pleural effusion in other conditions classified elsewhere" },
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "R09.3", "description": "Abnormal sputum" }
+        ]
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Pneumothorax",
+      "criteria": {
+        "inpatient": [
+          "Pneumothorax > 3 cm confirmed by imaging and requiring a chest tube and continuous suction for resolution and stabilization.",
+          "Hemodynamic instability or significant respiratory distress requiring immediate intervention and monitoring."
+        ],
+        "observation": [
+          "Pneumothorax confirmed by imaging but does not require chest tube placement or continuous suction, with size ≤ 3 cm.",
+          "Requires monitoring for potential progression or the need for further intervention, including oxygen therapy and serial imaging."
+        ],
+        "discharge": [
+          "Pneumothorax does not meet the severity for inpatient or observation care and is stable on clinical assessment.",
+          "Symptoms are resolved with no further intervention needed, and the patient is clinically stable for outpatient follow-up.",
+          "Outpatient follow-up arranged with appropriate monitoring and instructions for recurrence prevention."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "199", "description": "Pneumothorax with MCC", "GMLOS": 5.2 },
+          { "code": "200", "description": "Pneumothorax with CC", "GMLOS": 3.7 },
+          { "code": "201", "description": "Pneumothorax without CC/MCC", "GMLOS": 2.5 }
+        ],
+        "primary_icd10s": [
+          { "code": "J93.9", "description": "Pneumothorax, unspecified" },
+          { "code": "J93.83", "description": "Other air leak" },
+          { "code": "J93.0", "description": "Spontaneous tension pneumothorax" },
+          { "code": "J93.02", "description": "Secondary spontaneous pneumothorax" },
+          { "code": "J93.11", "description": "Primary spontaneous pneumothorax" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "R06.02", "description": "Shortness of breath" },
+          { "code": "R09.89", "description": "Other specified symptoms involving the circulatory and respiratory systems" },
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "J96.00", "description": "Acute respiratory failure, unspecified whether with hypoxia or hypercapnia" },
+          { "code": "Z99.81", "description": "Dependence on supplemental oxygen" }
+        ]
+      }
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Rhabdomyolysis",
+      "criteria": {
+        "inpatient": [
+          "CPK > 1,000 with clinical or laboratory evidence of renal dysfunction (e.g., elevated creatinine, electrolyte imbalance).",
+          "Myoglobinuria or hemoglobinuria with systemic symptoms (e.g., muscle pain, weakness, dark urine) requiring IV fluid resuscitation.",
+          "Electrolyte disturbances such as hyperkalemia, hypocalcemia, or acidosis requiring continuous monitoring and correction.",
+          "IV fluid rate ≥ 100 cc/hr for patients > 60 kg or 75 cc/hr for patients < 60 kg, age ≥ 65, or with comorbid conditions (CRI, CHF)."
+        ],
+        "observation": [
+          "CPK > 1,000 without systemic symptoms or complications but requiring monitoring for potential renal dysfunction.",
+          "Myoglobinuria or hemoglobinuria without renal impairment requiring IV fluid resuscitation and monitoring.",
+          "Stable after initial treatment but requiring close observation for signs of worsening electrolyte or renal function."
+        ],
+        "discharge": [
+          "CPK levels decreasing with no evidence of renal dysfunction or systemic symptoms.",
+          "Symptoms resolved, and no electrolyte abnormalities requiring correction.",
+          "Outpatient follow-up arranged for monitoring and supportive care."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "675", "description": "Other kidney and urinary tract procedures with MCC", "GMLOS": 8.4 },
+          { "code": "676", "description": "Other kidney and urinary tract procedures with CC", "GMLOS": 5.3 },
+          { "code": "677", "description": "Other kidney and urinary tract procedures without CC/MCC", "GMLOS": 3.1 }
+        ],
+        "primary_icd10s": [
+          { "code": "M62.82", "description": "Rhabdomyolysis" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "N17.9", "description": "Acute kidney failure, unspecified" },
+          { "code": "E87.2", "description": "Acidosis" },
+          { "code": "E87.6", "description": "Hypokalemia" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "E78.5", "description": "Hyperlipidemia, unspecified" },
+          { "code": "Z99.81", "description": "Dependence on supplemental oxygen" },
+          { "code": "R94.5", "description": "Abnormal results of blood chemistry" }
+        ]
+      }
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Hepatic Encephalopathy with SBP",
+      "criteria": {
+        "inpatient": [
+          "Stage III hepatic encephalopathy (gross disorientation and hyperactive reflexes) with medication required (e.g., lactulose, rifaximin, or neomycin).",
+          "Combined SBP meeting criteria for fever, abdominal pain, and ascitic fluid analysis with treatment needs."
+        ],
+        "observation": [
+          "Stage II hepatic encephalopathy with medication initiated but patient stable for monitoring.",
+          "SBP with mild ascitic fluid abnormalities and no systemic signs but requiring close observation."
+        ],
+        "discharge": [
+          "Resolved encephalopathy and SBP symptoms with normal mental status and lab findings.",
+          "Stable clinical course with follow-up care arranged for ascites management and encephalopathy."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "371", "description": "Major gastrointestinal disorders and peritoneal infections with MCC", "GMLOS": 7.5 },
+          { "code": "372", "description": "Major gastrointestinal disorders and peritoneal infections with CC", "GMLOS": 5.1 },
+          { "code": "373", "description": "Major gastrointestinal disorders and peritoneal infections without CC/MCC", "GMLOS": 3.6 }
+        ],
+        "primary_icd10s": [
+          { "code": "K65.2", "description": "Spontaneous bacterial peritonitis" },
+          { "code": "K76.7", "description": "Hepatorenal syndrome" },
+          { "code": "K70.31", "description": "Alcoholic cirrhosis of liver with ascites" },
+          { "code": "K72.90", "description": "Hepatic failure, unspecified without coma" },
+          { "code": "R41.0", "description": "Disorientation, unspecified" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "K74.60", "description": "Unspecified cirrhosis of liver" },
+          { "code": "R94.5", "description": "Abnormal results of blood chemistry" },
+          { "code": "Z99.81", "description": "Dependence on supplemental oxygen" }
+        ]
+      }
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Syncope",
+      "criteria": {
+        "inpatient": [
+          "At least one of the following high-risk features:",
+          "- Family history of sudden cardiac death.",
+          "- Syncope during exertion or while supine.",
+          "- Symptoms preceding syncope (e.g., palpitations, shortness of breath).",
+          "- Cardiac disease (e.g., known diastolic dysfunction, EF < 35%, previous MI).",
+          "- Abnormal ECG findings (e.g., WPW, HR < 60, QRS > 120, arrhythmogenic RVCM, RBB with ST elevation in V1-V3, QT > 440 men/QT > 460 women, QT < 340).",
+          "AND requiring continuous cardiac monitoring with all of the following:",
+          "- Carotid sinus massage (appropriate based on age and contraindications).",
+          "- ECG.",
+          "- Echocardiogram (scheduled or performed within 24 hours or recently performed).",
+          "- Orthostatic BP measurements."
+        ],
+        "observation": [
+          "Requiring continuous cardiac monitoring AND IVF at appropriate rates:",
+          "- ≥ 75 cc/hr if weight < 60 kg, age ≥ 65, Hx of CRI or CHF.",
+          "- ≥ 100 cc/hr if weight > 60 kg.",
+          "Stable condition but requiring further evaluation (e.g., diagnostic studies, therapy adjustments)."
+        ],
+        "discharge": [
+          "Resolved symptoms with no high-risk features and a normal diagnostic workup.",
+          "ECG is normal, unchanged, or non-diagnostic.",
+          "Postural hypotension identified and managed appropriately.",
+          "Outpatient follow-up arranged for further evaluation."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "312", "description": "Syncope and collapse", "GMLOS": 2.6 }
+        ],
+        "primary_icd10s": [
+          { "code": "R55", "description": "Syncope and collapse" },
+          { "code": "I45.89", "description": "Other specified conduction disorders" },
+          { "code": "I49.9", "description": "Cardiac arrhythmia, unspecified" },
+          { "code": "E87.1", "description": "Hypo-osmolality and hyponatremia" },
+          { "code": "I42.0", "description": "Dilated cardiomyopathy" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "I50.9", "description": "Heart failure, unspecified" },
+          { "code": "E78.5", "description": "Hyperlipidemia, unspecified" },
+          { "code": "R79.89", "description": "Other specified abnormal findings of blood chemistry" }
+        ]
+      }
+    },
+	{
+  "conditions": [
+    {
+      "condition": "Wound Infection",
+      "criteria": {
+        "inpatient": [
+          "At least one of the following high-risk features:",
+          "- Presence of purulent discharge from the wound site.",
+          "- Identification of a specific organism from the wound site.",
+          "- Evidence of systemic infection (e.g., fever, tachycardia, AMS, hypotension).",
+          "- Evidence of deep tissue infection on imaging (e.g., CT scan).",
+          "- Comorbid immunosuppressed state (e.g., chemotherapy, neutropenia).",
+          "AND requiring all of the following:",
+          "- IV antibiotics.",
+          "- Incision and drainage (I&D) of the wound site."
+        ],
+        "observation": [
+          "Mild to moderate wound infection requiring close monitoring and IV antibiotics but no immediate I&D.",
+          "Stable after initial I&D or other intervention and requires further observation or adjustment of therapy.",
+          "No systemic signs but requiring additional diagnostic studies or therapy adjustment."
+        ],
+        "discharge": [
+          "Resolved infection with no systemic or high-risk features.",
+          "Stable condition following outpatient wound care or oral antibiotics.",
+          "Outpatient follow-up arranged for definitive management."
+        ]
+      },
+      "associated_data": {
+        "DRGs": [
+          { "code": "573", "description": "Skin graft and/or debridement for skin ulcer or cellulitis with MCC", "GMLOS": 7.8 },
+          { "code": "574", "description": "Skin graft and/or debridement for skin ulcer or cellulitis with CC", "GMLOS": 5.3 },
+          { "code": "575", "description": "Skin graft and/or debridement for skin ulcer or cellulitis without CC/MCC", "GMLOS": 3.4 }
+        ],
+        "primary_icd10s": [
+          { "code": "L08.9", "description": "Local infection of the skin and subcutaneous tissue, unspecified" },
+          { "code": "T81.4XXA", "description": "Infection following a procedure, initial encounter" },
+          { "code": "L03.311", "description": "Cellulitis of the abdominal wall" },
+          { "code": "L02.415", "description": "Cutaneous abscess of the perineum" },
+          { "code": "L03.221", "description": "Acute lymphangitis of right upper limb" }
+        ],
+        "actively_managed_conditions": [
+          { "code": "I10", "description": "Essential (primary) hypertension" },
+          { "code": "E11.9", "description": "Type 2 diabetes mellitus without complications" },
+          { "code": "D64.9", "description": "Anemia, unspecified" },
+          { "code": "B95.61", "description": "Methicillin susceptible Staphylococcus aureus infection" },
+          { "code": "R79.89", "description": "Other specified abnormal findings of blood chemistry" }
+        ]
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+	  
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Audit Tool (AAT)</title>
+  <!-- Inline Styles for Simplicity -->
+  <style>
+    /* Root Variables for Theme Colors */
+    :root {
+      --bg-color: #121212; /* Default dark background */
+      --text-color: #ffffff; /* Default dark text */
+      --blue-color: #007BFF; /* Default vibrant blue */
+      --progress-color: #0056b3; /* Dark progress bar */
+    }
+
+    /* Light Mode Overrides */
+    body.light-mode {
+      --bg-color: #E0E0E0; /* 70% lighter background */
+      --text-color: #003366; /* Dark blue text for readability */
+      --blue-color: #66A3FF; /* 70% lighter blue */
+      --progress-color: #3399FF; /* Lighter progress bar */
+    }
+
+    /* General Styles */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--blue-color);
+      padding: 1rem;
+      text-align: center;
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h2, h3 {
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    button, input[type="checkbox"] {
+      background-color: var(--blue-color);
+      color: var(--text-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--progress-color);
+    }
+
+    textarea, table {
+      width: 100%;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      border: 1px solid var(--blue-color);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .progress-bar {
+      background-color: var(--blue-color);
+      height: 10px;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+    }
+
+    .progress {
+      background-color: var(--progress-color);
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    footer {
+      background-color: var(--blue-color);
+      text-align: center;
+      padding: 1rem;
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <header id="theme-toggle">
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-switch" aria-label="Toggle Dark Mode">
+        <span class="slider"></span>
+      </label>
+      <span id="toggle-label">Enable Dark Mode</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="admission-note-section">
+      <h2>Admission Note</h2>
+      <textarea id="admission-note" placeholder="Type or dictate your note here..." aria-describedby="admission-cmi"></textarea>
+      <div class="progress-container">
+        <label for="admission-cmi">CMI Progress:</label>
+        <div class="progress-bar">
+          <div class="progress" id="admission-cmi-progress" style="width: 50%;"></div>
+        </div>
+        <span id="admission-cmi" aria-live="polite">CMI: 1.0</span>
+      </div>
+    </section>
+
+    <section id="generate-summary-section">
+      <h2>Enhanced Summary</h2>
+      <div id="enhanced-summary" role="region" aria-live="polite">
+        <p>Your AI-enhanced summary will appear here...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Admission Audit Tool. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    const darkModeSwitch = document.getElementById('dark-mode-switch');
+    const body = document.body;
+
+    function toggleTheme(mode) {
+      const isLightMode = mode === 'light';
+      body.classList.toggle('light-mode', isLightMode);
+      localStorage.setItem('theme', mode);
+    }
+
+    // Initialize Theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      toggleTheme('light');
+      darkModeSwitch.checked = true;
+    }
+
+    // Event Listener for Theme Toggle
+    darkModeSwitch.addEventListener('change', () => {
+      const mode = darkModeSwitch.checked ? 'light' : 'dark';
+      toggleTheme(mode);
+    });
+  </script>
+</body>
+</html>

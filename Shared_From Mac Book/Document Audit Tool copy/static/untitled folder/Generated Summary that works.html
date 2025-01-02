@@ -1,0 +1,134 @@
+.result {
+    height: 400px;
+    overflow-y: auto; /* Allows vertical scrolling */
+    border: 1px solid #ccc;
+    font-size: 16px; /* Standard font size for readability */
+    width: 85%; /* Matches the width of other sections */
+    max-width: 900px; /* Ensures a consistent max width */
+    margin: 0 auto; /* Center alignment */
+    text-align: justify; /* Aligns text for clean look */
+    background-color: #f9f9f9; /* Softer background for the text area */
+    padding: 10px; /* Adds consistent spacing */
+    border-radius: 8px; /* Rounded corners for better appearance */
+    color: #222; /* Darker text for better readability */
+    line-height: 1.4; /* Single-spacing for tighter content */
+    white-space: normal; /* Prevents preformatted spacing */
+    word-wrap: break-word; /* Ensures text wraps inside the box */
+    overflow-wrap: break-word; /* Cross-browser support for wrapping */
+}
+
+.result pre {
+    font-family: 'Arial', sans-serif; /* Modern and clean font */
+    font-size: 16px; /* Matches the main text size */
+    color: #444; /* Slightly darker text for clarity */
+    line-height: 1.4; /* Matches single spacing */
+    white-space: normal; /* Forces text wrapping inside pre tags */
+    word-wrap: break-word; /* Ensures wrapped text */
+    overflow-wrap: break-word; /* Alternative for better compatibility */
+    background-color: #f7f9fc; /* Subtle background difference for preformatted text */
+    padding: 10px; /* Inner padding for better spacing */
+    border-radius: 6px; /* Rounded corners for preformatted text */
+}
+
+script 
+const icd10Data = {
+            "I50.9": { description: "Heart failure, unspecified", drg: "DRG 291", gmlos: 4.8, type: "MCC" },
+            "N17.9": { description: "Acute kidney failure, unspecified", drg: "DRG 291", gmlos: 4.8, type: "MCC" },
+            "J18.9": { description: "Pneumonia, unspecified organism", drg: "DRG 193", gmlos: 3.5, type: "CC" },
+            "I10": { description: "Essential (primary) hypertension", drg: "DRG 302", gmlos: 2.5, type: "CC" },
+            "E11.9": { description: "Type 2 diabetes mellitus without complications", drg: "DRG 640", gmlos: 3.1, type: "CC" },
+            "R07.9": { description: "Chest pain, unspecified", drg: "DRG 313", gmlos: 1.8, type: "None" }
+        };
+
+        let selectedICD10s = [];
+
+        function toggleICD10Search() {
+            const searchContainer = document.getElementById("icd10SearchContainer");
+            const button = document.getElementById("toggleSearchButton");
+            if (searchContainer.classList.contains("hidden")) {
+                searchContainer.classList.remove("hidden");
+                button.textContent = "Hide ICD-10 Search";
+            } else {
+                searchContainer.classList.add("hidden");
+                button.textContent = "Show ICD-10 Search";
+            }
+        }
+
+        function searchICD10() {
+            const searchQuery = document.getElementById("icd10Search").value.trim().toLowerCase();
+            const resultsContainer = document.getElementById("icd10Results");
+            resultsContainer.innerHTML = "";
+
+            for (const [code, data] of Object.entries(icd10Data)) {
+                if (code.includes(searchQuery.toUpperCase()) || data.description.toLowerCase().includes(searchQuery)) {
+                    const button = document.createElement("button");
+                    button.textContent = `${code} - ${data.description}`;
+                    button.onclick = () => selectICD10(code);
+                    resultsContainer.appendChild(button);
+                }
+            }
+        }
+
+        function selectICD10(code) {
+            if (!selectedICD10s.includes(code)) {
+                selectedICD10s.push(code);
+                updateSelectedICD10s();
+                updateGmLosDisplay();
+            }
+        }
+
+        function updateSelectedICD10s() {
+            const selectedContainer = document.getElementById("selectedICD10s");
+            if (selectedICD10s.length === 0) {
+                selectedContainer.textContent = "No ICD-10 codes selected.";
+            } else {
+                selectedContainer.innerHTML = selectedICD10s
+                    .map(code => {
+                        const data = icd10Data[code];
+                        return `<div>${code} - ${data.description} (DRG: ${data.drg}, GMLOS: ${data.gmlos} days, Type: ${data.type})</div>`;
+                    })
+                    .join("");
+            }
+        }
+
+        function updateGmLosDisplay() {
+            const gmLosContainer = document.getElementById("gmLosDisplay");
+
+            if (selectedICD10s.length === 0) {
+                gmLosContainer.textContent = "GMLOS will be displayed here once ICD-10 codes are selected.";
+            } else {
+                const baseICD10 = selectedICD10s[0];
+                const baseData = icd10Data[baseICD10];
+                const baseGmLos = baseData ? baseData.gmlos : 0;
+
+                const adjustmentFactor = selectedICD10s.length > 3 ? 1.33 : 1.0;
+                const adjustedGmLos = baseGmLos * adjustmentFactor;
+
+                gmLosContainer.textContent = `Estimated GMLOS: ${adjustedGmLos.toFixed(1)} days (Base GMLOS: ${baseGmLos}, Adjustment Factor: ${adjustmentFactor})`;
+            }
+        }
+
+        function generateEnhancedDocumentation() {
+            const note = document.getElementById("admissionNote").value;
+            const resultElement = document.getElementById("result");
+
+            if (!note.trim()) {
+                resultElement.textContent = "Error: Please enter an admission note.";
+                return;
+            }
+
+            // Create summary with proper line breaks
+            const selectedICDDescriptions = selectedICD10s.map(code => `${code} - ${icd10Data[code].description}`).join('\n');
+
+            const summary = `
+                Admission Note:\n
+                ${note}\n
+                \nSelected ICD-10 Codes:\n
+                ${selectedICDDescriptions}\n
+                \nEstimated GMLOS:\n
+                ${document.getElementById("gmLosDisplay").textContent}
+            `;
+
+            // Use <pre> for the result but ensure it wraps properly
+            resultElement.innerHTML = `<pre>${summary}</pre>`;
+        }
