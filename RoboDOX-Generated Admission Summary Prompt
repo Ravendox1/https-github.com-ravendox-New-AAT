@@ -1,0 +1,36 @@
+DOX21-Generated Admission Summary Prompt
+Clinical Presentation and Plan: The patient is a [age]-year-old [gender] presenting to the emergency room with [specific symptoms, e.g., chest pain, shortness of breath, fever]. The patient has a significant history of [relevant medical conditions, e.g., COPD, CHF, diabetes, etc.] and is currently taking [medications]. On presentation, laboratory findings demonstrate [specific abnormalities, e.g., elevated BNP, anemia, elevated troponin]. Imaging reveals [key findings, e.g., bilateral pleural effusions, infiltrates, ischemic changes], and physical examination is notable for [clinical findings, e.g., 2+ pitting edema, reduced breath sounds].
+The patient is being admitted to inpatient care based on InterQual criteria, which include [specific findings, e.g., hypoxemia, abnormal imaging, lab trends]. Milliman guidelines further support inpatient admission due to [reasons for ongoing care, e.g., frequent monitoring of lab values, need for intensive management]. This admission aligns with ICD-10 codes including [specific ICD-10s, e.g., I50.9 for acute CHF], and is categorized under DRG [specific DRG, e.g., 291 – Heart Failure With MCC], with an estimated GMLOS of [GMLOS days].
+Key interventions include:
+* CPT codes: [CPT codes relevant to the interventions, e.g., 99223 for high-complexity hospital care, 93306 for echocardiogram].
+* RVUs: Estimated RVUs for this admission total approximately [RVU total], covering evaluation, diagnostics, and therapeutic interventions.
+* Management needs: The patient requires [specific interventions, e.g., frequent reassessment of diuresis, oxygen therapy].
+* Consultations: Consultations with [specialists, e.g., cardiology, pulmonology, GI] have been obtained to ensure comprehensive care.
+
+Integrated Documentation and Compliance Section: This admission aligns with the following coding and documentation standards:
+* ICD-10 Codes:
+    * [Primary diagnosis, e.g., I50.9 – Acute congestive heart failure].
+    * [Secondary diagnosis, e.g., N17.9 – Acute kidney injury].
+    * [Additional findings, e.g., R09.02 – Hypoxemia].
+* DRG: [Specific DRG, e.g., DRG 291 – Heart Failure and Shock With MCC].
+    * GMLOS: [DRG-specific GMLOS, e.g., 4.8 days].
+* CPT Codes:
+    * Initial Hospital Care: 99221-99223 (document complexity to support the appropriate level).
+    * Diagnostic Testing: [Examples: 93306 (Transthoracic echocardiogram), 71046 (Chest X-ray, two views)].
+    * Therapeutic Interventions: [Examples: 96365 (IV infusion), 94660 (BiPAP management)].
+* RVU Calculation:
+    * Initial Evaluation and Management (e.g., CPT 99223): 3.86 RVUs.
+    * Diagnostic Testing (e.g., echocardiogram, chest X-ray): [Cumulative RVUs based on performed diagnostics].
+    * Therapeutic Interventions (e.g., IV therapy, respiratory support): [Cumulative RVUs based on interventions].
+Total RVUs for Admission Services: [Sum of RVUs based on documentation].
+
+Potential Weaknesses to Address:
+1. Lab trends: Ensure documentation reflects changes in relevant lab values (e.g., troponin, BNP, creatinine).
+2. Treatment responses: Include responses to interventions (e.g., diuresis, oxygen therapy).
+3. Complication risks: Highlight risks of complications (e.g., sepsis, worsening respiratory failure, GI bleeding).
+
+Dynamic Prompts for Clarification
+* Lab trends: Could you provide updates on serial labs (e.g., troponin, BNP)?
+* Treatment responses: How has the patient responded to initial interventions?
+* Complication risks: Are there potential risks (e.g., STEMI, infection) requiring ongoing monitoring?
+ 
