@@ -1,0 +1,34 @@
+{
+  "complaints": [
+    {
+      "condition": "Skin Abscess",
+      "criteria": {
+        "inpatient": [
+          "Severe cellulitis with systemic symptoms such as fever or tachycardia",
+          "Failed outpatient therapy with worsening infection",
+          "Abscess size > 5 cm requiring surgical drainage",
+          "Immunocompromised state increasing risk of complications"
+        ],
+        "observation": [
+          "Moderate cellulitis without systemic symptoms",
+          "Abscess size 3-5 cm requiring minor drainage or monitoring",
+          "Patient requires close monitoring for response to antibiotics"
+        ],
+        "discharge": [
+          "Localized small abscess (< 3 cm) managed with outpatient antibiotics",
+          "No signs of systemic infection and good response to initial treatment"
+        ]
+      },
+      "interqual_alignment": {
+        "inpatient": "Severe systemic symptoms or failed outpatient therapy with worsening infection.",
+        "observation": "Moderate cellulitis without systemic symptoms requiring short-term monitoring or minor drainage.",
+        "discharge": "Small abscess with good response to outpatient antibiotics, no systemic symptoms."
+      },
+      "milliman_alignment": {
+        "inpatient": "Systemic signs of infection, failed outpatient management, abscess size > 5 cm.",
+        "observation": "Monitoring for clinical response or minor drainage procedure required.",
+        "discharge": "Outpatient management feasible, no ongoing need for IV antibiotics or monitoring."
+      }
+    }
+  ]
+}
