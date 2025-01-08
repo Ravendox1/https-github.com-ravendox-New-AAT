@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Variables */
+:root {
+  --transition-speed: 0.4s;
+  --primary-bg-dark: #0d1b2a;
+  --primary-bg-light: #f8f9fa;
+  --header-bg-dark: #1b263b;
+  --header-bg-light: #e0f7fa;
+  --text-color-dark: #f8f9fa;
+  --text-color-light: #2c3e50;
+  --accent-color: #00b4d8;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, var(--primary-bg-dark), var(--header-bg-dark));
+  color: var(--text-color-dark);
+  line-height: 1.6;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background: var(--header-bg-dark);
+  color: var(--text-color-dark);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+/* Dark Mode Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: var(--transition-speed);
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: var(--transition-speed);
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0077b6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Section Styling */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  background: var(--header-bg-dark);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2e3c52;
+  color: var(--text-color-dark);
+  transition: background var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Heading Styles */
+h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #9fb3c8;
+  margin-bottom: 10px;
+  transition: color var(--transition-speed);
+}
+
+/* Admission Note Section Textarea Styling */
+#admission-note-section textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  background: var(--primary-bg-dark);
+  color: var(--text-color-dark);
+  border: 1px solid #9fb3c8;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transition: background var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+#admission-note-section textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Auto-expanding Textarea */
+#admission-note-section textarea.auto-expand {
+  overflow: hidden;
+}
+
+/* Progress Container for Generate Summary */
+#generate-summary-section .summary-progress-container {
+  margin-top: 15px;
+}
+
+#generate-summary-section .summary-progress-bar-container {
+  width: 100%;
+  background: var(--primary-bg-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25px;
+  border: 1px solid #2e3c52;
+  transition: background var(--transition-speed), border-color var(--transition-speed);
+}
+
+#generate-summary-section .summary-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #0096c7, var(--accent-color));
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  border-radius: 10px;
+  transition: width var(--transition-speed), color var(--transition-speed);
+}
+
+/* Progress Percentage Display */
+#generate-summary-section .progress-percentage {
+  margin-left: 10px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background: linear-gradient(to bottom, var(--primary-bg-light), var(--header-bg-light));
+  color: var(--text-color-light);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+header.light-mode {
+  background: var(--header-bg-light);
+  color: var(--text-color-light);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+section.light-mode {
+  background: var(--primary-bg-light);
+  border: 1px solid #bdd4e7;
+  color: var(--text-color-light);
+  transition: background var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+h2.light-mode, h3.light-mode {
+  color: #2c6e91;
+  transition: color var(--transition-speed);
+}
+
+textarea.light-mode {
+  background: #ffffff;
+  color: var(--text-color-light);
+  border: 1px solid #bdd4e7;
+  transition: background var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+button.light-mode {
+  background: linear-gradient(to right, #0077b6, var(--accent-color));
+  color: var(--text-color-light);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+button.light-mode:hover {
+  background: linear-gradient(to right, #023e8a, #0096c7);
+  color: #ffffff;
+}
+
+#generate-summary-section .progress-bar-container.light-mode {
+  background: var(--header-bg-light);
+  border: 1px solid #bdd4e7;
+}
+
+#generate-summary-section .progress.light-mode {
+  color: var(--text-color-light);
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(to right, #0077b6, var(--accent-color));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #023e8a, #0096c7);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Primary ICD-10 Button */
+.primary-icd10-btn {
+  background-color: transparent;
+  color: var(--text-color-dark);
+  border: 1px solid #9fb3c8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.primary-icd10-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.primary-icd10-btn.selected {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
